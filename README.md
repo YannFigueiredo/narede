@@ -1,5 +1,5 @@
 # Nave HQ
-
+![](https://github.com/YannFigueiredo/assets/blob/main/navehq/logo.jpg?raw=true)
 ## Sobre o projeto
 Site focado em disponibilizar quadrinhos brasileiros e suas informações.
 
@@ -23,7 +23,7 @@ git clone https://github.com/YannFigueiredo/navehq.git
 # acessar o diretório do projeto
 cd navehq
 
-# Digitar o comando para executar
+# digitar o comando para executar
 npm start
 ```
 
