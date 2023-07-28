@@ -1,12 +1,13 @@
 import React from "react";
-import App from "../App";
 import { GlobalStyle } from "../styles/GlobalStyle";
+import theme from "../styles/theme";
+import { ThemeProvider } from "styled-components";
 
-export default function AppProviders() {
+export default function AppProviders({ children }) {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <App />
-    </>
+      {children}
+    </ThemeProvider>
   );
 }
