@@ -1,15 +1,11 @@
 import React from "react";
-import { styled } from "styled-components";
 import AppProviders from "./providers/AppProviders";
-
-const Text = styled.h1 `
-  color: ${({theme}) => theme.colors.primary};
-`;
+import RoutesApp from "./routes";
 
 function App() {
   return (
     <AppProviders>
-      
+      <RoutesApp />
     </AppProviders>
   );
 }
