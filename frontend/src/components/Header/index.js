@@ -5,7 +5,7 @@ import Logo from "../../assets/images/Logo";
 export default function Header() {
   return(
     <Container>
-      <ImageWrapper>
+      <ImageWrapper href="/">
         <Logo />
       </ImageWrapper>
       <MenuWrapper>
