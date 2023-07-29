@@ -8,6 +8,9 @@ const spacing = {
     very_small: "0.625rem", //10px
     small: "1rem", //16px
     normal: "1.25rem", //20px
+  },
+  radius: {
+    small: "0.5rem" //8px
   }
 };
 

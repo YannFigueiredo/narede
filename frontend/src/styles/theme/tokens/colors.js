@@ -3,7 +3,7 @@ const colors = {
   primaryGradient: "#0078BA",
   secondaryGradient: "#008A5E",
   gray: {
-    "200": "#FF12"
+    "200": "rgb(233, 236, 239)"
   }
 };
 
