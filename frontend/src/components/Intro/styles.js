@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  max-width: 450px;
+  max-width: 350px;
 
   img {
     width: 100%;
