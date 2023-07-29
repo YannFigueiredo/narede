@@ -5,6 +5,9 @@ export const Container = styled.div`
   width: ${(props) => props.width}px;
   border-radius: ${({theme}) => theme.spacing.radius.small};
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const InputWrapper = styled.input`
@@ -18,4 +21,9 @@ export const InputWrapper = styled.input`
   &:focus {
     outline: none;
   }
+`;
+
+export const SearchButton = styled.div`
+  padding: 0.3125rem;
+  cursor: pointer;
 `;

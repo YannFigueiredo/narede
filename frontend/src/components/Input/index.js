@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, InputWrapper } from "./styles";
-import SearchIcon from '@mui/icons-material/Search';
+import { Container, InputWrapper, SearchButton } from "./styles";
+import SearchIcon from "@mui/icons-material/Search";
 
 export default function Input({
   width,
@@ -8,12 +8,14 @@ export default function Input({
   isSearch = false
 }) {
   return(
-    <Container width={width} tabIndex="0">
+    <Container width={width}>
       <InputWrapper 
         placeholder={placeholder}
       />
       {isSearch &&
-        <SearchIcon />
+        <SearchButton>
+          <SearchIcon />
+        </SearchButton>
       }
     </Container>
   );
