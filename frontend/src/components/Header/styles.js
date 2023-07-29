@@ -13,7 +13,7 @@ export const ImageWrapper = styled.a`
   max-width: 100px;
   max-height: auto;
 
-  svg {
+  img {
     width: 100%;
     height: auto;
   }

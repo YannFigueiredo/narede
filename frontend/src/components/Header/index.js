@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, ImageWrapper, MenuWrapper, Menu } from "./styles";
-import Logo from "../../assets/images/Logo";
+import Logo from "../../assets/images/logo.png";
 
 export default function Header() {
   return(
     <Container>
       <ImageWrapper href="/">
-        <Logo />
+        <img src={Logo} alt="Logo do site Nave HQ"/>
       </ImageWrapper>
       <MenuWrapper>
         <Menu>
