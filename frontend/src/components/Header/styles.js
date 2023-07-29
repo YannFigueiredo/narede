@@ -10,7 +10,7 @@ export const Container = styled.header`
 `;
 
 export const ImageWrapper = styled.a`
-  max-width: 100px;
+  max-width: 5.3125rem;
   max-height: auto;
 
   img {
