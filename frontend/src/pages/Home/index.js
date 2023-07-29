@@ -7,6 +7,7 @@ export default function Home() {
       <Input 
         placeholder="Procure por título, autor ou categoria"
         width={500}
+        isSearch
       />
     </>
   );
