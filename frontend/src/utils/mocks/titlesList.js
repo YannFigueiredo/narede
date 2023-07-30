@@ -1,10 +1,17 @@
+import Logo01 from "assets/covers/01-acai-pesado.png";
+import Logo02 from "assets/covers/02-ajuricaba.png";
+import Logo03 from "assets/covers/03-belem-imaginaria.jpg";
+import Logo04 from "assets/covers/04-brega-story.png";
+import Logo05 from "assets/covers/05-diversidade-cultural-paraense-em-quadrinhos.jpg";
+import Logo06 from "assets/covers/06-las-cabacas.png";
+
 export const titlesList = [
   {
     title: "Açaí Pesado",
     author: [""],
     category: "Aventura",
     views: 0,
-    cover: "assets/covers/01-acai-pesado.png",
+    cover: Logo01,
     year: "2018"
   },
   {
@@ -12,7 +19,7 @@ export const titlesList = [
     author: ["Ademar Vieira", "Jucylande Júnior", "Ticê Santos"],
     category: "Aventura",
     views: 0,
-    cover: "assets/covers/02-ajuricaba.png",
+    cover: Logo02,
     year: "2020"
   },
   {
@@ -20,7 +27,7 @@ export const titlesList = [
     author: ["Wolney Nazareno", "Fernando Augusto", "Carlos Paul", "Otoniel Oliveira"],
     category: "Folclore",
     views: 0,
-    cover: "assets/covers/03-belem-imaginaria.jpg",
+    cover: Logo03,
     year: "2004"
   },
   {
@@ -28,7 +35,7 @@ export const titlesList = [
     author: "Gidalti Júnior",
     category: "Romance",
     views: 0,
-    cover: "assets/covers/04-brega-story.png",
+    cover: Logo04,
     year: "2017"
   },
   {
@@ -36,7 +43,7 @@ export const titlesList = [
     author: [""],
     category: "Cultura",
     views: 0,
-    cover: "assets/covers/05-diversidade-cultural-paraense-em-quadrinhos.jpg",
+    cover: Logo05,
     year: "2017"
   },
   {
@@ -44,7 +51,7 @@ export const titlesList = [
     author: ["Dedê Paiva"],
     category: "Comédia",
     views: 0,
-    cover: "assets/covers/06-las-cabacas.png",
+    cover: Logo06,
     year: "2000"
   }
 ];
