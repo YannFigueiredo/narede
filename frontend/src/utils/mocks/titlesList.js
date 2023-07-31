@@ -4,11 +4,13 @@ import Logo03 from "assets/covers/03-belem-imaginaria.jpg";
 import Logo04 from "assets/covers/04-brega-story.png";
 import Logo05 from "assets/covers/05-diversidade-cultural-paraense-em-quadrinhos.jpg";
 import Logo06 from "assets/covers/06-las-cabacas.png";
+import Logo07 from "assets/covers/07-vero-pexe.jpg";
+import Logo08 from "assets/covers/08-tailus.jpg";
 
 export const titlesList = [
   {
     title: "Açaí Pesado",
-    author: [""],
+    author: [],
     category: "Aventura",
     views: 0,
     cover: Logo01,
@@ -32,7 +34,7 @@ export const titlesList = [
   },
   {
     title: "Brega Story",
-    author: "Gidalti Júnior",
+    author: ["Gidalti Júnior"],
     category: "Romance",
     views: 0,
     cover: Logo04,
@@ -40,7 +42,7 @@ export const titlesList = [
   },
   {
     title: "Diversidade Cultural Paraense em Quadrinhos",
-    author: [""],
+    author: [],
     category: "Cultura",
     views: 0,
     cover: Logo05,
@@ -53,5 +55,21 @@ export const titlesList = [
     views: 0,
     cover: Logo06,
     year: "2000"
+  },
+  {
+    title: "Vero Pexe e sua Turma",
+    author: ["Luiz Paulo Jacob", "Gabriel de Jesus"],
+    category: "Comédia",
+    views: 0,
+    cover: Logo07,
+    year: "1989"
+  },
+  {
+    title: "Tailus em Busca da Semente da Vida",
+    author: [],
+    category: "Ação",
+    views: 0,
+    cover: Logo08,
+    year: "2010"
   }
 ];

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.article`
   width: 12.5rem;
-  height: 16.25rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.small};
@@ -10,7 +10,7 @@ export const Container = styled.article`
 
 export const CoverWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: 16.25rem;
   position: relative;
 
   img {

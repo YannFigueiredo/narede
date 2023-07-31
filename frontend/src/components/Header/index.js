@@ -11,6 +11,7 @@ export default function Header() {
       <MenuWrapper>
         <Menu>
           <li>Categorias</li>
+          <li>Lista de Leitura</li>
           <li>Sobre</li>
         </Menu>
       </MenuWrapper>

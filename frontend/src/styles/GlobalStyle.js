@@ -17,5 +17,6 @@ export const GlobalStyle = createGlobalStyle`
 
     h2 {
       font-size: ${({theme}) => theme.fontSize.large};
+      color: #FFF;
     }
 `;
