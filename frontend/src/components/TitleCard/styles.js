@@ -48,4 +48,6 @@ export const InfoWrapper = styled.div`
   }
 `;
 
-export const DetailsWrapper = styled.div``;
+export const DetailsWrapper = styled.div`
+  text-align: center;
+`;

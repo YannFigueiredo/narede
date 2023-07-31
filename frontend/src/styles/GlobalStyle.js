@@ -14,4 +14,8 @@ export const GlobalStyle = createGlobalStyle`
       font-family: "Comic Neue", sans-serif;
       font-weight: 700;
     }
+
+    h2 {
+      font-size: ${({theme}) => theme.fontSize.large};
+    }
 `;
