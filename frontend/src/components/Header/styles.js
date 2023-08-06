@@ -4,8 +4,8 @@ export const Container = styled.header`
   background: ${({theme}) => theme.colors.primary};
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  justify-content: space-between;
+  gap: ${({theme}) => theme.spacing.between_elements.between_items};
   padding: ${({theme}) => theme.spacing.padding.small};
 `;
 
@@ -33,5 +33,12 @@ export const Menu = styled.ul`
     list-style: none;
     color: #FFF;
     font-weight: 500;
+    cursor: pointer;
+    transition: all linear .3s;
+    padding: ${({theme}) => theme.spacing.padding.very_small} ${({theme}) => theme.spacing.padding.small};
+  }
+
+  li:hover {
+    background: linear-gradient(to right, ${({theme}) => theme.colors.primaryGradient}, ${({theme}) => theme.colors.secondaryGradient});
   }
 `;

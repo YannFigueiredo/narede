@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, ImageWrapper, MenuWrapper, Menu } from "./styles";
-import Logo from "../../assets/images/logo.png";
+import Logo from "assets/images/logo.png";
 
 export default function Header() {
   return(
