@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  overflow-y: scroll;
+  position: relative;
 `;
 
 export const CardsWrapper = styled.div`
@@ -11,4 +11,38 @@ export const CardsWrapper = styled.div`
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+
+  &:hover #back-btn, &:hover #next-btn {
+    opacity: 1;
+  }
+
+  #back-btn, #next-btn {
+    opacity: 0;
+    transition: all linear .4s;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    height: 16.25rem;
+    ${({theme}) => theme.spacing.padding.big_small};
+    background: rgba(0, 0, 0, .7);
+
+    svg {
+      fill: rgba(255, 255, 255, .3);
+      cursor: pointer;
+      font-size: 50px;
+    }
+  }
+
+  #back-btn {
+    left: 0;
+  }
+
+  #next-btn {
+    right: 0;
+  }
+
+  #back-btn svg:hover, #next-btn svg:hover {
+    fill: rgba(255, 255, 255, 1);
+  }
 `;

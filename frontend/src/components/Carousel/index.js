@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, CardsWrapper } from "./styles";
 import TitleCard from "components/TitleCard";
+import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 
 export default function Carousel({
   cards
@@ -8,6 +10,9 @@ export default function Carousel({
   return(
     <Container>
       <CardsWrapper>
+        <div id="back-btn" >
+          <ArrowCircleLeftIcon />
+        </div>
         {
           cards.map((card, key) => 
             <TitleCard 
@@ -19,6 +24,9 @@ export default function Carousel({
             />
           )
         }
+        <div id="next-btn">
+          <ArrowCircleRightIcon />
+        </div>
       </CardsWrapper>
     </Container>
   ); 
