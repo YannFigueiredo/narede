@@ -8,8 +8,7 @@ export const CardsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(20, auto);
   grid-template-rows: auto;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 
   &:hover #back-btn, &:hover #next-btn {
@@ -30,7 +29,7 @@ export const CardsWrapper = styled.div`
     svg {
       fill: rgba(255, 255, 255, .3);
       cursor: pointer;
-      font-size: 50px;
+      font-size: 3.125rem;
     }
   }
 
@@ -44,5 +43,12 @@ export const CardsWrapper = styled.div`
 
   #back-btn svg:hover, #next-btn svg:hover {
     fill: rgba(255, 255, 255, 1);
+  }
+
+  
+  @media screen and (max-width: 600px) {
+    #back-btn, #next-btn {
+      opacity: 1;
+    }
   }
 `;
