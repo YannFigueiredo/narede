@@ -45,6 +45,9 @@ export const CardsWrapper = styled.div`
     fill: rgba(255, 255, 255, 1);
   }
 
+  article {
+    cursor: pointer;
+  }
   
   @media screen and (max-width: 600px) {
     #back-btn, #next-btn {
