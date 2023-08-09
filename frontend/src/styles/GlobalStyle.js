@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "Roboto", sans-serif;
         font-weight: 400;
         color: #000;
+        overflow-x: hidden;
     }
 
     h1, h2, h3 {
