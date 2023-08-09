@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { 
   Container,
   CloseButton, 
@@ -18,18 +18,34 @@ import {
 import CancelIcon from "@mui/icons-material/Cancel";
 
 export default function TitleModel({
-  cover
+  cover,
+  isModalOpen = false
 }) {
+  const [modalOpen, setModalOpen] = useState(isModalOpen);
+  const modal = useRef(null);
+
+  const closeModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
   useEffect(() => {
-    global.document.body.style.overflow = "hidden";
-  }, []);
+    if(modalOpen) {
+      global.document.body.style.overflow = "hidden";
+      global.document.documentElement.style.overflow = "hidden";
+      modal.current.style.display = "flex";
+    } else {
+      global.document.body.style.overflow = "auto";
+      global.document.documentElement.style.overflow = "auto";
+      modal.current.style.display = "none";
+    }
+  }, [modalOpen]);
 
   return(
-    <Container>
+    <Container ref={modal}>
       <Main>        
         <Header cover={cover}>
           <CloseButton>
-            <CancelIcon id="close-button" />
+            <CancelIcon id="close-button" onClick={closeModal} />
           </CloseButton>
           <DetailsWrapper>
             <TitleWrapper>
