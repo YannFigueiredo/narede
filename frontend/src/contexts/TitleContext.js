@@ -14,9 +14,17 @@ export default function TitleProvider({ children }) {
     views: 0,
     author: []
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return(
-    <TitleContext.Provider value={{titleValues, setTitleValues}}>
+    <TitleContext.Provider 
+      value={{
+        titleValues, 
+        setTitleValues,
+        isModalOpen,
+        setIsModalOpen
+      }}
+    >
       { children }
     </TitleContext.Provider>
   );

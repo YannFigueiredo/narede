@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
+import { TitleContext } from "contexts/TitleContext";
 import { 
   Container,
   CloseButton, 
@@ -17,18 +18,13 @@ import {
 } from "./styles";
 import CancelIcon from "@mui/icons-material/Cancel";
 
-export default function TitleModal({
-  cover,
-  isModalOpen = false,
-  setIsModalOpen,
-}) {
-  //const [modalOpen, setModalOpen] = useState(isModalOpen);
+export default function TitleModal() {
+  const { titleValues, isModalOpen, setIsModalOpen } = useContext(TitleContext);
   const modal = useRef(null);
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
 
   useEffect(() => {
     if(isModalOpen) {
@@ -45,7 +41,7 @@ export default function TitleModal({
   return(
     <Container ref={modal}>
       <Main>        
-        <Header cover={cover}>
+        <Header cover={titleValues.cover}>
           <CloseButton>
             <CancelIcon id="close-button" onClick={closeModal} />
           </CloseButton>

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { TitleContext } from "contexts/TitleContext";
 import { Container, CoverWrapper, InfoWrapper, DetailsWrapper } from "./styles";
-import TitleModal from "components/TitleModal";
 
 export default function TitleCard({
   title,
@@ -8,7 +8,7 @@ export default function TitleCard({
   year, 
   cover
 }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { setIsModalOpen } = useContext(TitleContext);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -26,10 +26,6 @@ export default function TitleCard({
       <DetailsWrapper>
         <h3>{title}</h3>
       </DetailsWrapper>
-      <TitleModal
-        cover={cover}
-        isModalOpen={isModalOpen}
-      />
     </Container>
   );
 }
