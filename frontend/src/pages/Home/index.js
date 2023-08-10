@@ -1,24 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { Container } from "../../components/Container/page";
 import Intro from "components/Intro";
 import MostPopular from "components/MostPopular";
 import MostRecent from "components/MostRecent";
-import TitleModel from "components/TitleModal";
-import image from "assets/covers/01-acai-pesado.png";
+import TitleModal from "components/TitleModal";
 
 export default function Home() {
-  useEffect(() => {
-    
-    global.document.body.style.overflow = "hidden";
-
-  }, []);
+  const [modal, setModal] = useState({cover: ""});
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return(
     <Container>
       <Intro />
       <MostPopular />
       <MostRecent />
-      <TitleModel cover={image} isModalOpen />
+      <TitleModal 
+        cover={modal.cover}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        setModal={setModal}
+      />
     </Container>
   );
 }

@@ -17,19 +17,21 @@ import {
 } from "./styles";
 import CancelIcon from "@mui/icons-material/Cancel";
 
-export default function TitleModel({
+export default function TitleModal({
   cover,
-  isModalOpen = false
+  isModalOpen = false,
+  setIsModalOpen,
 }) {
-  const [modalOpen, setModalOpen] = useState(isModalOpen);
+  //const [modalOpen, setModalOpen] = useState(isModalOpen);
   const modal = useRef(null);
 
   const closeModal = () => {
-    setModalOpen(!modalOpen);
+    setIsModalOpen(false);
   };
 
+
   useEffect(() => {
-    if(modalOpen) {
+    if(isModalOpen) {
       global.document.body.style.overflow = "hidden";
       global.document.documentElement.style.overflow = "hidden";
       modal.current.style.display = "flex";
@@ -38,7 +40,7 @@ export default function TitleModel({
       global.document.documentElement.style.overflow = "auto";
       modal.current.style.display = "none";
     }
-  }, [modalOpen]);
+  }, [isModalOpen]);
 
   return(
     <Container ref={modal}>

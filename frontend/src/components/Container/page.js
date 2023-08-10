@@ -6,4 +6,5 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
+  position: relative;
 `;
