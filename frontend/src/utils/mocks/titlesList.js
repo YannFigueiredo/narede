@@ -9,7 +9,11 @@ import Logo08 from "assets/covers/08-tailus.jpg";
 
 export const titlesList = [
   {
+    id: 1,
     title: "Açaí Pesado",
+    description: "lorem ipsum",
+    volumesNumber: 0,
+    chaptersNumber: 0,
     author: [],
     category: "Aventura",
     views: 0,
@@ -17,7 +21,11 @@ export const titlesList = [
     year: "2018"
   },
   {
+    id: 2,
     title: "Ajuricaba",
+    description: "lorem ipsum",
+    volumesNumber: 0,
+    chaptersNumber: 0,
     author: ["Ademar Vieira", "Jucylande Júnior", "Ticê Santos"],
     category: "Aventura",
     views: 0,
@@ -25,7 +33,11 @@ export const titlesList = [
     year: "2020"
   },
   {
+    id: 3,
     title: "Belém Imaginária",
+    description: "lorem ipsum",
+    volumesNumber: 0,
+    chaptersNumber: 0,
     author: ["Wolney Nazareno", "Fernando Augusto", "Carlos Paul", "Otoniel Oliveira"],
     category: "Folclore",
     views: 0,
@@ -33,7 +45,11 @@ export const titlesList = [
     year: "2004"
   },
   {
+    id: 4,
     title: "Brega Story",
+    description: "lorem ipsum",
+    volumesNumber: 0,
+    chaptersNumber: 0,
     author: ["Gidalti Júnior"],
     category: "Romance",
     views: 0,
@@ -41,7 +57,11 @@ export const titlesList = [
     year: "2017"
   },
   {
+    id: 5,
     title: "Diversidade Cultural Paraense em Quadrinhos",
+    description: "lorem ipsum",
+    volumesNumber: 0,
+    chaptersNumber: 0,
     author: [],
     category: "Cultura",
     views: 0,
@@ -49,7 +69,11 @@ export const titlesList = [
     year: "2017"
   },
   {
+    id: 6,
     title: "Las Cabaças: A Primeira Aventura",
+    description: "lorem ipsum",
+    volumesNumber: 0,
+    chaptersNumber: 0,
     author: ["Dedê Paiva"],
     category: "Comédia",
     views: 0,
@@ -57,7 +81,11 @@ export const titlesList = [
     year: "2000"
   },
   {
+    id: 7,
     title: "Vero Pexe e sua Turma",
+    description: "lorem ipsum",
+    volumesNumber: 0,
+    chaptersNumber: 0,
     author: ["Luiz Paulo Jacob", "Gabriel de Jesus"],
     category: "Comédia",
     views: 0,
@@ -65,7 +93,11 @@ export const titlesList = [
     year: "1989"
   },
   {
+    id: 8,
     title: "Tailus em Busca da Semente da Vida",
+    description: "lorem ipsum",
+    volumesNumber: 0,
+    chaptersNumber: 0,
     author: [],
     category: "Ação",
     views: 0,

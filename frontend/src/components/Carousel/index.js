@@ -37,10 +37,15 @@ export default function Carousel({
           cards.map((card, key) => 
             <TitleCard 
               key={key}
+              id={card.id}
               title={card.title}
+              description={card.description}
+              volumesNumber={card.volumesNumber}
+              chaptersNumber={card.chaptersNumber}
               category={card.category}
               year={card.year}
               cover={card.cover}
+              views={card.views}
             />
           )
         }

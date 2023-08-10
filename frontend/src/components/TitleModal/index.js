@@ -47,18 +47,18 @@ export default function TitleModal() {
           </CloseButton>
           <DetailsWrapper>
             <TitleWrapper>
-              <span>categoria</span>
-              <h3>Título</h3>
+              <span>{titleValues.category}</span>
+              <h3>{titleValues.title}</h3>
             </TitleWrapper>
             <InfosWrapper>
               <InfoWrapper>
-                <span>1 volume(s)</span>
+                <span>{titleValues.volumesNumber} volume(s)</span>
               </InfoWrapper>
               <InfoWrapper>
-                <span>1 capítulo(s)</span>
+                <span>{titleValues.chaptersNumber} capítulo(s)</span>
               </InfoWrapper>
               <InfoWrapper>
-                <span>views</span>
+                <span>{titleValues.views} view(s)</span>
               </InfoWrapper>
             </InfosWrapper>
           </DetailsWrapper>
@@ -68,7 +68,7 @@ export default function TitleModal() {
             <ButtonWrapper>
               <button>salvar na lista de leitura</button>
             </ButtonWrapper>
-            <span>hq paraense muito legal</span>
+            <span>{titleValues.description}</span>
           </Description>
           <ListWrapper>
             <HeaderList>

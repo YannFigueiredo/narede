@@ -3,14 +3,31 @@ import { TitleContext } from "contexts/TitleContext";
 import { Container, CoverWrapper, InfoWrapper, DetailsWrapper } from "./styles";
 
 export default function TitleCard({
+  id,
   title,
   category,
+  description,
+  volumesNumber,
+  chaptersNumber,
+  views,
+  author,
   year, 
   cover
 }) {
-  const { setIsModalOpen } = useContext(TitleContext);
+  const { setTitleValues, setIsModalOpen } = useContext(TitleContext);
 
   const openModal = () => {
+    setTitleValues({
+      id: id,
+      title: title,
+      description: description,
+      cover: cover,
+      category: category,
+      volumesNumber: volumesNumber,
+      chaptersNumber: chaptersNumber,
+      views: views,
+      author: author
+    });
     setIsModalOpen(true);
   };
 
