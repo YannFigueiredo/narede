@@ -11,7 +11,7 @@ export const titlesList = [
   {
     id: 1,
     title: "Açaí Pesado",
-    description: "lorem ipsum",
+    description: "descrição da obra",
     volumesNumber: 0,
     chaptersNumber: 0,
     author: [],
@@ -23,7 +23,7 @@ export const titlesList = [
   {
     id: 2,
     title: "Ajuricaba",
-    description: "lorem ipsum",
+    description: "descrição da obra",
     volumesNumber: 0,
     chaptersNumber: 0,
     author: ["Ademar Vieira", "Jucylande Júnior", "Ticê Santos"],
@@ -35,7 +35,7 @@ export const titlesList = [
   {
     id: 3,
     title: "Belém Imaginária",
-    description: "lorem ipsum",
+    description: "descrição da obra",
     volumesNumber: 0,
     chaptersNumber: 0,
     author: ["Wolney Nazareno", "Fernando Augusto", "Carlos Paul", "Otoniel Oliveira"],
@@ -47,7 +47,7 @@ export const titlesList = [
   {
     id: 4,
     title: "Brega Story",
-    description: "lorem ipsum",
+    description: "descrição da obra",
     volumesNumber: 0,
     chaptersNumber: 0,
     author: ["Gidalti Júnior"],
@@ -59,7 +59,7 @@ export const titlesList = [
   {
     id: 5,
     title: "Diversidade Cultural Paraense em Quadrinhos",
-    description: "lorem ipsum",
+    description: "descrição da obra",
     volumesNumber: 0,
     chaptersNumber: 0,
     author: [],
@@ -71,7 +71,7 @@ export const titlesList = [
   {
     id: 6,
     title: "Las Cabaças: A Primeira Aventura",
-    description: "lorem ipsum",
+    description: "descrição da obra",
     volumesNumber: 0,
     chaptersNumber: 0,
     author: ["Dedê Paiva"],
@@ -83,7 +83,7 @@ export const titlesList = [
   {
     id: 7,
     title: "Vero Pexe e sua Turma",
-    description: "lorem ipsum",
+    description: "descrição da obra",
     volumesNumber: 0,
     chaptersNumber: 0,
     author: ["Luiz Paulo Jacob", "Gabriel de Jesus"],
@@ -95,7 +95,7 @@ export const titlesList = [
   {
     id: 8,
     title: "Tailus em Busca da Semente da Vida",
-    description: "lorem ipsum",
+    description: "descrição da obra",
     volumesNumber: 0,
     chaptersNumber: 0,
     author: [],
