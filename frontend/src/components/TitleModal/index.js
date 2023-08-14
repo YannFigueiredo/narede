@@ -49,6 +49,7 @@ export default function TitleModal() {
             <TitleWrapper>
               <span>{titleValues.category}</span>
               <h3>{titleValues.title}</h3>
+              <h4>uma obra de: {titleValues.author.map(author => author + " | ")}</h4>
             </TitleWrapper>
             <InfosWrapper>
               <InfoWrapper>
@@ -56,9 +57,6 @@ export default function TitleModal() {
               </InfoWrapper>
               <InfoWrapper>
                 <span>{titleValues.chaptersNumber} capítulo(s)</span>
-              </InfoWrapper>
-              <InfoWrapper>
-                <span>{titleValues.views} view(s)</span>
               </InfoWrapper>
             </InfosWrapper>
           </DetailsWrapper>
@@ -72,9 +70,6 @@ export default function TitleModal() {
           </Description>
           <ListWrapper>
             <HeaderList>
-              <select>
-                <option>volume</option>
-              </select>
               <span>Capítulos</span>
             </HeaderList>
             <List>

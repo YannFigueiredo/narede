@@ -82,6 +82,10 @@ export const TitleWrapper = styled.div`
     text-transform: uppercase;
     font-size: ${({theme}) => theme.fontSize.base};
   }
+
+  h4 {
+    color: #FFF;
+  }
 `;
 
 export const InfosWrapper = styled.div`

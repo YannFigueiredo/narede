@@ -45,7 +45,7 @@ export default function Carousel({
               category={card.category}
               year={card.year}
               cover={card.cover}
-              views={card.views}
+              author={card.author}
             />
           )
         }
