@@ -4,7 +4,10 @@ export const hqsList = [
   {
     id: 1,
     chapters: [
-      ap0101
+      {
+        name: "Volume 1 - Capítulo 1",
+        url: ap0101
+      }
     ]
   }
 ];
