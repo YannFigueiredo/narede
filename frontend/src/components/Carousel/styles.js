@@ -21,7 +21,7 @@ export const CardsWrapper = styled.div`
     display: flex;
     align-items: center;
     position: absolute;
-    z-index: 99;
+    z-index: 97;
     height: 16.25rem;
     ${({theme}) => theme.spacing.padding.big_small};
     background: rgba(0, 0, 0, .7);
@@ -52,6 +52,7 @@ export const CardsWrapper = styled.div`
   @media screen and (max-width: 600px) {
     #back-btn, #next-btn {
       opacity: 1;
+      z-index: 97;
     }
   }
 `;

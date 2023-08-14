@@ -8,11 +8,12 @@ export const Container = styled.div`
   left: 0;
   height: 100vh;
   width: 100vw;
-  padding: ${({theme}) => theme.spacing.padding.small} 0;
+  padding: ${({theme}) => theme.spacing.padding.small};
   display: flex;
   justify-content: center;
   align-items: flex-start;
   overflow-y: auto;
+  z-index: 99;
 `;
 
 export const Main = styled.div`
@@ -24,7 +25,7 @@ export const CloseButton = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  z-index: 11;
+  z-index: 99;
 
   #close-button {
     font-size: ${({theme}) => theme.fontSize.large};
@@ -59,7 +60,7 @@ export const Header = styled.header`
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, .6);
-    z-index: 10;
+    z-index: 98;
   }
 `;
 
@@ -67,7 +68,7 @@ export const DetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
-  z-index: 11;
+  z-index: 99;
 `;
 
 export const TitleWrapper = styled.div`
