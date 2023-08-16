@@ -50,7 +50,17 @@ export default function TitleModal() {
             <TitleWrapper>
               <span>{titleValues.category}</span>
               <h3>{titleValues.title}</h3>
-              <h4>uma obra de: {titleValues.author.map(author => author + " | ")}</h4>
+              <h4>
+                uma obra de: {
+                  titleValues.author.map((author, key) => {
+                    if(key >= titleValues.author.length - 1) {
+                      return author;
+                    } else {
+                      return author + " | ";
+                    }
+                  })
+                }
+              </h4>
             </TitleWrapper>
           </DetailsWrapper>
         </Header>

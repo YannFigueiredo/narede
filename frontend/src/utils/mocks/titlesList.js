@@ -11,10 +11,9 @@ export const titlesList = [
   {
     id: 1,
     title: "Açaí Pesado",
-    description: "descrição da obra",
-    author: [],
+    description: "Antologia de quadrinhos paraenses. Nesta primeira edição lançada em 2018, o coletivo Açaí Pesado deu seu primeiro passo e lançou 11 histórias, onde o único limitador seria a criatividade do autor. Histórias como A Lua e a Fera, O Som do Imigrante, e Colosso são algumas das histórias que você encontrará na edição.",
+    author: ["Vários"],
     category: "Aventura",
-    views: 0,
     cover: Logo01,
     year: "2018"
   },
