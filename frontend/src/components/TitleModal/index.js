@@ -12,7 +12,6 @@ import {
   InfoWrapper, 
   Content, 
   Description, 
-  ButtonWrapper,
   ListWrapper, 
   HeaderList, 
   List  
@@ -67,9 +66,6 @@ export default function TitleModal() {
         </Header>
         <Content>
           <Description>
-            <ButtonWrapper>
-              <button>salvar na lista de leitura</button>
-            </ButtonWrapper>
             <span>{titleValues.description}</span>
           </Description>
           <ListWrapper>
