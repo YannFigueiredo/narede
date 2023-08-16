@@ -10,7 +10,7 @@ export default function AppRoutes() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/title/:id/:vol/:chap" element={<Title />} />
+        <Route path="/title/:id/:chap" element={<Title />} />
       </Routes>
     </BrowserRouter>
   );

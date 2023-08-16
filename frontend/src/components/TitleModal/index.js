@@ -1,5 +1,6 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { TitleContext } from "contexts/TitleContext";
+import { hqsList } from "utils/mocks/hqsList";
 import { 
   Container,
   CloseButton, 
@@ -20,6 +21,7 @@ import CancelIcon from "@mui/icons-material/Cancel";
 
 export default function TitleModal() {
   const { titleValues, isModalOpen, setIsModalOpen } = useContext(TitleContext);
+  const [chaptersList, setChaptersList] = useState([]);
   const modal = useRef(null);
 
   const closeModal = () => {
@@ -31,6 +33,8 @@ export default function TitleModal() {
       global.document.body.style.overflow = "hidden";
       global.document.documentElement.style.overflow = "hidden";
       modal.current.style.display = "flex";
+
+      setChaptersList(hqsList.filter(hq => hq.id === titleValues.id));
     } else {
       global.document.body.style.overflow = "auto";
       global.document.documentElement.style.overflow = "auto";
@@ -73,7 +77,11 @@ export default function TitleModal() {
               <span>Capítulos</span>
             </HeaderList>
             <List>
-              <span>capítulo x</span>
+              {
+                chaptersList.length > 0 ? chaptersList[0].chapters.map((chapter, key) => (
+                  <a key={key} href={`/title/${titleValues.id}/${key + 1}`}>{chapter.name}</a>
+                )) : (<span>Nenhum capítulo encontrado</span>)
+              }
             </List>
           </ListWrapper>
         </Content>

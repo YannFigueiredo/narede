@@ -4,7 +4,7 @@ export const TitleContext = createContext();
 
 export default function TitleProvider({ children }) {
   const [titleValues, setTitleValues] = useState({
-    id: "",
+    id: 0,
     title: "",
     description: "",
     cover: "",
