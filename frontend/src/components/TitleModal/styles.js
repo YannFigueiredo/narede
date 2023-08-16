@@ -144,4 +144,8 @@ export const HeaderList = styled.div`
   }
 `;
 
-export const List = styled.div``;
+export const List = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({theme}) => theme.spacing.between_elements.very_small};
+`;

@@ -14,10 +14,16 @@ export default function Title() {
   }, []);
 
   useEffect(() => {
+    console.log(hq);
+    console.log(chap);
 
     if(hq.length > 0 && hq[0].chapters)
       setActualChap(hq[0].chapters[chap - 1].url);
   }, [hq]);
+
+  useEffect(() => {
+    console.log(actualChap);
+  }, [actualChap]);
 
   return(
     <Container>
