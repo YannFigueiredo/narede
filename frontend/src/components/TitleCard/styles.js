@@ -6,6 +6,7 @@ export const Container = styled.article`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.small};
+  cursor: pointer;
 `;
 
 export const CoverWrapper = styled.div`

@@ -10,8 +10,8 @@ export default function Header() {
       </ImageWrapper>
       <MenuWrapper>
         <Menu>
-          <li>Categorias</li>
-          <li>Sobre</li>
+          <li><a href="/categories">Categorias</a></li>
+          <li><a href="#">Sobre</a></li>
         </Menu>
       </MenuWrapper>
     </Container>

@@ -31,11 +31,15 @@ export const Menu = styled.ul`
 
   li {
     list-style: none;
-    color: #FFF;
     font-weight: 500;
     cursor: pointer;
     transition: all linear .3s;
     padding: ${({theme}) => theme.spacing.padding.very_small} ${({theme}) => theme.spacing.padding.small};
+  }
+
+  li a {
+    color: #FFF;
+    text-decoration: none;
   }
 
   li:hover {
