@@ -8,8 +8,6 @@ import {
   Header, 
   DetailsWrapper,
   TitleWrapper,
-  InfosWrapper, 
-  InfoWrapper, 
   Content, 
   Description, 
   ListWrapper, 
@@ -54,14 +52,6 @@ export default function TitleModal() {
               <h3>{titleValues.title}</h3>
               <h4>uma obra de: {titleValues.author.map(author => author + " | ")}</h4>
             </TitleWrapper>
-            <InfosWrapper>
-              <InfoWrapper>
-                <span>{titleValues.volumesNumber} volume(s)</span>
-              </InfoWrapper>
-              <InfoWrapper>
-                <span>{titleValues.chaptersNumber} capítulo(s)</span>
-              </InfoWrapper>
-            </InfosWrapper>
           </DetailsWrapper>
         </Header>
         <Content>

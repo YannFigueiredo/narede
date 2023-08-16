@@ -9,8 +9,6 @@ export default function TitleProvider({ children }) {
     description: "",
     cover: "",
     category: "",
-    volumesNumber: 0,
-    chaptersNumber: 0,
     views: 0,
     author: []
   });

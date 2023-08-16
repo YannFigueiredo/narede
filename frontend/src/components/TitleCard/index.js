@@ -7,8 +7,6 @@ export default function TitleCard({
   title,
   category,
   description,
-  volumesNumber,
-  chaptersNumber,
   views,
   author,
   year, 
@@ -23,8 +21,6 @@ export default function TitleCard({
       description: description,
       cover: cover,
       category: category,
-      volumesNumber: volumesNumber,
-      chaptersNumber: chaptersNumber,
       views: views,
       author: author
     });
