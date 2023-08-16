@@ -43,7 +43,7 @@ export default function Categories() {
   return(
     <Container>
       <Main>
-        <Selector>
+        <Selector active={activeCategory + 1}>
           {
             categories && categories.length > 0 && categories.map((category, key) => (
               <Button 
