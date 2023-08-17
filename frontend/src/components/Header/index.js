@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, ImageWrapper, MenuWrapper, Menu } from "./styles";
 import Logo from "assets/images/logo.png";
+import LoginIcon from "@mui/icons-material/Login";
 
 export default function Header() {
   return(
@@ -10,9 +11,13 @@ export default function Header() {
       </ImageWrapper>
       <MenuWrapper>
         <Menu>
-          <li><a href="/categories">Categorias</a></li>
+          <li><a href="/categories">Biblioteca</a></li>
+          <li><a href="#">Leitor</a></li>
+          <li><a href="#">Produtor</a></li>
+          <li><a href="#">Blog</a></li>
           <li><a href="#">Sobre</a></li>
         </Menu>
+        <LoginIcon />
       </MenuWrapper>
     </Container>
   );

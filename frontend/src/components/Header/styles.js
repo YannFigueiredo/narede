@@ -20,7 +20,21 @@ export const ImageWrapper = styled.a`
 `;
 
 export const MenuWrapper = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: ${({theme}) => theme.spacing.between_elements.normal};
 
+  svg {
+    font-size: 28px;
+    fill: rgba(255, 255, 255, .7);
+    cursor: pointer;
+    transition: all linear .3s;
+  }
+
+  svg:hover {
+    fill: rgba(255, 255, 255, 1);
+  }
 `;
 
 export const Menu = styled.ul`
