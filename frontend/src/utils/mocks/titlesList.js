@@ -20,71 +20,64 @@ export const titlesList = [
   {
     id: 2,
     title: "Ajuricaba",
-    description: "descrição da obra",
+    description: "A ocupação europeia na Amazônia e o avanço do colonialismo português foi marcado pelo genocídio de centenas de povos nativos. Após anos de conflitos, massacres, doenças e escravização, a resposta indígena veio à altura, com o surgimento de um grande líder oriundo da maior nação guerreira da selva, os manaos, Ajuricaba, um jovem corajoso e inteligente que foi capaz de reunir mais de 30 tribos contra as investidas da coroa portuguesa e conseguiu impedir, durante cinco anos, a expansão do projeto colonial português em toda a calha do Rio Negro. Seus feitos épicos e sua bravura nunca foram esquecidos e é por isso que, hoje, a capital do Amazonas se chama Manaus, em homenagem a ele e ao povo que deu a vida pela liberdade.",
     author: ["Ademar Vieira", "Jucylande Júnior", "Ticê Santos"],
     category: "Aventura",
-    views: 0,
     cover: Logo02,
     year: "2020"
   },
   {
     id: 3,
     title: "Belém Imaginária",
-    description: "descrição da obra",
+    description: "A trama se inicia quando Saulo, um menino da capital paraense, acorda numa Belém completamente diferente, onde animais andam, falam e se vestem como humanos. Surpreso, ele logo chama a atenção dos malandros locais, que o perseguem. O menino é salvo por um enorme Peixe-Boi, a pedido de Iaçá, uma bela indiazinha inspirada na lenda da menina mágica que dá origem ao açaí, que passa a ser sua protetora. Na companhia do macaquinho Enilson, ela fará de tudo para levar Saulo de volta ao seu mundo. Mas não será fácil. A única criatura que pode ajudar nessa missão é a Boiúna, uma cobra gigantesca e poderosa que vive sob a cidade. No entanto, para chegar até ela, os novos amigos terão que enfrentar perigos como o gigantesco Mapinguary e a bruxa Maria Cipó, que quer o corpo de Saulo para abrigar sua alma.",
     author: ["Wolney Nazareno", "Fernando Augusto", "Carlos Paul", "Otoniel Oliveira"],
     category: "Folclore",
-    views: 0,
     cover: Logo03,
     year: "2004"
   },
   {
     id: 4,
     title: "Brega Story",
-    description: "descrição da obra",
+    description: "Brega Story é uma graphic novel escrita e desenhada por Gidalti Jr., ganhador do primeiro prêmio Jabuti de Quadrinhos em 2017 com o álbum de quadrinhos Castanha do Pará. Brega Story é um quadrinho brasileiro ambientado nos bastidores do universo da cena da música brega de Belém do Pará. Esse livro de quadrinhos tem capa dura, 320 páginas, sendo que 32 são coloridas e as demais em preto e branco. A edição foi impressa em papel pólen, possui fitilho marcador de páginas e pintura trilateral nas páginas na cor amarela. O design da capa ficou por conta do Victor Marcello e a edição foi coordenada pelo Lobo. Esse romance gráfico foi produzido com o apoio do Proac Quadrinhos, da Secretaria de Cultura do Estado de São Paulo.",
     author: ["Gidalti Júnior"],
     category: "Romance",
-    views: 0,
     cover: Logo04,
     year: "2017"
   },
   {
     id: 5,
     title: "Diversidade Cultural Paraense em Quadrinhos",
-    description: "descrição da obra",
-    author: [],
+    description: "Compilado com as histórias ganhadoras da 3ª semana do quadrinho nacional.",
+    author: ["Sérnio dos Anjos", "Angela Ousinho", "Felipe Garcia", "Diogo Ferreira", "Markynson Rocha", "Andressa Munhoz", "Laércio Júnior"],
     category: "Cultura",
-    views: 0,
     cover: Logo05,
     year: "2017"
   },
   {
     id: 6,
     title: "Las Cabaças: A Primeira Aventura",
-    description: "descrição da obra",
+    description: "Revista em quadrinhos estrelada por Marina Quinan e Juliana Balsalobre, que são atrizes, palhaças e arte-educadoras. Formadas pelo Teatro-Escola Célia Helena/SP em 1995. Foram professoras de teatro para crianças e adolescentes na Casa do Teatro-SP de 1994 a 2000 e atuaram nos hospitais junto aos Doutores da Alegria de SP de 2000/2001 até 2008.",
     author: ["Dedê Paiva"],
     category: "Comédia",
-    views: 0,
     cover: Logo06,
     year: "2000"
   },
   {
     id: 7,
     title: "Vero Pexe e sua Turma",
-    description: "descrição da obra",
+    description: "Quadrinho resultado de incentivo do governo, através da Fundação Cultural do Pará Tancredo Neves, para a produção local de quadrinhos, com o lançamento do chamado Edital de Arte.",
     author: ["Luiz Paulo Jacob", "Gabriel de Jesus"],
     category: "Comédia",
-    views: 0,
     cover: Logo07,
     year: "1989"
   },
   {
     id: 8,
     title: "Tailus em Busca da Semente da Vida",
-    description: "descrição da obra",
-    author: [],
+    description: "Quadrinho paraense",
+    author: ["Woylle Masaki"],
     category: "Ação",
-    views: 0,
     cover: Logo08,
-    year: "2010"
+    year: "2021"
   }
 ];

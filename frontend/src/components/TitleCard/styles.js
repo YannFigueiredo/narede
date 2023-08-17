@@ -6,13 +6,13 @@ export const Container = styled.article`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.small};
-  cursor: pointer;
 `;
 
 export const CoverWrapper = styled.div`
   width: 100%;
   height: 16.25rem;
   position: relative;
+  cursor: pointer;
 
   img {
     width: 100%;

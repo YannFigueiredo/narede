@@ -60,6 +60,7 @@ export default function Categories() {
               <TitleCard 
                 key={key}
                 id={title.id}
+                title={title.title}
                 category={title.category}
                 description={title.description}
                 volumesNumber={title.volumesNumber}
