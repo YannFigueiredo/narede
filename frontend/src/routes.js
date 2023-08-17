@@ -11,8 +11,8 @@ export default function AppRoutes() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/title/:id/:chap" element={<Title />} />
-        <Route path="/categories" element={<Categories />} />
+        <Route path="/quadrinho/:id/:chap" element={<Title />} />
+        <Route path="/biblioteca" element={<Categories />} />
       </Routes>
     </BrowserRouter>
   );

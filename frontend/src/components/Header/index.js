@@ -11,7 +11,7 @@ export default function Header() {
       </ImageWrapper>
       <MenuWrapper>
         <Menu>
-          <li><a href="/categories">Biblioteca</a></li>
+          <li><a href="/biblioteca">Biblioteca</a></li>
           <li><a href="#">Leitor</a></li>
           <li><a href="#">Produtor</a></li>
           <li><a href="#">Blog</a></li>

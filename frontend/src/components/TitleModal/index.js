@@ -75,7 +75,7 @@ export default function TitleModal() {
             <List>
               {
                 chaptersList.length > 0 ? chaptersList[0].chapters.map((chapter, key) => (
-                  <a key={key} href={`/title/${titleValues.id}/${key + 1}`}>{chapter.name}</a>
+                  <a key={key} href={`/quadrinho/${titleValues.id}/${key + 1}`}>{chapter.name}</a>
                 )) : (<span>Nenhum capítulo encontrado</span>)
               }
             </List>
