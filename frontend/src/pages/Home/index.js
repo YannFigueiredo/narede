@@ -9,8 +9,8 @@ export default function Home() {
   return(
     <Container>
       <Intro />
-      <MostPopular />
       <MostRecent />
+      <MostPopular />
       <TitleModal />
     </Container>
   );

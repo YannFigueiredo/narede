@@ -11,7 +11,7 @@ export default function TitleCard({
   author,
   year, 
   cover,
-  variation = "large"
+  variation = "medium"
 }) {
   const { setTitleValues, setIsModalOpen } = useContext(TitleContext);
 

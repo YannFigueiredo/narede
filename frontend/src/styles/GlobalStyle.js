@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      font-family: "Roboto", sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-weight: 400;
       color: #FFF;
   }
@@ -15,7 +15,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3 {
-    font-family: "Comic Neue", sans-serif;
     font-weight: 700;
   }
 
@@ -25,5 +24,9 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-size: ${({theme}) => theme.fontSize.large};
+  }
+
+  h3 {
+    font-size: ${({theme}) => theme.fontSize.base};
   }
 `;

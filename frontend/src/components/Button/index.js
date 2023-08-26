@@ -3,10 +3,12 @@ import { Container } from "./styles";
 
 export default function Button({
   text,
-  onClick
+  onClick,
+  background,
+  color
 }) {
   return(
-    <Container onClick={onClick}>
+    <Container onClick={onClick} background={background} color={color}>
       {text}
     </Container>
   );

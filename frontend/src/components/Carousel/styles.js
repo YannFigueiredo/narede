@@ -22,7 +22,7 @@ export const CardsWrapper = styled.div`
     align-items: center;
     position: absolute;
     z-index: 97;
-    height: 16.25rem;
+    height: 15rem;
     ${({theme}) => theme.spacing.padding.big_small};
     background: rgba(0, 0, 0, .7);
 
@@ -35,10 +35,12 @@ export const CardsWrapper = styled.div`
 
   #back-btn {
     left: 0;
+    border-radius: 1.875rem 0 0 1.875rem;
   }
 
   #next-btn {
     right: 0;
+    border-radius: 0 1.875rem 1.875rem 0;
   }
 
   #back-btn svg:hover, #next-btn svg:hover {

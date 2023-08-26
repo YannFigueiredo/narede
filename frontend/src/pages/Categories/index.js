@@ -13,6 +13,10 @@ export default function Categories() {
   useEffect(() => {
     setCategories([
       {
+        name: "Todos",
+        titles: titlesList
+      },
+      {
         name: "Aventura",
         titles: titlesList.filter(title => title.category === "Aventura")
       },
@@ -37,7 +41,6 @@ export default function Categories() {
         titles: titlesList.filter(title => title.category === "Ação")
       }
     ]);
-    console.log(categories);
   }, []);
 
   return(
@@ -50,6 +53,8 @@ export default function Categories() {
                 key={key}
                 text={category.name}
                 onClick={() => setActiveCategory(key)}
+                background="#FFF"
+                color="#212A4F"
               />
             ))
           }
@@ -68,6 +73,7 @@ export default function Categories() {
                 author={title.author}
                 year={title.year}
                 cover={title.cover}
+                variation={key % 2 === 0 ? "medium" : "large"}
               />
             ))
           }
