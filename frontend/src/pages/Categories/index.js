@@ -73,7 +73,7 @@ export default function Categories() {
                 author={title.author}
                 year={title.year}
                 cover={title.cover}
-                variation={key % 2 === 0 ? "medium" : "large"}
+                variation="none"
               />
             ))
           }

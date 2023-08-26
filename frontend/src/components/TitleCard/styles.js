@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.article`
   width: ${({ variation }) => {
-    return variation === "small" ? "10rem" : variation === "medium" ? "11rem" : "12.5rem";
+    return variation === "small" ? "10rem" : variation === "medium" ? "11rem" : variation === "large" ? "12.5rem" : "auto";
   }}; 
   height: 100%;
   display: flex;
@@ -13,8 +13,9 @@ export const Container = styled.article`
 export const CoverWrapper = styled.div`
   width: 100%;
   height: ${({ variation }) => {
-    return variation === "small" ? "13rem" : variation === "medium" ? "15rem" : "16.25rem";
+    return variation === "small" ? "13rem" : variation === "medium" ? "15rem" : variation === "large" ? "16.25rem" : "auto";
   }};
+  max-height: 20rem;
   position: relative;
   cursor: pointer;
   border-radius: 30px;

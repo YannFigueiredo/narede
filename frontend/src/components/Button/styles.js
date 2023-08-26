@@ -11,6 +11,10 @@ export const Container = styled.button`
   font-weight: 700;
 
   &:hover {
-    background: linear-gradient(to right, ${({theme}) => theme.colors.primaryGradient}, ${({theme}) => theme.colors.secondaryGradient});
+    background: linear-gradient(
+      to right, 
+      ${({theme}) => theme.colors.primaryGradient}, 
+      ${({theme}) => theme.colors.secondaryGradient}
+    );
   }
 `;

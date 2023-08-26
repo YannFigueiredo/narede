@@ -19,8 +19,8 @@ export const Selector = styled.div`
 `;
 
 export const TitlesArea = styled.div`
-  display: flex;
-  gap: 0 ${({theme}) => theme.spacing.between_elements.between_cards};
-  flex-wrap: wrap;
-  align-items: flex-;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 `;
