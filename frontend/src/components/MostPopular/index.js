@@ -8,7 +8,7 @@ export default function MostPopular() {
   return(
     <Container>
       <TitleWrapper>
-        <h2>Mais populares</h2>
+        <h2>Top: Quadrinhos mais populares</h2>
       </TitleWrapper>
       <Carousel cards={titlesList} />
     </Container>

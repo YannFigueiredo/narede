@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: ${({theme}) => theme.spacing.padding.small};
+  padding: 0 ${({theme}) => theme.spacing.padding.small};
 `;

@@ -6,12 +6,18 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
-  background: ${({theme}) => theme.colors.gray["100"]};
-  padding: ${({theme}) => theme.spacing.padding.small};
+  background: #FFF;
+  padding: ${({theme}) => theme.spacing.padding.large};
+
+  span {
+    font-size: ${({theme}) => theme.fontSize.base_large};
+    color: ${({theme}) => theme.colors.blue["500"]};
+    font-weight: 700;
+  }
 `;
 
 export const ImageWrapper = styled.div`
-  max-width: 350px;
+  max-width: 17.5rem;
 
   img {
     width: 100%;

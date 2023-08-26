@@ -7,4 +7,5 @@ export const Container = styled.div`
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
   position: relative;
+  padding-bottom: ${({theme}) => theme.spacing.padding.small};
 `;

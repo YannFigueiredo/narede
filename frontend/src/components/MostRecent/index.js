@@ -8,7 +8,7 @@ export default function MostRecent() {
   return(
     <Container>
       <TitleWrapper>
-        <h2>Mais recentes</h2>
+        <h2>Novidades</h2>
       </TitleWrapper>
       <Carousel cards={titlesList} />
     </Container>

@@ -10,7 +10,8 @@ export default function TitleCard({
   views,
   author,
   year, 
-  cover
+  cover,
+  variation = "large"
 }) {
   const { setTitleValues, setIsModalOpen } = useContext(TitleContext);
 
@@ -28,8 +29,8 @@ export default function TitleCard({
   };
 
   return(
-    <Container>
-      <CoverWrapper onClick={openModal}>
+    <Container variation={variation}>
+      <CoverWrapper variation={variation} onClick={openModal}>
         <img src={cover} alt="Capa da HQ" />
         <InfoWrapper>
           <span>{category}</span>
