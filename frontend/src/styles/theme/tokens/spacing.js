@@ -12,10 +12,13 @@ const spacing = {
     very_small: "0.625rem", //10px
     small: "1rem", //16px
     normal: "1.25rem", //20px
-    large: "2rem" //32px
+    large: "2rem", //32px
+    very_large: "4rem" // 64px
   },
   radius: {
-    small: "0.5rem" //8px
+    very_small: "0.3125rem", //5px
+    small: "0.5rem", //8px
+    normal: "1rem" //16px
   }
 };
 
