@@ -4,6 +4,7 @@ import Header from "components/Header";
 import Home from "pages/Home";
 import Title from "pages/Title";
 import Categories from "pages/Categories";
+import Reader from "pages/Reader";
 
 export default function AppRoutes() {
   return(
@@ -13,6 +14,7 @@ export default function AppRoutes() {
         <Route path="/" element={<Home />}/>
         <Route path="/quadrinho/:id/:chap" element={<Title />} />
         <Route path="/biblioteca" element={<Categories />} />
+        <Route path="/leitor" element={<Reader />} />
       </Routes>
     </BrowserRouter>
   );

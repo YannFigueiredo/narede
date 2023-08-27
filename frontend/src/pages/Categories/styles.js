@@ -20,7 +20,8 @@ export const Selector = styled.div`
 
 export const TitlesArea = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr;
+  grid-auto-rows: auto;
+  grid-auto-flow: row dense;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 `;
