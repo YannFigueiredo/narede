@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container } from "components/Container/page";
 import { Main, ContentWrapper, Tabs, Content } from "./styles";
 import List from "./components/List";
+import Options from "./components/Options";
 
 export default function Reader() {
   const [tab, setTab] = useState(0);
@@ -92,7 +93,7 @@ export default function Reader() {
             }
             {
               tab === 2 &&
-              <></>
+              <Options />
             }
           </Content>
         </ContentWrapper>
