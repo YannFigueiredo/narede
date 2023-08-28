@@ -74,7 +74,6 @@ export const Tabs = styled.nav`
 
   .selected {
     background: ${({theme}) => theme.colors.blue["100"]};
-    position: relative;
   }
 `;
 
