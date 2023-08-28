@@ -14,7 +14,7 @@ export const Selector = styled.div`
    color:  ${({theme}) => theme.colors.blue["100"]};
 
    button:nth-child(${(props) => props.active}) {
-    background: linear-gradient(to right, ${({theme}) => theme.colors.primaryGradient}, ${({theme}) => theme.colors.secondaryGradient});
+    background: rgb(100, 204, 233);
    }
 `;
 

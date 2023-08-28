@@ -53,8 +53,7 @@ export default function Categories() {
                 key={key}
                 text={category.name}
                 onClick={() => setActiveCategory(key)}
-                background="#FFF"
-                color="#212A4F"
+                variant="tab"
               />
             ))
           }

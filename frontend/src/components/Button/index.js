@@ -4,11 +4,16 @@ import { Container } from "./styles";
 export default function Button({
   text,
   onClick,
-  background,
-  color
+  variant,
+  freeSize = true,
+  width
 }) {
   return(
-    <Container onClick={onClick} background={background} color={color}>
+    <Container 
+      onClick={onClick} 
+      variant={variant} 
+      width={freeSize ? "auto" : width}
+    >
       {text}
     </Container>
   );
