@@ -6,6 +6,7 @@ import Title from "pages/Title";
 import Categories from "pages/Categories";
 import Reader from "pages/Reader";
 import Producer from "pages/Producer";
+import Blog from "pages/Blog";
 
 export default function AppRoutes() {
   return(
@@ -17,6 +18,7 @@ export default function AppRoutes() {
         <Route path="/biblioteca" element={<Categories />} />
         <Route path="/leitor" element={<Reader />} />
         <Route path="/produtor" element={<Producer />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </BrowserRouter>
   );

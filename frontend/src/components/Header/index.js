@@ -39,7 +39,7 @@ export default function Header() {
           <li><a href="/biblioteca">Biblioteca</a></li>
           <li><a href="/leitor">Leitor</a></li>
           <li><a href="/produtor">Produtor</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="/blog">Blog</a></li>
           <li><a href="#">Sobre</a></li>
           <CancelIcon id="menu-close" onClick={closeMenu} />
         </Menu>

@@ -6,13 +6,15 @@ export default function Button({
   onClick,
   variant,
   freeSize = true,
-  width
+  width,
+  isUppercase = false
 }) {
   return(
     <Container 
       onClick={onClick} 
       variant={variant} 
       width={freeSize ? "auto" : width}
+      isUppercase={isUppercase}
     >
       {text}
     </Container>
