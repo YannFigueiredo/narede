@@ -11,12 +11,16 @@ export const Main = styled.main`
   gap: ${({theme}) => theme.spacing.between_elements.normal}; 
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  text-transform: uppercase;
+  color: ${({theme}) => theme.colors.blue["100"]}; 
+`;
 
 export const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   gap: ${({theme}) => theme.spacing.between_elements.normal}; 
+  width: 100%;
 `;
 
 export const Top = styled.aside`
