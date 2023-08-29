@@ -37,8 +37,8 @@ export default function Header() {
       <MenuWrapper>
         <Menu ref={menu}>
           <li><a href="/biblioteca">Biblioteca</a></li>
-          <li><a href="#">Leitor</a></li>
-          <li><a href="#">Produtor</a></li>
+          <li><a href="/leitor">Leitor</a></li>
+          <li><a href="/produtor">Produtor</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Sobre</a></li>
           <CancelIcon id="menu-close" onClick={closeMenu} />
