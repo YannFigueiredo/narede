@@ -5,6 +5,7 @@ import Home from "pages/Home";
 import Title from "pages/Title";
 import Categories from "pages/Categories";
 import Reader from "pages/Reader";
+import Producer from "pages/Producer";
 
 export default function AppRoutes() {
   return(
@@ -15,6 +16,7 @@ export default function AppRoutes() {
         <Route path="/quadrinho/:id/:chap" element={<Title />} />
         <Route path="/biblioteca" element={<Categories />} />
         <Route path="/leitor" element={<Reader />} />
+        <Route path="/produtor" element={<Producer />} />
       </Routes>
     </BrowserRouter>
   );
