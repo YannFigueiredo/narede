@@ -11,7 +11,8 @@ export default function TitleCard({
   author,
   year, 
   cover,
-  variation = "medium"
+  variation = "medium",
+  withTitle = true
 }) {
   const { setTitleValues, setIsModalOpen } = useContext(TitleContext);
 
@@ -37,9 +38,11 @@ export default function TitleCard({
           <span>{year}</span>
         </InfoWrapper>
       </CoverWrapper>
-      <DetailsWrapper>
-        <h3>{title}</h3>
-      </DetailsWrapper>
+      {withTitle &&
+        <DetailsWrapper>
+          <h3>{title}</h3>
+        </DetailsWrapper>
+      }
     </Container>
   );
 }
