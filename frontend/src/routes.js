@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "components/Header";
+import Footer from "components/Footer";
 import Home from "pages/Home";
 import Title from "pages/Title";
 import Categories from "pages/Categories";
@@ -24,6 +25,7 @@ export default function AppRoutes() {
         <Route path="/sobre" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
