@@ -46,6 +46,7 @@ export default function Carousel({
               year={card.year}
               cover={card.cover}
               author={card.author}
+              variation="large"
             />
           )
         }

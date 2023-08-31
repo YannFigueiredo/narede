@@ -9,7 +9,7 @@ export const CardsWrapper = styled.div`
   grid-template-columns: repeat(20, auto);
   grid-template-rows: auto;
   overflow-x: hidden;
-  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  gap: ${({theme}) => theme.spacing.between_elements.between_items};
 
   &:hover #back-btn, &:hover #next-btn {
     opacity: 1;
@@ -22,7 +22,7 @@ export const CardsWrapper = styled.div`
     align-items: center;
     position: absolute;
     z-index: 97;
-    height: 15rem;
+    height: 16.25rem;
     ${({theme}) => theme.spacing.padding.big_small};
     background: rgba(0, 0, 0, .7);
 
@@ -35,12 +35,10 @@ export const CardsWrapper = styled.div`
 
   #back-btn {
     left: 0;
-    border-radius: 1.875rem 0 0 1.875rem;
   }
 
   #next-btn {
     right: 0;
-    border-radius: 0 1.875rem 1.875rem 0;
   }
 
   #back-btn svg:hover, #next-btn svg:hover {
