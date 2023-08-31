@@ -7,6 +7,7 @@ import {
 } from "./styles";
 import Button from "components/Button";
 import GenericPicture from "assets/images/generic-user.png";
+import Input from "components/Input";
 
 export default function Options() {
   return(
@@ -36,7 +37,7 @@ export default function Options() {
         <span className="option-label">
           Novo nome de exibição
         </span>
-        <input type="text" />
+        <Input />
         <Button 
           text="Confirmar"
           variant="blue"
@@ -52,7 +53,7 @@ export default function Options() {
         <span className="option-label">
           Novo e-mail
         </span>
-        <input type="text" />
+        <Input />
         <Button 
           text="Confirmar"
           variant="blue"
@@ -66,15 +67,15 @@ export default function Options() {
         <span className="option-label">
           Senha atual
         </span>
-        <input type="text" />
+        <Input />
         <span className="option-label">
           Nova senha
         </span>
-        <input type="text" />
+        <Input />
         <span className="option-label">
           Senha de confirmação
         </span>
-        <input type="text" />
+        <Input />
         <Button 
           text="Confirmar"
           variant="blue"
