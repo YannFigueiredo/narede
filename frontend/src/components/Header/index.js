@@ -63,8 +63,6 @@ export default function Header() {
 
   useEffect(() => updateActualPage(), [actualPage.pathname]);
 
-  useEffect(() => updateActualPage(console.log(isLogged)), [isLogged]);
-
   return(
     <Container variant={actualPage.pathname === "/" ? "home" : "others"}>
       {
@@ -77,7 +75,7 @@ export default function Header() {
       {
         actualPage.pathname === "/" &&
         <MenuWrapper>
-          <Menu ref={menu}>
+          <Menu ref={menu} variant={actualPage.pathname === "/" ? "home" : "others"}>
             <li>
               <a href="/" className={actualPage.pathname === "/" ? "active" : ""}>
                 Página inicial
@@ -141,9 +139,9 @@ export default function Header() {
       <SessionManager>
         {
           isLogged &&
-          <Menu id="logged-container">
+          <Menu id="logged-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
             <li>
-              <a href="#">fulandodetal</a>
+              <a href="#">fulanodetal</a>
               <img src={GenericUser} alt="Foto de perfil" />
             </li>
             <li><a href="#" onClick={exit}>Sair</a></li>
@@ -151,7 +149,7 @@ export default function Header() {
         }
         {
           isLogged === false &&
-          <Menu>
+          <Menu variant={actualPage.pathname === "/" ? "home" : "others"}>
             <li><a href="#" onClick={login}>Entrar</a></li>
             <li><a href="#">Criar conta</a></li>
           </Menu>

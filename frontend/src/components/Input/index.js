@@ -8,8 +8,9 @@ export default function Input({
   isSearch = false
 }) {
   return(
-    <Container width={width}>
+    <Container width={width} isSearch={isSearch}>
       <InputWrapper 
+        isSearch={isSearch}
         placeholder={placeholder}
       />
       {isSearch &&

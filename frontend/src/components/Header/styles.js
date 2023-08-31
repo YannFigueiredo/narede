@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.header`
   background: 
   ${({variant, theme}) => {
-    return variant === "home" ? theme.colors.blue["900"] : theme.colors.gray["100"];
+    return variant === "home" ? theme.colors.blue["900"] : "#FFF";
   }};
   display: flex;
   align-items: center;
@@ -72,6 +72,7 @@ export const Menu = styled.ul`
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.very_small};
   text-transform: uppercase;
+  min-height: 60px;
 
   li {
     list-style: none;
@@ -83,13 +84,23 @@ export const Menu = styled.ul`
 
   li a {
     transition: all linear .3s;
-    color: rgba(255, 255, 255, .7);
+    color: 
+    ${({variant, theme}) => {
+    return variant === "home" ? "rgba(255, 255, 255, .7)" : theme.colors.blue["900"];
+  }};
     text-decoration: none;
     font-size: ${({theme}) => theme.fontSize.regular};
+    font-weight: 
+    ${({variant}) => {
+    return variant === "home" ? 400 : 700;
+  }};
   }
 
   li a:hover, li .active {
-    color: rgba(255, 255, 255, 1);
+    color: 
+    ${({variant, theme}) => {
+    return variant === "home" ? "rgba(255, 255, 255, 1)" : theme.colors.blue["400"];
+  }};
     font-weight: 700;
   }
 

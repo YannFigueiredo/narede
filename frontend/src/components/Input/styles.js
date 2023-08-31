@@ -3,12 +3,15 @@ import styled from "styled-components";
 export const Container = styled.div`
   border: 1px solid ${({theme}) => theme.colors.primary};
   width: ${(props) => props.width};
-  border-radius: ${({theme}) => theme.spacing.radius.small};
+  border-radius: ${({theme, isSearch}) => isSearch ? "20px" : theme.spacing.radius.small};
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #FFF;
+  max-width: 17.5rem;
+  width: 100%;
+  background: 
+  ${({isSearch, theme}) => isSearch ? theme.colors.blue["400"] : "#FFF"};
 `;
 
 export const InputWrapper = styled.input`
@@ -17,10 +20,16 @@ export const InputWrapper = styled.input`
   width: 100%;
   height: 100%;
   padding: ${({theme}) => theme.spacing.padding.very_small};
-  font-size: ${({theme}) => theme.fontSize.base};
+  font-size: ${({theme}) => theme.fontSize.regular};
+  color: ${({isSearch, theme}) => isSearch ? "#FFF" : theme.colors.blue["900"]};
 
   &:focus {
     outline: none;
+  }
+
+  &::placeholder {
+    color: ${({isSearch}) => isSearch ? "#FFF" : "rgba(255, 255, 255, .7)"};
+    font-size: ${({theme}) => theme.fontSize.small};
   }
 `;
 
