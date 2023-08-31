@@ -49,7 +49,7 @@ export const MenuWrapper = styled.nav`
     top: 0;
     right: 0;
     fill: rgba(255, 255, 255, .7);
-    z-index: 999;
+    z-index: 9999;
     font-size: ${({theme}) => theme.fontSize.very_large};
     cursor: pointer;
     margin: ${({theme}) => theme.spacing.padding.normal} ${({theme}) => theme.spacing.padding.normal} 0 0;

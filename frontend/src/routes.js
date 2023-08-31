@@ -8,6 +8,7 @@ import Reader from "pages/Reader";
 import Producer from "pages/Producer";
 import Blog from "pages/Blog";
 import About from "pages/About";
+import NotFound from "pages/NotFound";
 
 export default function AppRoutes() {
   return(
@@ -21,6 +22,7 @@ export default function AppRoutes() {
         <Route path="/produtor" element={<Producer />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/sobre" element={<About />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
