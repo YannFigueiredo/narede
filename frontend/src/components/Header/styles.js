@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  background: ${({theme}) => theme.colors.primary};
+  background: 
+  ${({variant, theme}) => {
+    return variant === "home" ? theme.colors.blue["900"] : theme.colors.gray["100"];
+  }};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,13 +12,23 @@ export const Container = styled.header`
   padding: ${({theme}) => theme.spacing.padding.small};
 `;
 
-export const ImageWrapper = styled.a`
-  max-width: 5.3125rem;
-  max-height: auto;
+export const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({theme}) => theme.spacing.between_elements.between_items};
 
   img {
+    max-width: 11rem;
     width: 100%;
     height: auto;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    color: ${({theme}) => theme.colors.blue["400"]};
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 1;
   }
 `;
 
@@ -24,17 +37,6 @@ export const MenuWrapper = styled.nav`
   justify-content: center;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.normal};
-
-  svg {
-    font-size: ${({theme}) => theme.fontSize.large};
-    fill: rgba(255, 255, 255, .7);
-    cursor: pointer;
-    transition: all linear .3s;
-  }
-
-  svg:hover {
-    fill: rgba(255, 255, 255, 1);
-  }
 
   #menu-open {
     display: none;
@@ -68,7 +70,8 @@ export const Menu = styled.ul`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: ${({theme}) => theme.spacing.between_elements.between_items};
+  gap: ${({theme}) => theme.spacing.between_elements.very_small};
+  text-transform: uppercase;
 
   li {
     list-style: none;
@@ -79,12 +82,20 @@ export const Menu = styled.ul`
   }
 
   li a {
-    color: #FFF;
+    transition: all linear .3s;
+    color: rgba(255, 255, 255, .7);
     text-decoration: none;
+    font-size: ${({theme}) => theme.fontSize.regular};
   }
 
-  li:hover {
-    background: linear-gradient(to right, ${({theme}) => theme.colors.primaryGradient}, ${({theme}) => theme.colors.secondaryGradient});
+  li a:hover, li .active {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+  }
+
+  li img {
+    max-width: 40px;
+    border-radius: 50%;
   }
 
   @media screen and (max-width: 600px) {
@@ -108,6 +119,16 @@ export const Menu = styled.ul`
 
     li a {
       font-size: ${({theme}) => theme.fontSize.large};
+    }
+  }
+`;
+
+export const SessionManager = styled.div`
+  #logged-container {
+    li:nth-child(1) {
+      display: flex;
+      align-items: center;
+      gap: ${({theme}) => theme.spacing.between_elements.small};
     }
   }
 `;

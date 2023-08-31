@@ -16,7 +16,9 @@ export const Container = styled.div`
 
 export const ComicsWrapper = styled.div`
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
+  overflow: hidden;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 `;
 

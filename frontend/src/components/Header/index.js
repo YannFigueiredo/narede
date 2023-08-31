@@ -1,13 +1,32 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Container, ImageWrapper, MenuWrapper, Menu } from "./styles";
+import { 
+  Container, 
+  ImageWrapper, 
+  MenuWrapper, 
+  Menu,
+  SessionManager 
+} from "./styles";
 import Logo from "assets/images/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelIcon from "@mui/icons-material/Cancel";
-import LoginIcon from "@mui/icons-material/Login";
+import Input from "components/Input";
+import GenericUser from "assets/images/generic-user.png";
 
 export default function Header() {
   const menu = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [actualPage, setActualPage] = useState("");
+  const [isLogged, setIsLogged] = useState(global.localStorage.getItem("logged") === "true" ? true : false);
+
+  const login = () => {
+    global.localStorage.setItem("logged", "true");
+    setIsLogged(global.localStorage.getItem("logged") === "true" ? true : false);
+  };
+
+  const exit = () => {
+    global.localStorage.setItem("logged", "false");
+    setIsLogged(global.localStorage.getItem("logged") === "false" ? false : true);
+  };
 
   const openMenu = () => {
     setIsMenuOpen(true);
@@ -17,6 +36,17 @@ export default function Header() {
   const closeMenu = () => {
     setIsMenuOpen(false);
     menu.current.style.display = "none";
+  };
+
+  const updateActualPage = () => {
+    setActualPage({
+      pathname: global.window.location.pathname,
+      pageTitle: 
+      actualPage.pathname === "/catalogo" ? "Catálogo" : 
+        actualPage.pathname === "/leitor" ? "Leitor" :
+          actualPage.pathname === "/produtor" ? "Produtor" :
+            actualPage.pathname === "/blog" ? "Blog" : "Sobre nós" 
+    });
   };
 
   useEffect(() => {
@@ -29,23 +59,104 @@ export default function Header() {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => updateActualPage(), []);
+
+  useEffect(() => updateActualPage(), [actualPage.pathname]);
+
+  useEffect(() => updateActualPage(console.log(isLogged)), [isLogged]);
+
   return(
-    <Container>
-      <ImageWrapper href="/">
-        <img src={Logo} alt="Logo do site Nave HQ"/>
-      </ImageWrapper>
-      <MenuWrapper>
-        <Menu ref={menu}>
-          <li><a href="/biblioteca">Biblioteca</a></li>
-          <li><a href="/leitor">Leitor</a></li>
-          <li><a href="/produtor">Produtor</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="#">Sobre</a></li>
-          <CancelIcon id="menu-close" onClick={closeMenu} />
-        </Menu>
-        <MenuIcon id="menu-open" onClick={openMenu} />
-        <LoginIcon />
-      </MenuWrapper>
+    <Container variant={actualPage.pathname === "/" ? "home" : "others"}>
+      {
+        actualPage.pathname !== "/" &&
+        <ImageWrapper>
+          <a href="/"><img src={Logo} alt="Logo do site Nave HQ"/></a>
+          <h1>{actualPage.pageTitle}</h1>
+        </ImageWrapper>
+      }
+      {
+        actualPage.pathname === "/" &&
+        <MenuWrapper>
+          <Menu ref={menu}>
+            <li>
+              <a href="/" className={actualPage.pathname === "/" ? "active" : ""}>
+                Página inicial
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/catalogo" 
+                className={actualPage.pathname === "/catalogo" ? "active" : ""}
+                onClick={() => setActualPage({...actualPage, pageTitle: "Catálogo"})}
+              >
+                Catálogo
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/leitor" 
+                className={actualPage.pathname === "/leitor" ? "active" : ""}
+                onClick={() => setActualPage({...actualPage, pageTitle: "Leitor"})}
+              >
+                Leitor
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/produtor" 
+                className={actualPage.pathname === "/produtor" ? "active" : ""}
+                onClick={() => setActualPage({...actualPage, pageTitle: "Produtor"})}  
+              >
+                Produtor
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/blog" 
+                className={actualPage.pathname === "/blog" ? "active" : ""}
+                onClick={() => setActualPage({...actualPage, pageTitle: "Blog"})}
+              >
+                Blog
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/sobre" 
+                className={actualPage.pathname === "/sobre" ? "active" : ""}
+                onClick={() => setActualPage({...actualPage, pageTitle: "Sobre nós"})}
+              >
+                Sobre nós
+              </a>
+            </li>
+            <CancelIcon id="menu-close" onClick={closeMenu} />
+          </Menu>
+          <MenuIcon id="menu-open" onClick={openMenu} />
+        </MenuWrapper>
+      }
+      <Input 
+        width="auto"
+        isSearch
+        placeholder="Insira título, quadrinista ou categoria"
+      />
+      <SessionManager>
+        {
+          isLogged &&
+          <Menu id="logged-container">
+            <li>
+              <a href="#">fulandodetal</a>
+              <img src={GenericUser} alt="Foto de perfil" />
+            </li>
+            <li><a href="#" onClick={exit}>Sair</a></li>
+          </Menu>
+        }
+        {
+          isLogged === false &&
+          <Menu>
+            <li><a href="#" onClick={login}>Entrar</a></li>
+            <li><a href="#">Criar conta</a></li>
+          </Menu>
+        }
+      </SessionManager>
     </Container>
   );
 }

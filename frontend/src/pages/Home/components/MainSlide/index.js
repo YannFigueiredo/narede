@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { 
   Container,
   ComicsWrapper ,
@@ -10,6 +10,20 @@ import TitleCard from "components/TitleCard";
 export default function MainSlide() {
   const [comics, setComics] = useState([]);
   const [tabActive, setTabActive] = useState(2);
+  const slide = useRef(null);
+
+  const moveSlide = () => {
+    if(slide.current) {
+      var firstElement = slide.current.firstElementChild;
+      
+      firstElement.style.transition = "margin-left linear 1s";
+      firstElement.style.marginLeft = "25%";
+      
+      slide.current.appendChild(firstElement);
+      firstElement.style.transition = "margin-left linear 1s";
+      firstElement.style.marginLeft = "0";
+    }
+  };
 
   useEffect(() => {
     setComics(titlesList.slice(0, 5));
@@ -18,7 +32,7 @@ export default function MainSlide() {
   return(
     <Container>
       <h2>Recomendações</h2>
-      <ComicsWrapper>
+      <ComicsWrapper ref={slide}>
         {
           comics.map((comic, key) => (
             <TitleCard
@@ -42,7 +56,10 @@ export default function MainSlide() {
             <div 
               key={key} 
               className={key === tabActive ? "active" : ""}
-              onClick={() => setTabActive(key)}
+              onClick={() => {
+                setTabActive(key);
+                moveSlide();
+              }}
             ></div>
           ))
         }
