@@ -97,7 +97,7 @@ export const InfosWrapper = styled.div`
 
 export const InfoWrapper = styled.div`
   span {
-    color: #FFF;
+    color: ${({theme}) => theme.colors.blue["900"]};
   }
 `;
 
@@ -107,6 +107,10 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
+
+  span, a {
+    color: ${({theme}) => theme.colors.blue["900"]};
+  }
 `;
 
 export const Description = styled.div`
