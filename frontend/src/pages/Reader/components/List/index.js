@@ -6,7 +6,7 @@ export default function List({ list, isHistoric = false }) {
 
   useEffect(() => {
     setItemsList(Array.isArray(list) ? list : []);
-  }, []);
+  }, [list]);
 
   return(
     <Container>

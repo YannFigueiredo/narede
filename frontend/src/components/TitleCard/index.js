@@ -12,7 +12,8 @@ export default function TitleCard({
   year, 
   cover,
   variation = "medium",
-  withTitle = true
+  withTitle = true,
+  className
 }) {
   const { setTitleValues, setIsModalOpen } = useContext(TitleContext);
 
@@ -30,7 +31,7 @@ export default function TitleCard({
   };
 
   return(
-    <Container variation={variation}>
+    <Container variation={variation} className={className}>
       <CoverWrapper variation={variation} onClick={openModal}>
         <img src={cover} alt="Capa da HQ" />
         <InfoWrapper>
