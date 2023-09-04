@@ -75,7 +75,7 @@ export default function Header() {
       {
         actualPage.pathname === "/" &&
         <MenuWrapper>
-          <Menu ref={menu} variant={actualPage.pathname === "/" ? "home" : "others"}>
+          <Menu id="main-menu" ref={menu} variant={actualPage.pathname === "/" ? "home" : "others"}>
             <li>
               <a href="/" className={actualPage.pathname === "/" ? "active" : ""}>
                 Página inicial
@@ -132,6 +132,7 @@ export default function Header() {
         </MenuWrapper>
       }
       <Input 
+        className="search-input-header"
         width="auto"
         isSearch
         placeholder="Insira título, quadrinista ou categoria"
@@ -149,7 +150,7 @@ export default function Header() {
         }
         {
           isLogged === false &&
-          <Menu variant={actualPage.pathname === "/" ? "home" : "others"}>
+          <Menu  variant={actualPage.pathname === "/" ? "home" : "others"}>
             <li><a href="#" onClick={login}>Entrar</a></li>
             <li><a href="#">Criar conta</a></li>
           </Menu>

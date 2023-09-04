@@ -5,10 +5,11 @@ import SearchIcon from "@mui/icons-material/Search";
 export default function Input({
   width,
   placeholder = "",
-  isSearch = false
+  isSearch = false,
+  className
 }) {
   return(
-    <Container width={width} isSearch={isSearch}>
+    <Container width={width} isSearch={isSearch} className={className}>
       <InputWrapper 
         isSearch={isSearch}
         placeholder={placeholder}
