@@ -5,6 +5,15 @@ export const Container = styled.footer`
   justify-content: center;
   align-items: center;
   background: ${({theme}) => theme.colors.gray["100"]};
+  padding: 0 ${({theme}) => theme.spacing.padding.very_large};
+
+  @media screen and (max-width: 992px) {
+    padding: 0 ${({theme}) => theme.spacing.padding.large};
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 ${({theme}) => theme.spacing.padding.small};
+  }
 `;
 
 export const MenuWrapper = styled.nav`
@@ -20,7 +29,7 @@ export const Menu = styled.ul`
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.very_small};
   text-transform: uppercase;
-  min-height: 60px;
+  min-height: 3.75rem;
 
   li {
     list-style: none;
@@ -40,5 +49,9 @@ export const Menu = styled.ul`
   li a:hover, li .active {
     color: ${({theme}) => theme.colors.blue["400"]};
     font-weight: 700;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 `;
