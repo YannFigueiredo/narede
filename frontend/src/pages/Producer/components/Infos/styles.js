@@ -21,6 +21,10 @@ export const Container = styled.div`
   .edit-btn:hover {
     background: ${({theme}) => theme.colors.gray["100"]};
   }
+
+  @media screen and (max-width: 600px) {
+    max-width: 100%;
+  }
 `;
 
 export const Main = styled.div`

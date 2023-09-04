@@ -9,6 +9,7 @@ import Button from "components/Button";
 export default function Categories() {
   const [ categories, setCategories ] = useState([]);
   const [activeCategory, setActiveCategory] = useState(0);
+  const [windowSize, setWindowSize] = useState(global.window.innerWidth);
 
   useEffect(() => {
     setCategories([
@@ -43,6 +44,12 @@ export default function Categories() {
     ]);
   }, []);
 
+  useEffect(() => {
+    global.window.addEventListener("resize", () => setWindowSize(global.window.innerWidth));
+
+    return () => global.window.removeEventListener("resize", () => setWindowSize(global.window.innerWidth));
+  }, [global.window.innerWidth]);
+
   return(
     <Container>
       <Main>
@@ -73,7 +80,7 @@ export default function Categories() {
                 author={title.author}
                 year={title.year}
                 cover={title.cover}
-                variation={"large"}
+                variation={windowSize <= 768 ? "small" : windowSize <= 992 ? "medium" : "large"}
               />
             ))
           }

@@ -5,14 +5,18 @@ export const Container = styled.footer`
   justify-content: center;
   align-items: center;
   background: ${({theme}) => theme.colors.gray["100"]};
-  padding: 0 ${({theme}) => theme.spacing.padding.very_large};
+  padding: 
+  ${({theme}) => theme.spacing.padding.small}
+  ${({theme}) => theme.spacing.padding.very_large};
 
   @media screen and (max-width: 992px) {
-    padding: 0 ${({theme}) => theme.spacing.padding.large};
+    padding: 
+  ${({theme}) => theme.spacing.padding.small}
+  ${({theme}) => theme.spacing.padding.large};
   }
 
   @media screen and (max-width: 768px) {
-    padding: 0 ${({theme}) => theme.spacing.padding.small};
+    padding: ${({theme}) => theme.spacing.padding.small};
   }
 `;
 

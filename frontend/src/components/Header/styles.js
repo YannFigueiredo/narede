@@ -96,7 +96,7 @@ export const MenuWrapper = styled.nav`
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      z-index: 999;
+      z-index: 9999;
       padding-top: 3.5rem;
   
       li {
