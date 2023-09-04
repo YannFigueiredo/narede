@@ -6,6 +6,12 @@ export const TitleWrapper = styled.div`
   width: 100%;
   padding: ${({theme}) => theme.spacing.padding.small} 0;
   border-radius: ${({theme}) => theme.spacing.radius.small};
+
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 1.375rem;
+    }
+  }
 `;
 
 export const CardsWrapper = styled.div`
@@ -13,4 +19,8 @@ export const CardsWrapper = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
+
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
 `;

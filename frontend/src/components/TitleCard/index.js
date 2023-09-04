@@ -32,7 +32,7 @@ export default function TitleCard({
 
   return(
     <Container variation={variation} className={className}>
-      <CoverWrapper variation={variation} onClick={openModal}>
+      <CoverWrapper variation={variation} onClick={openModal} className="cover">
         <img src={cover} alt="Capa da HQ" />
         <InfoWrapper>
           <span>{category}</span>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Container, CardsWrapper } from "./styles";
 import TitleCard from "components/TitleCard";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
@@ -10,6 +10,8 @@ export default function Carousel({
   const backBtn = useRef(null);
   const nextBtn = useRef(null);
   const cardsWrapper = useRef(null);
+
+  const [windowSize, setWindowSize] = useState(global.window.innerWidth);
 
   const back = () => {
     const scrollPosition = cardsWrapper.current.scrollLeft - 400;
@@ -26,6 +28,12 @@ export default function Carousel({
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    global.window.addEventListener("resize", () => setWindowSize(global.window.innerWidth));
+
+    return () => global.window.removeEventListener("resize", setWindowSize(global.window.innerWidth));
+  }, [global.window.innerWidth]);
 
   return(
     <Container>
@@ -46,7 +54,7 @@ export default function Carousel({
               year={card.year}
               cover={card.cover}
               author={card.author}
-              variation="large"
+              variation={windowSize <= 768 ? "small" : windowSize <= 992 ? "medium" : "large"}
             />
           )
         }

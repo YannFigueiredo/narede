@@ -23,7 +23,6 @@ export const CardsWrapper = styled.div`
     position: absolute;
     z-index: 97;
     height: 16.25rem;
-    ${({theme}) => theme.spacing.padding.big_small};
     background: rgba(0, 0, 0, .7);
 
     svg {
@@ -49,10 +48,22 @@ export const CardsWrapper = styled.div`
     cursor: pointer;
   }
   
+  @media screen and (max-width: 992px) {
+    #back-btn, #next-btn {
+      height: 15rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #back-btn, #next-btn {
+      height: 13rem;
+    }
+  }
+
   @media screen and (max-width: 600px) {
     #back-btn, #next-btn {
       opacity: 1;
       z-index: 97;
     }
   }
-`;
+  `;

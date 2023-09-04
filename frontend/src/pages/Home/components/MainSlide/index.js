@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Container } from "components/Container/section";
 import { 
-  Container,
+  Main,
   ComicsWrapper ,
   TabsWrapper
 } from "./styles";
@@ -10,18 +11,37 @@ import TitleCard from "components/TitleCard";
 export default function MainSlide() {
   const [comics, setComics] = useState([]);
   const [tabActive, setTabActive] = useState(2);
+  const [positions, setPositions] = useState([0, 1, 2, 3, 4]);
   const slide = useRef(null);
 
-  const moveSlide = () => {
+  const moveSlide = (index) => {
     if(slide.current) {
-      var firstElement = slide.current.firstElementChild;
+      var elements = slide.current.querySelectorAll(":scope > *");
+      var element = elements[index];
+      var middlePosition = Math.floor(elements.length/2) + 1;
+      //var referenceElement = elements[middlePosition];
       
-      firstElement.style.transition = "margin-left linear 1s";
-      firstElement.style.marginLeft = "25%";
+      //firstElement.style.transition = "margin-left linear 1s";
+      //firstElement.style.marginLeft = "-100%";
+      //slide.current.removeChild(referenceElement);
       
-      slide.current.appendChild(firstElement);
-      firstElement.style.transition = "margin-left linear 1s";
-      firstElement.style.marginLeft = "0";
+      slide.current.insertBefore(
+        element, 
+        index <= middlePosition ? 
+          elements[middlePosition] : 
+          index === 3 ? 
+            elements[1] : 
+            elements[middlePosition - 1]
+      );
+
+      //slide.current.insertBefore(referenceElement, elements[4]);
+      //firstElement.style.transition = "margin-left linear 1s";
+      //firstElement.style.marginLeft = "0";
+      const newPositions = [...positions];
+      newPositions.splice(index, 2);
+      //newPositions.splice(4, 0);
+      //newPositions.splice(middlePosition - (index <= middlePosition ? 0 : 1), 0, index);
+      setPositions(newPositions);
     }
   };
 
@@ -31,39 +51,45 @@ export default function MainSlide() {
 
   return(
     <Container>
-      <h2>Recomendações</h2>
-      <ComicsWrapper ref={slide}>
-        {
-          comics.map((comic, key) => (
-            <TitleCard
-              key={key}
-              id={comic.id}
-              title={comic.title}
-              description={comic.description}
-              author={comic.author}
-              cover={comic.cover} 
-              withTitle={false}
-              category={comic.category}
-              year={comic.year}
-              variation={key === 0 || key === 4 ? "small" : key === 1 || key === 3 ? "medium" : "large"}
-            />
-          ))
-        }
-      </ComicsWrapper>
-      <TabsWrapper>
-        {
-          comics.map((_, key) => (
-            <div 
-              key={key} 
-              className={key === tabActive ? "active" : ""}
-              onClick={() => {
-                setTabActive(key);
-                moveSlide();
-              }}
-            ></div>
-          ))
-        }
-      </TabsWrapper>
+      <Main>
+        <h2>Recomendações</h2>
+        <ComicsWrapper ref={slide}>
+          {
+            comics.map((comic, key) => (
+              <TitleCard
+                className={
+                  positions[key] === 0 || positions[key] === 4 ? 
+                    "small" : positions[key] === 1 || positions[key] === 3 ? 
+                      "medium" : "large"
+                }
+                key={key}
+                id={comic.id}
+                title={comic.title}
+                description={comic.description}
+                author={comic.author}
+                cover={comic.cover} 
+                withTitle={false}
+                category={comic.category}
+                year={comic.year}
+              />
+            ))
+          }
+        </ComicsWrapper>
+        <TabsWrapper>
+          {
+            comics.map((_, key) => (
+              <div 
+                key={key} 
+                className={key === tabActive ? "active" : ""}
+                onClick={() => {
+                  setTabActive(key);
+                  moveSlide(key);
+                }}
+              ></div>
+            ))
+          }
+        </TabsWrapper>
+      </Main>
     </Container>
   );
 }
