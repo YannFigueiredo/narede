@@ -163,4 +163,10 @@ export const SessionManager = styled.div`
       gap: ${({theme}) => theme.spacing.between_elements.small};
     }
   }
+
+  #logged-container, #logged-out-container {
+    li {
+      padding: ${({theme}) => theme.spacing.padding.big_small};
+    }
+  } 
 `;

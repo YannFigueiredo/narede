@@ -150,7 +150,7 @@ export default function Header() {
         }
         {
           isLogged === false &&
-          <Menu  variant={actualPage.pathname === "/" ? "home" : "others"}>
+          <Menu id="logged-out-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
             <li><a href="#" onClick={login}>Entrar</a></li>
             <li><a href="#">Criar conta</a></li>
           </Menu>

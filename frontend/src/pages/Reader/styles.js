@@ -15,12 +15,24 @@ export const Main = styled.div`
     border-radius: ${({theme}) => theme.spacing.radius.very_small};
     background: #FFF;
   }
+
+  @media screen and (max-width: 992px) {
+    padding: ${({theme}) => theme.spacing.padding.large};
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: ${({theme}) => theme.spacing.padding.small};
+  }
 `;
 
 export const ContentWrapper = styled.div`
-    display: flex;
-    align-items: flex-start;
-    gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  display: flex;
+  align-items: flex-start;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+  }
 `;
 
 export const Tabs = styled.nav`
@@ -56,7 +68,7 @@ export const Tabs = styled.nav`
     list-style: none;
     text-transform: uppercase;
     font-size: ${({theme}) => theme.fontSize.base_large};
-    padding:  ${({theme}) => theme.spacing.padding.large} ${({theme}) => theme.spacing.padding.large};
+    padding: ${({theme}) => theme.spacing.padding.large};
     background: #FFF;
     border-radius:  ${({theme}) => theme.spacing.radius.normal};
     color: ${({theme}) => theme.colors.blue["500"]};
@@ -74,6 +86,37 @@ export const Tabs = styled.nav`
 
   .selected {
     background: ${({theme}) => theme.colors.blue["100"]};
+  }
+
+  @media screen and (max-width: 992px) {
+    max-width: 100%;
+
+    ul {
+      flex-direction: row;
+      justify-content:  space-around;
+    }
+
+    ul li {
+      width: 100%;
+    }
+
+    ul li span {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul li div {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    ul li span {
+      font-size: ${({theme}) => theme.fontSize.base};
+      padding: ${({theme}) => theme.spacing.padding.small} 
+    }
   }
 `;
 
