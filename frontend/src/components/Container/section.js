@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-height: 75vh;
   padding: 0 ${({theme}) => theme.spacing.padding.very_large};
 
   @media screen and (max-width: 992px) {

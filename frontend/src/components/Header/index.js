@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { 
   Container, 
   ImageWrapper, 
@@ -17,6 +18,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [actualPage, setActualPage] = useState("");
   const [isLogged, setIsLogged] = useState(global.localStorage.getItem("logged") === "true" ? true : false);
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   const login = () => {
     global.localStorage.setItem("logged", "true");
@@ -45,8 +48,14 @@ export default function Header() {
       actualPage.pathname === "/catalogo" ? "Catálogo" : 
         actualPage.pathname === "/leitor" ? "Leitor" :
           actualPage.pathname === "/produtor" ? "Produtor" :
-            actualPage.pathname === "/blog" ? "Blog" : "Sobre nós" 
+            actualPage.pathname === "/blog" ? "Blog" : 
+              actualPage.pathname === "/about" ? " Sobre nós" : "Busca" 
     });
+  };
+
+  const runSearch = () => {
+    navigate(`/search/${search}`);
+    updateActualPage();
   };
 
   useEffect(() => {
@@ -135,7 +144,10 @@ export default function Header() {
         className="search-input-header"
         width="auto"
         isSearch
-        placeholder="Insira título, quadrinista ou categoria"
+        placeholder="Insira título ou quadrinista"
+        onChange={(e) => setSearch(e.target.value)}
+        onClick={() => runSearch()}
+        onKeyDown={(e) => {if(e.key === "Enter") runSearch();}}
       />
       <SessionManager>
         {

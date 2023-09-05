@@ -9,6 +9,7 @@ import Reader from "pages/Reader";
 import Producer from "pages/Producer";
 import Blog from "pages/Blog";
 import About from "pages/About";
+import Search from "pages/Search";
 import NotFound from "pages/NotFound";
 
 export default function AppRoutes() {
@@ -23,6 +24,7 @@ export default function AppRoutes() {
         <Route path="/produtor" element={<Producer />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/sobre" element={<About />} />
+        <Route path="/search/:search" element={<Search />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

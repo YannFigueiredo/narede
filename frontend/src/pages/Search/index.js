@@ -1,0 +1,75 @@
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { Container } from "components/Container/page";
+import { Main, ComicsWrapper } from "./styles";
+import { titlesList } from "utils/mocks/titlesList";
+import TitleCard from "components/TitleCard";
+import TitleModal from "components/TitleModal";
+
+export default function Search() {
+  const [result, setResult] = useState([]);
+  const { search } = useParams();
+
+  const normalizeText = (text) => {
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  };
+
+  const searchResults = () => {
+    let results = [];
+
+    titlesList.map(title => {
+      if(
+        normalizeText(title.title.toLowerCase())
+          .includes(
+            normalizeText(search.toLowerCase())
+          )
+      ) {
+        results.push(title);
+      } 
+      
+      title.author.map(name => {
+        if(
+          normalizeText(name.toLowerCase())
+            .includes(
+              normalizeText(search.toLowerCase())
+            )
+        ) {
+          results.push(title);
+        }
+      });
+    });
+
+    setResult(results);
+  };
+
+  useEffect(() => searchResults(), []);
+
+  useEffect(() => searchResults(), [global.window.location.pathname]);
+
+  return(
+    <Container>
+      <TitleModal />
+      <Main>
+        {result.length === 0 &&
+          <span>Nenhum resultado foi encontrado!</span>
+        }
+        {result.length > 0 &&
+          <ComicsWrapper>
+            {result.map((comic, key) => (
+              <TitleCard
+                key={key}
+                title={comic.title}
+                category={comic.category}
+                description={comic.description}
+                author={comic.author}
+                year={comic.year}
+                cover={comic.cover}
+                variation="large"
+              />
+            ))}
+          </ComicsWrapper>
+        }
+      </Main>
+    </Container>
+  );
+}

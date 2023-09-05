@@ -6,17 +6,22 @@ export default function Input({
   width,
   placeholder = "",
   isSearch = false,
-  className
+  className,
+  onChange,
+  onClick,
+  onKeyDown
 }) {
   return(
     <Container width={width} isSearch={isSearch} className={className}>
       <InputWrapper 
         isSearch={isSearch}
         placeholder={placeholder}
+        onChange={onChange}
+        onKeyDown={onKeyDown}
       />
       {isSearch &&
         <SearchButton>
-          <SearchIcon />
+          <SearchIcon onClick={onClick} />
         </SearchButton>
       }
     </Container>
