@@ -28,7 +28,7 @@ export default function Blog() {
       {name: "Beltrano", username: "beltranosilva"}
     ]);
 
-    setComics(titlesList.slice(3, titlesList.length));
+    setComics(titlesList.slice(3, 8));
 
     setPosts([
       {
@@ -89,7 +89,7 @@ export default function Blog() {
           </Posts>
           <Top>
             <h2>Top obras</h2>
-            <TopContent>
+            <TopContent id="top-titles">
               {
                 comics && comics.length > 0 && comics.map((comic, key) => (
                   <TitleCard
