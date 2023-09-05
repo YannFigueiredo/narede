@@ -11,8 +11,8 @@ export const Container = styled.footer`
 
   @media screen and (max-width: 992px) {
     padding: 
-  ${({theme}) => theme.spacing.padding.small}
-  ${({theme}) => theme.spacing.padding.large};
+    ${({theme}) => theme.spacing.padding.small}
+    ${({theme}) => theme.spacing.padding.large};
   }
 
   @media screen and (max-width: 768px) {
