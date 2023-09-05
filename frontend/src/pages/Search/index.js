@@ -8,6 +8,7 @@ import TitleModal from "components/TitleModal";
 
 export default function Search() {
   const [result, setResult] = useState([]);
+  const [windowSize, setWindowSize] = useState(global.window.innerWidth);
   const { search } = useParams();
 
   const normalizeText = (text) => {
@@ -46,6 +47,12 @@ export default function Search() {
 
   useEffect(() => searchResults(), [global.window.location.pathname]);
 
+  useEffect(() => {
+    global.window.addEventListener("resize", setWindowSize(global.window.innerWidth));
+
+    return () => global.window.removeEventListener("resize", setWindowSize(global.window.innerWidth));
+  }, [global.window.innerWidth]);
+
   return(
     <Container>
       <TitleModal />
@@ -64,7 +71,7 @@ export default function Search() {
                 author={comic.author}
                 year={comic.year}
                 cover={comic.cover}
-                variation="large"
+                variation={windowSize <= 768 ? "small" : windowSize <= 992 ? "medium" : "large"}
               />
             ))}
           </ComicsWrapper>
