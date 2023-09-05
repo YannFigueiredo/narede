@@ -15,6 +15,13 @@ export const Container = styled.div`
   &:nth-child(even) {
     align-self: flex-end;
   }
+
+  @media screen and (max-width: 600px) {
+    padding: 
+    ${({theme}) => theme.spacing.padding.small}
+    ${({theme}) => theme.spacing.padding.large}
+    ${({theme}) => theme.spacing.padding.large};
+  }
 `;
 
 export const Header = styled.div`
@@ -32,6 +39,10 @@ export const Identifier = styled.h2`
   color: ${({theme}) => theme.colors.blue["400"]};
   font-size: 5rem;
   font-weight: 900;
+
+  @media screen and (max-width: 600px) {
+    font-size: 3.5rem;
+  }
 `;
 
 export const Title = styled.h2`
@@ -39,6 +50,10 @@ export const Title = styled.h2`
   font-size: 2.5rem;
   font-weight: 900;
   margin-top: 0.3125rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Description = styled.p`
@@ -46,4 +61,8 @@ export const Description = styled.p`
   font-size: ${({theme}) => theme.fontSize.base_large};
   font-weight: 700;
   text-align: justify;
+
+  @media screen and (max-width: 600px) {
+    font-size: ${({theme}) => theme.fontSize.base};
+  }
 `;
