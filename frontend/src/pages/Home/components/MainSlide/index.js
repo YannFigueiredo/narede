@@ -36,7 +36,43 @@ export default function MainSlide() {
               comics.map((comic, key) => (
                 <TitleCard
                   className={
+                    "medium"
+                  }
+                  key={key}
+                  id={comic.id}
+                  title={comic.title}
+                  description={comic.description}
+                  author={comic.author}
+                  cover={comic.cover} 
+                  withTitle={false}
+                  category={comic.category}
+                  year={comic.year}
+                />
+              ))
+            }
+            {
+              comics.map((comic, key) => (
+                <TitleCard
+                  className={
                     "large"
+                  }
+                  key={key}
+                  id={comic.id}
+                  title={comic.title}
+                  description={comic.description}
+                  author={comic.author}
+                  cover={comic.cover} 
+                  withTitle={false}
+                  category={comic.category}
+                  year={comic.year}
+                />
+              ))
+            }
+            {
+              comics.map((comic, key) => (
+                <TitleCard
+                  className={
+                    "medium"
                   }
                   key={key}
                   id={comic.id}

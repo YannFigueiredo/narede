@@ -26,6 +26,7 @@ export const Main = styled.div`
 export const SlideContainer = styled.div`
   overflow-x: hidden;
   position: relative;
+  max-width: 50rem;
 
   .slide-side {
     position: absolute;
@@ -47,12 +48,18 @@ export const SlideContainer = styled.div`
 `;
 
 export const ComicsWrapper = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: auto;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+
+  .small, .medium, .large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .small {
     width: 10rem;

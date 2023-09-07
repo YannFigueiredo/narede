@@ -10,6 +10,7 @@ export const Container = styled.header`
   justify-content: space-between;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
   padding: ${({theme}) => theme.spacing.padding.small};
+  max-width: 100%;
 
   @media screen and (max-width: 768px) {
     position: relative;
