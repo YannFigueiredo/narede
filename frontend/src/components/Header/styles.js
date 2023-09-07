@@ -24,6 +24,11 @@ export const Container = styled.header`
       margin: ${({theme}) => theme.spacing.padding.small} auto;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -49,6 +54,12 @@ export const ImageWrapper = styled.div`
   @media screen and (max-width: 768px) {
     h1 {
       font-size: ${({theme}) => theme.fontSize.base_large};
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    img {
+      max-width: 8rem;
     }
   }
 `;
