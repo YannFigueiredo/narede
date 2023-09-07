@@ -23,6 +23,29 @@ export const Main = styled.div`
   }
 `;
 
+export const SlideContainer = styled.div`
+  overflow-x: hidden;
+  position: relative;
+
+  .slide-side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6.25rem;
+    z-index: 999;
+  }
+
+  .left-side {
+    left: 0;
+    background: linear-gradient(to right, ${({theme}) => theme.colors.blue["900"]}, transparent);
+  }
+
+  .right-side {
+    right: 0;
+    background: linear-gradient(to left, ${({theme}) => theme.colors.blue["900"]}, transparent);
+  }
+`;
+
 export const ComicsWrapper = styled.div`
   display: flex;
   flex-wrap: nowrap;

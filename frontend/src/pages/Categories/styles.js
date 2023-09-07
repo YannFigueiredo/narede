@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-  padding: ${({theme}) => theme.spacing.padding.large};
+  padding: 
+  ${({theme}) => theme.spacing.padding.large}
+  ${({theme}) => theme.spacing.padding.very_large};;
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};

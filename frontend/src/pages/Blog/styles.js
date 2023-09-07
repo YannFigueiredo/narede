@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Main = styled.main`
   padding:
-  ${({theme}) => theme.spacing.padding.normal} 
-  ${({theme}) => theme.spacing.padding.large}; 
+  ${({theme}) => theme.spacing.padding.large} 
+  ${({theme}) => theme.spacing.padding.very_large}; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

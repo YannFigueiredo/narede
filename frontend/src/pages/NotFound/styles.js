@@ -6,8 +6,8 @@ export const Main = styled.main`
   align-items: center;
   min-height: 75vh;
   padding: 
-  ${({theme}) => theme.spacing.padding.small}
-  ${({theme}) => theme.spacing.padding.large};
+  ${({theme}) => theme.spacing.padding.large}
+  ${({theme}) => theme.spacing.padding.very_large};
   text-align: center;
 
   h1 {

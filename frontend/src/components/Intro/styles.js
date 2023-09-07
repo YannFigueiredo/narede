@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
   background: #FFF;
-  padding: ${({theme}) => theme.spacing.padding.large};
+  padding: ${({theme}) => theme.spacing.padding.large} 0;
 
   span {
     font-size: ${({theme}) => theme.fontSize.base_large};

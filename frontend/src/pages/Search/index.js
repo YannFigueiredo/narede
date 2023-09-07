@@ -48,9 +48,9 @@ export default function Search() {
   useEffect(() => searchResults(), [global.window.location.pathname]);
 
   useEffect(() => {
-    global.window.addEventListener("resize", setWindowSize(global.window.innerWidth));
+    global.window.addEventListener("resize", () => setWindowSize(global.window.innerWidth));
 
-    return () => global.window.removeEventListener("resize", setWindowSize(global.window.innerWidth));
+    return () => global.window.removeEventListener("resize", () => setWindowSize(global.window.innerWidth));
   }, [global.window.innerWidth]);
 
   return(

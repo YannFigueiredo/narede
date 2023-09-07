@@ -105,7 +105,7 @@ export const MenuWrapper = styled.nav`
       }
   
       li a {
-        font-size: ${({theme}) => theme.fontSize.large};
+        font-size: ${({theme}) => theme.fontSize.base_large};
       }
     }
   }
