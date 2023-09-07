@@ -81,7 +81,6 @@ export const Tabs = styled.nav`
 
   ul li span:hover {
     background: ${({theme}) => theme.colors.blue["100"]};
-
   }
 
   .selected {
@@ -113,6 +112,10 @@ export const Tabs = styled.nav`
   }
 
   @media screen and (max-width: 768px) {
+    ul {
+      flex-wrap: wrap;
+    }
+
     ul li span {
       font-size: ${({theme}) => theme.fontSize.base};
       padding: ${({theme}) => theme.spacing.padding.small} 
