@@ -27,6 +27,7 @@ export const SlideContainer = styled.div`
   overflow-x: hidden;
   position: relative;
   max-width: 50rem;
+  width: 100%;
 
   .slide-side {
     position: absolute;
@@ -55,25 +56,18 @@ export const ComicsWrapper = styled.div`
   justify-content: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 
-  .small, .medium, .large {
+  .medium, .large {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .small {
+
+  .medium {
     width: 10rem;
 
     .cover {
       height: 13rem;
-    }
-  }
-
-  .medium {
-    width: 11rem;
-    
-    .cover {
-      height: 15rem;
     }
   }
 
@@ -85,12 +79,12 @@ export const ComicsWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 992px) {
-    .medium, .large {
-      width: 10rem;
-
+  @media screen and (max-width: 600px) {
+    .large {
+      width: 11rem;
+      
       .cover {
-        height: 13rem;
+        height: 15rem;
       }
     }
   }

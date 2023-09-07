@@ -15,14 +15,29 @@ export default function MainSlide() {
   const slide = useRef(null);
 
   const moveSlide = (index) => {
-    let translateValue = 50/-index;
-    slide.current.style.transition = "all linear .4s";
-    slide.current.style.transform = `translateX(${translateValue}%)`;
+    if(slide.current) {
+      let translateValue = index === 0 ? 43 : 
+        index === 1 ? 22 : 
+          index === 3 ? -22 :
+            index === 4 ? -43 : 0;
+      slide.current.style.transition = "all linear .3s";
+      slide.current.style.transform = `translateX(${translateValue}%)`;
+    }
   };
 
   useEffect(() => {
     setComics(titlesList.slice(0, 5));
+
+    const interval = setInterval(() => {
+      setTabActive((prevTabActive) => (prevTabActive !== 4 ? prevTabActive + 1 : 0));
+    }, 5000);
+  
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
+
+  useEffect(() => moveSlide(tabActive), [tabActive]);
 
   return(
     <Container>
@@ -54,7 +69,7 @@ export default function MainSlide() {
               comics.map((comic, key) => (
                 <TitleCard
                   className={
-                    "large"
+                    key === tabActive ? "large" : "medium"
                   }
                   key={key}
                   id={comic.id}
@@ -94,10 +109,7 @@ export default function MainSlide() {
               <div 
                 key={key} 
                 className={key === tabActive ? "active" : ""}
-                onClick={() => {
-                  setTabActive(key);
-                  moveSlide(key);
-                }}
+                onClick={() => setTabActive(key)}
               ></div>
             ))
           }
