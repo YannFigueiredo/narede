@@ -79,7 +79,7 @@ export const ComicsWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 600px) {
+  /*@media screen and (max-width: 600px) {
     .large {
       width: 11rem;
       
@@ -87,7 +87,7 @@ export const ComicsWrapper = styled.div`
         height: 15rem;
       }
     }
-  }
+  }*/
 `;
 
 export const TabsWrapper = styled.div`

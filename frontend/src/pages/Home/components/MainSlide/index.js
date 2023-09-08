@@ -12,16 +12,20 @@ import TitleCard from "components/TitleCard";
 export default function MainSlide() {
   const [comics, setComics] = useState([]);
   const [tabActive, setTabActive] = useState(2);
+  const slideContainer = useRef(null);
   const slide = useRef(null);
 
   const moveSlide = (index) => {
+    console.log("tamanho da tela geral: ", global.window.innerWidth);
+    console.log("tamanho do container do slide: ", slideContainer.current.offsetWidth);
+    console.log("tamanho do container interno do slide: ", slide.current.offsetWidth);
     if(slide.current) {
-      let translateValue = index === 0 ? 43 : 
-        index === 1 ? 22 : 
-          index === 3 ? -22 :
-            index === 4 ? -43 : 0;
+      let translateValue = index === 0 ? 170*2 : 
+        index === 1 ? 160*1 : 
+          index === 3 ? -160*1 :
+            index === 4 ? -170*2 : 0;
       slide.current.style.transition = "all linear .3s";
-      slide.current.style.transform = `translateX(${translateValue}%)`;
+      slide.current.style.transform = `translateX(${translateValue}px)`;
     }
   };
 
@@ -43,7 +47,7 @@ export default function MainSlide() {
     <Container>
       <Main>
         <h2>Recomendações</h2>
-        <SlideContainer>
+        <SlideContainer ref={slideContainer}>
           <div className="slide-side left-side"></div>
           <div className="slide-side right-side"></div>
           <ComicsWrapper ref={slide}>
