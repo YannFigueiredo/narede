@@ -40,7 +40,7 @@ export const CloseButton = styled.div`
 `;
 
 export const Header = styled.header`
-  height: 13.75rem;
+  min-height: 13.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -53,7 +53,7 @@ export default function Title() {
           ))}
         </Content>
         <Button 
-          onClick={() => setIsModalOpen(true)}
+          onClick={openModal}
           text="Acessar capítulos"
           variant="blue"
         />
