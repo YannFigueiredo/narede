@@ -16,7 +16,7 @@ import GenericUser from "assets/images/generic-user.png";
 export default function Header() {
   const menu = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [actualPage, setActualPage] = useState("");
+  const [actualPage, setActualPage] = useState({pathname: "", pageTitle: ""});
   const [isLogged, setIsLogged] = useState(global.localStorage.getItem("logged") === "true" ? true : false);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
@@ -49,7 +49,8 @@ export default function Header() {
         actualPage.pathname === "/leitor" ? "Leitor" :
           actualPage.pathname === "/produtor" ? "Produtor" :
             actualPage.pathname === "/blog" ? "Blog" : 
-              actualPage.pathname === "/about" ? " Sobre nós" : "Busca" 
+              actualPage.pathname === "/about" ? " Sobre nós" : 
+                actualPage.pathname.includes("/quadrinho") ? "Quadrinho" : "Busca" 
     });
   };
 
