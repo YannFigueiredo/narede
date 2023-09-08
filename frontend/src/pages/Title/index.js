@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { hqsList } from "utils/mocks/hqsList";
 import { titlesList } from "utils/mocks/titlesList";
 import { Container } from "components/Container/page";
-import { Reader } from "./styles";
+import { Reader, Content } from "./styles";
 import { TitleContext } from "contexts/TitleContext";
 import Button from "components/Button";
 import TitleModal from "components/TitleModal";
@@ -46,9 +46,12 @@ export default function Title() {
           text="Acessar capítulos"
           variant="blue"
         />
-        {Object.values(actualChap).map((page, key) => (
-          <img key={key} src={page} alt={`Página ${key + 1}`} />
-        ))}
+        <Content>
+          <h2>{hq.length > 0 && hq[0].chapters[chap - 1].name}</h2>
+          {Object.values(actualChap).map((page, key) => (
+            <img key={key} src={page} alt={`Página ${key + 1}`} />
+          ))}
+        </Content>
         <Button 
           onClick={() => setIsModalOpen(true)}
           text="Acessar capítulos"

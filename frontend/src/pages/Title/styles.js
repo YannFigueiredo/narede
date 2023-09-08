@@ -5,11 +5,25 @@ export const Reader = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  gap: ${({theme}) => theme.spacing.between_elements.between_sections};
   padding: ${({theme}) => theme.spacing.padding.small};
   
   img {
-    max-width: 700px;
+    max-width: 43.75rem;
     width: 100%;
+  }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: ${({theme}) => theme.fontSize.base_large};
+    }
   }
 `;
