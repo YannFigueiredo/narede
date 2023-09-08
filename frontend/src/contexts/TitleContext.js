@@ -9,7 +9,6 @@ export default function TitleProvider({ children }) {
     description: "",
     cover: "",
     category: "",
-    views: 0,
     author: []
   });
   const [isModalOpen, setIsModalOpen] = useState(false);

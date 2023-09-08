@@ -52,7 +52,7 @@ export default function TitleModal() {
               <h3>{titleValues.title}</h3>
               <h4>
                 uma obra de: {
-                  titleValues.author.map((author, key) => {
+                  titleValues.author && titleValues.author.map((author, key) => {
                     if(key >= titleValues.author.length - 1) {
                       return author;
                     } else {
@@ -74,7 +74,7 @@ export default function TitleModal() {
             </HeaderList>
             <List>
               {
-                chaptersList.length > 0 ? chaptersList[0].chapters.map((chapter, key) => (
+                chaptersList && chaptersList.length > 0 ? chaptersList[0].chapters.map((chapter, key) => (
                   <a key={key} href={`/quadrinho/${titleValues.id}/${key + 1}`}>{chapter.name}</a>
                 )) : (<span>Nenhum capítulo encontrado</span>)
               }

@@ -65,6 +65,7 @@ export default function Search() {
             {result.map((comic, key) => (
               <TitleCard
                 key={key}
+                id={comic.id}
                 title={comic.title}
                 category={comic.category}
                 description={comic.description}

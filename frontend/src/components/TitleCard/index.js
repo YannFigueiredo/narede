@@ -7,7 +7,6 @@ export default function TitleCard({
   title,
   category,
   description,
-  views,
   author,
   year, 
   cover,
@@ -24,7 +23,6 @@ export default function TitleCard({
       description: description,
       cover: cover,
       category: category,
-      views: views,
       author: author
     });
     setIsModalOpen(true);
