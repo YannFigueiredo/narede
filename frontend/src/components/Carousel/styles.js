@@ -6,7 +6,7 @@ export const Container = styled.div`
 
 export const CardsWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(20, auto);
+  grid-template-columns: repeat(8, auto);
   grid-template-rows: auto;
   overflow-x: hidden;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
