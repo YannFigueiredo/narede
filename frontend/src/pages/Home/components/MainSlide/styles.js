@@ -62,7 +62,6 @@ export const ComicsWrapper = styled.div`
     align-items: center;
   }
 
-
   .medium {
     width: 10rem;
 

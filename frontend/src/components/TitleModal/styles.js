@@ -13,7 +13,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   overflow-y: auto;
-  z-index: 99;
+  z-index: 9998;
 `;
 
 export const Main = styled.div`
