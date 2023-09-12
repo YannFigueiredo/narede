@@ -1,4 +1,4 @@
-# Nave HQ
+# Navega Comics
 ![](https://github.com/YannFigueiredo/assets/blob/main/navehq/logo.jpg?raw=true)
 ## Sobre o projeto
 Site focado em disponibilizar quadrinhos brasileiros e suas informações.
@@ -8,7 +8,6 @@ Site focado em disponibilizar quadrinhos brasileiros e suas informações.
 - React.js
 - JavaScript
 - Styled-Components
-- Vitest
 
 ## Como executar o projeto
 ### Front-End Local
