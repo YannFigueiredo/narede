@@ -30,7 +30,7 @@ export default function MainSlide() {
 
     const interval = setInterval(() => {
       setTabActive((prevTabActive) => (prevTabActive !== 4 ? prevTabActive + 1 : 0));
-    }, 5000);
+    }, 3000);
   
     return () => {
       clearInterval(interval);

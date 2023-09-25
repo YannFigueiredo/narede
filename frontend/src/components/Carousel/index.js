@@ -35,6 +35,23 @@ export default function Carousel({
     return () => global.window.removeEventListener("resize", setWindowSize(global.window.innerWidth));
   }, [global.window.innerWidth]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if(
+        cardsWrapper.current.scrollLeft === (cardsWrapper.current.scrollWidth - cardsWrapper.current.clientWidth)
+        && cardsWrapper.current.scrollLeft !== 0
+      ) {
+        back();
+      } else {
+        next();
+      }
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return(
     <Container>
       <CardsWrapper ref={cardsWrapper} >
