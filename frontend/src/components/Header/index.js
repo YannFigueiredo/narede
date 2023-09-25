@@ -49,7 +49,7 @@ export default function Header() {
         actualPage.pathname === "/leitor" ? "Leitor" :
           actualPage.pathname === "/produtor" ? "Produtor" :
             actualPage.pathname === "/blog" ? "Blog" : 
-              actualPage.pathname === "/about" ? " Sobre nós" : 
+              actualPage.pathname === "/sobre" ? " Sobre nós" : 
                 actualPage.pathname.includes("/quadrinho") ? "Quadrinho" : "Busca" 
     });
   };
