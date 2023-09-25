@@ -20,7 +20,7 @@ export const Selector = styled.div`
   color:  ${({theme}) => theme.colors.blue["100"]};
 
   button:nth-child(${(props) => props.active}) {
-  background: rgb(100, 204, 233);
+    background: ${({theme}) => theme.colors.blue[100]};
   }
 `;
 

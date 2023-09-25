@@ -33,7 +33,7 @@ export const Container = styled.button`
     ${({variant, theme}) => {
     return(
       variant === "tab" ? theme.colors.blue["100"] : 
-        variant === "blue" ? theme.colors.blue["300"] : 
+        variant === "blue" ? theme.colors.blue["400"] : 
           variant === "gray" ? theme.colors.blue["100"] : 
             variant === "blue_alt" ? theme.colors.blue["100"] : "transparent"
     );

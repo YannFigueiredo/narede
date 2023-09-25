@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, ImageWrapper } from "./styles";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/logo-and-title.png";
 
 export default function Intro() {
   return(

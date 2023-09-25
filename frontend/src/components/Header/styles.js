@@ -37,8 +37,8 @@ export const ImageWrapper = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
 
   img {
-    max-width: 11rem;
-    min-width: 5rem;
+    max-width: 4rem;
+    min-width: 4rem;
     width: 100%;
     height: auto;
   }
