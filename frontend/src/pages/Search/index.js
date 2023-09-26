@@ -15,6 +15,25 @@ export default function Search() {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   };
 
+  const checkDuplicates = (titles) => {
+    const newList = [];
+    let isDuplicate = false;
+
+    titles.map(title => {
+      newList.map(item => {
+        if(item.id && item.id === title.id)
+          isDuplicate = true;
+      });
+
+      if(isDuplicate === false)
+        newList.push(title);
+      
+      isDuplicate = false;
+    });
+
+    return newList;
+  };
+
   const searchResults = () => {
     let results = [];
 
@@ -40,7 +59,8 @@ export default function Search() {
       });
     });
 
-    setResult(results);
+    console.log("results antes de checar: ", results);
+    setResult(checkDuplicates(results));
   };
 
   useEffect(() => searchResults(), []);
