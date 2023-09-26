@@ -59,7 +59,6 @@ export default function Search() {
       });
     });
 
-    console.log("results antes de checar: ", results);
     setResult(checkDuplicates(results));
   };
 
