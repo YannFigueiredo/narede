@@ -8,7 +8,7 @@ export default function Intro() {
       <ImageWrapper>
         <img src={Logo} alt="Logo do site Nave HQ na seção principal da página inicial" />
       </ImageWrapper>
-      <span>Atravessando por novas ideias!</span>
+      <span>Percorrendo novos horizontes da criatividade</span>
     </Container>
   );
 }
