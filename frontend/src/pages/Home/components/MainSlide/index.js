@@ -8,6 +8,7 @@ import {
 } from "./styles";
 import { titlesList } from "utils/mocks/titlesList";
 import TitleCard from "components/TitleCard";
+import { Header } from "../header.js";
 
 export default function MainSlide() {
   const [comics, setComics] = useState([]);
@@ -42,7 +43,10 @@ export default function MainSlide() {
   return(
     <Container>
       <Main>
-        <h2>Recomendações</h2>
+        <Header>
+          <h2>Recomendações</h2>
+          <a href="/catalogo">ver lista completa</a>
+        </Header>
         <SlideContainer>
           <div className="slide-side left-side"></div>
           <div className="slide-side right-side"></div>

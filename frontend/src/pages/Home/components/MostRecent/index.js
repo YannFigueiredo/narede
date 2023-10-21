@@ -3,6 +3,7 @@ import { Container } from "components/Container/section";
 import { titlesList } from "utils/mocks/titlesList";
 import { TitleWrapper, CardsWrapper } from "./styles";
 import TitleCard from "components/TitleCard";
+import { Header } from "../header.js";
 
 export default function MostRecent() {
   const [windowSize, setWindowSize] = useState(global.window.innerWidth);
@@ -16,7 +17,10 @@ export default function MostRecent() {
   return(
     <Container>
       <TitleWrapper>
-        <h2>Novidades</h2>
+        <Header>
+          <h2>Novidades</h2>
+          <a href="/catalogo">ver lista completa</a>
+        </Header>
       </TitleWrapper>
       <CardsWrapper>
         {

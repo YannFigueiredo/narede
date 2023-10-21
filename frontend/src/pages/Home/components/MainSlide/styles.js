@@ -10,7 +10,6 @@ export const Main = styled.div`
 
   h2 {
     display: inline-block;
-    width: 100%;
     text-align: left;
   }
 
