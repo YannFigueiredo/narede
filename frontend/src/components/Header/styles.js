@@ -70,6 +70,17 @@ export const MenuWrapper = styled.nav`
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.normal};
 
+  #main-menu {
+    li a svg {
+      font-size: 2rem;
+      fill: rgba(255, 255, 255, .6);
+    }
+  }
+
+  #main-menu li a svg:hover, #main-menu li .active svg {
+    fill: rgba(255, 255, 255, 1);
+  }
+
   #menu-open {
     display: none;
     font-size: ${({theme}) => theme.fontSize.large};

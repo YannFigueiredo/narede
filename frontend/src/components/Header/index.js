@@ -12,6 +12,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CancelIcon from "@mui/icons-material/Cancel";
 import Input from "components/Input";
 import GenericUser from "assets/images/generic-user.png";
+import HomeIcon from "@mui/icons-material/Home";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import ImportContactsIcon from "@mui/icons-material/ImportContacts";
+import BrushIcon from "@mui/icons-material/Brush";
+import PostAddIcon from "@mui/icons-material/PostAdd";
+import InfoIcon from "@mui/icons-material/Info";
 
 export default function Header() {
   const menu = useRef(null);
@@ -87,53 +93,58 @@ export default function Header() {
         <MenuWrapper>
           <Menu id="main-menu" ref={menu} variant={actualPage.pathname === "/" ? "home" : "others"}>
             <li>
-              <a href="/" className={actualPage.pathname === "/" ? "active" : ""}>
-                Página inicial
+              <a href="/" title="Página inicial" className={actualPage.pathname === "/" ? "active" : ""}>
+                <HomeIcon/>
               </a>
             </li>
             <li>
               <a 
                 href="/catalogo" 
+                title="Catálogo"
                 className={actualPage.pathname === "/catalogo" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Catálogo"})}
               >
-                Catálogo
+                <LibraryBooksIcon />
               </a>
             </li>
             <li>
               <a 
                 href="/leitor" 
+                title="Leitor"
                 className={actualPage.pathname === "/leitor" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Leitor"})}
               >
-                Leitor
+                <ImportContactsIcon />
               </a>
             </li>
             <li>
               <a 
                 href="/produtor" 
+                title="Produtor"
                 className={actualPage.pathname === "/produtor" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Produtor"})}  
               >
-                Produtor
+                <BrushIcon />
               </a>
             </li>
             <li>
               <a 
                 href="/blog" 
+                title="Blog"
                 className={actualPage.pathname === "/blog" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Blog"})}
               >
-                Blog
+                <PostAddIcon />
               </a>
             </li>
             <li>
               <a 
                 href="/sobre" 
+                title="Sobre nós"
                 className={actualPage.pathname === "/sobre" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Sobre nós"})}
               >
-                Sobre nós
+                <InfoIcon />
               </a>
             </li>
             <CancelIcon id="menu-close" onClick={closeMenu} />
