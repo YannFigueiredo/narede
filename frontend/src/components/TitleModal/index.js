@@ -11,7 +11,6 @@ import {
   Content, 
   Description, 
   ListWrapper, 
-  HeaderList, 
   List  
 } from "./styles";
 import CancelIcon from "@mui/icons-material/Cancel";
@@ -24,6 +23,14 @@ export default function TitleModal() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  /*const addFavorite = () => {
+    const favorites = JSON.parse(global.localStorage.getItem("favorites")) || [];
+
+    favorites.push(titleValues);
+
+    global.localStorage.setItem("favorites", JSON.stringify(favorites));
+  };*/
 
   useEffect(() => {
     if(isModalOpen) {
@@ -51,7 +58,7 @@ export default function TitleModal() {
               <span>{titleValues.category}</span>
               <h3>{titleValues.title}</h3>
               <h4>
-                uma obra de: {
+                autor(es): {
                   titleValues.author && titleValues.author.map((author, key) => {
                     if(key >= titleValues.author.length - 1) {
                       return author;
@@ -59,19 +66,17 @@ export default function TitleModal() {
                       return author + " | ";
                     }
                   })
-                }
+                } - @autor - x páginas - x visualizações - x likes - x comentários - x favoritações
               </h4>
             </TitleWrapper>
           </DetailsWrapper>
         </Header>
         <Content>
           <Description>
+            <h3>Sinopse</h3>
             <span>{titleValues.description}</span>
           </Description>
           <ListWrapper>
-            <HeaderList>
-              <span>Capítulos</span>
-            </HeaderList>
             <List>
               {
                 chaptersList && chaptersList.length > 0 ? chaptersList[0].chapters.map((chapter, key) => (

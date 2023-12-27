@@ -50,6 +50,7 @@ export const Header = styled.header`
   background-size: cover;
   background-position: center;
   position: relative;
+  text-transform: uppercase;
 
   &::before {
     content: "";
@@ -72,6 +73,10 @@ export const DetailsWrapper = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+
   h3 {
     font-size: ${({theme}) => theme.fontSize.large};
     color: #FFF;
@@ -85,6 +90,7 @@ export const TitleWrapper = styled.div`
 
   h4 {
     color: #FFF;
+    font-size: 0.75rem;
   }
 `;
 
@@ -102,14 +108,15 @@ export const InfoWrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  background: #FFF;
+  background: rgb(0, 24, ,30);
   padding: ${({theme}) => theme.spacing.padding.small};
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
+  text-transform: uppercase;
 
   span, a {
-    color: ${({theme}) => theme.colors.blue["900"]};
+    color: #FFF;
   }
 `;
 
@@ -117,6 +124,14 @@ export const Description = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
+
+  h3 {
+    color: #FFF;
+  }
+
+  span {
+    font-size: 0.85rem;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -131,21 +146,6 @@ export const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
-`;
-
-export const HeaderList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
-
-  select {
-    width: 9.375rem;
-  }
-
-  span {
-    font-weight: 700;
-    font-size: ${({theme}) => theme.fontSize.base_large};
-  }
 `;
 
 export const List = styled.div`
