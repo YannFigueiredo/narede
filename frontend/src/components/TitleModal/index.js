@@ -9,9 +9,10 @@ import {
   DetailsWrapper,
   TitleWrapper,
   Content, 
+  ButtonsWrapper,
   Description, 
   ListWrapper, 
-  List  
+  List
 } from "./styles";
 import CancelIcon from "@mui/icons-material/Cancel";
 
@@ -72,6 +73,15 @@ export default function TitleModal() {
           </DetailsWrapper>
         </Header>
         <Content>
+          <ButtonsWrapper>
+            <a>Ler agora</a>
+            <div>
+              <a href="#">Apoie o autor</a>
+              <a href="#">Perfil do autor</a>
+              <a href="#">Salvar</a>
+              <a href="#">Compatilhar</a>
+            </div>
+          </ButtonsWrapper>
           <Description>
             <h3>Sinopse</h3>
             <span>{titleValues.description}</span>
@@ -80,7 +90,10 @@ export default function TitleModal() {
             <List>
               {
                 chaptersList && chaptersList.length > 0 ? chaptersList[0].chapters.map((chapter, key) => (
-                  <a key={key} href={`/quadrinho/${titleValues.id}/${key + 1}`}>{chapter.name}</a>
+                  <div className="list-item" key={key}>
+                    <div className="list-item-photo"></div>
+                    <a href={`/quadrinho/${titleValues.id}/${key + 1}`}>{chapter.name}</a>
+                  </div>
                 )) : (<span>Nenhum capítulo encontrado</span>)
               }
             </List>

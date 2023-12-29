@@ -134,11 +134,31 @@ export const Description = styled.div`
   }
 `;
 
-export const ButtonWrapper = styled.div`
-  max-width: 11.25rem;
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: ${({theme}) => theme.spacing.between_elements.small};
 
-  button {
-    width: 100%;
+  div {
+    display: flex;
+    align-items: center;
+    gap: ${({theme}) => theme.spacing.between_elements.very_small};
+  }  
+  
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background: ${({theme}) => theme.colors.backgroundSecondaryBox};
+    font-size: 0.65rem;
+    padding: ${({theme}) => theme.spacing.padding.big_small}; 
+    border-radius: 0.5rem;
+    transition: all linear .4s;
+    cursor: pointer;
+  }
+
+  a:hover {
+    background: ${({theme}) => theme.colors.backgroundPrimary};
   }
 `;
 
@@ -152,4 +172,26 @@ export const List = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.very_small};
+  background: ${({theme}) => theme.colors.backgroundSecondaryBox};
+  padding: 
+  ${({theme}) => theme.spacing.padding.big_small}
+  ${({theme}) => theme.spacing.padding.small};
+
+  a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: ${({theme}) => theme.colors.gray["100"]};
+  }
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    gap: ${({theme}) => theme.spacing.between_elements.small};
+  }
+
+  .list-item-photo {
+    width: 35px;
+    height: 30px;
+    background: #000;
+  }
 `;
