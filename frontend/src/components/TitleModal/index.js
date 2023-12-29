@@ -8,6 +8,7 @@ import {
   Header, 
   DetailsWrapper,
   TitleWrapper,
+  AssessmentsWrapper,
   Content, 
   ButtonsWrapper,
   Description, 
@@ -15,6 +16,7 @@ import {
   List
 } from "./styles";
 import CancelIcon from "@mui/icons-material/Cancel";
+import acaiIcon from "assets/icons/acai.png";
 
 export default function TitleModal() {
   const { titleValues, isModalOpen, setIsModalOpen } = useContext(TitleContext);
@@ -70,6 +72,14 @@ export default function TitleModal() {
                 } - @autor - x páginas - x visualizações - x likes - x comentários - x favoritações
               </h4>
             </TitleWrapper>
+            <AssessmentsWrapper>
+              <span>Avaliação:</span>
+              <div>
+                <img src={acaiIcon} />
+                <img src={acaiIcon} />
+                <img src={acaiIcon} />
+              </div>
+            </AssessmentsWrapper>
           </DetailsWrapper>
         </Header>
         <Content>

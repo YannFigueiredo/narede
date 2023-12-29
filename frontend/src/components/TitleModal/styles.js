@@ -86,11 +86,37 @@ export const TitleWrapper = styled.div`
     color: #FFF;
     text-transform: uppercase;
     font-size: ${({theme}) => theme.fontSize.base};
+    font-weight: 500;
   }
 
   h4 {
     color: #FFF;
     font-size: 0.75rem;
+    font-weight: 500;
+  }
+`;
+
+export const AssessmentsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({theme}) => theme.spacing.between_elements.small};
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    height: 20px;
+  }
+
+  span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 `;
 
