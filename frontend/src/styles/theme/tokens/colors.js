@@ -1,9 +1,10 @@
 const colors = {
   backgroundPrimary: "rgb(0, 49, 84)",
-  backgroundSecondary: "",
+  backgroundSecondary: "rgb(0, 109, 160)",
   backgroundPrimaryBox: "rgb(0, 24, 40)",
   backgroundSecondaryBox: "rgb(0, 109, 160)",
   sectionTitle: "rgb(249, 79, 12)",
+  detailPrimary: "rgb(255, 180, 29)",
   primary: "#212A4F",
   primaryGradient: "#0078BA",
   secondaryGradient: "#008A5E",

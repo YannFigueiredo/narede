@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { 
   Container, 
   ImageWrapper, 
+  OptionsWrapper,
+  ActionWrapper,
   MenuWrapper, 
   Menu,
   SessionManager 
@@ -11,13 +13,6 @@ import Logo from "assets/images/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelIcon from "@mui/icons-material/Cancel";
 import Input from "components/Input";
-import GenericUser from "assets/images/generic-user.png";
-import HomeIcon from "@mui/icons-material/Home";
-import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
-import ImportContactsIcon from "@mui/icons-material/ImportContacts";
-import BrushIcon from "@mui/icons-material/Brush";
-import PostAddIcon from "@mui/icons-material/PostAdd";
-import InfoIcon from "@mui/icons-material/Info";
 
 export default function Header() {
   const menu = useRef(null);
@@ -80,21 +75,45 @@ export default function Header() {
   useEffect(() => updateActualPage(), [actualPage.pathname]);
 
   return(
-    <Container variant={actualPage.pathname === "/" ? "home" : "others"}>
-      {
-        actualPage.pathname !== "/" &&
-        <ImageWrapper>
-          <a href="/"><img src={Logo} alt="Logo do site Nave HQ"/></a>
-          <h1>{actualPage.pageTitle}</h1>
-        </ImageWrapper>
-      }
-      {
-        actualPage.pathname === "/" &&
+    <Container>
+      <ImageWrapper>
+        <a href="/"><img src={Logo} alt="Logo do site Nave HQ"/></a>
+      </ImageWrapper>
+      <OptionsWrapper>
+        <ActionWrapper>
+          <SessionManager>
+            {
+              isLogged &&
+              <Menu id="logged-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
+                <li><a href="#" title="Minha conta">Minha conta</a></li>
+                <li><a href="#" title="Planos">Planos</a></li>
+                <li><a href="#" title="Enviar">Enviar</a></li>
+                <li><a href="#" title="Sair" onClick={exit}>Sair</a></li>
+              </Menu>
+            }
+            {
+              isLogged === false &&
+              <Menu id="logged-out-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
+                <li><a href="#" onClick={login}>Entrar</a></li>
+                <li><a href="#">Criar conta</a></li>
+              </Menu>
+            }
+          </SessionManager>
+          <Input 
+            className="search-input-header"
+            width="auto"
+            isSearch
+            placeholder="Insira título ou quadrinista"
+            onChange={(e) => setSearch(e.target.value)}
+            onClick={() => runSearch()}
+            onKeyDown={(e) => {if(e.key === "Enter") runSearch();}}
+          />
+        </ActionWrapper>
         <MenuWrapper>
-          <Menu id="main-menu" ref={menu} variant={actualPage.pathname === "/" ? "home" : "others"}>
+          <Menu id="main-menu" ref={menu}>
             <li>
               <a href="/" title="Página inicial" className={actualPage.pathname === "/" ? "active" : ""}>
-                <HomeIcon/>
+                Página inicial
               </a>
             </li>
             <li>
@@ -104,7 +123,7 @@ export default function Header() {
                 className={actualPage.pathname === "/catalogo" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Catálogo"})}
               >
-                <LibraryBooksIcon />
+                Catálogo
               </a>
             </li>
             <li>
@@ -114,27 +133,27 @@ export default function Header() {
                 className={actualPage.pathname === "/leitor" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Leitor"})}
               >
-                <ImportContactsIcon />
+                Leitor
               </a>
             </li>
             <li>
               <a 
-                href="/produtor" 
-                title="Produtor"
+                href="/quadrinista" 
+                title="Quadrinista"
                 className={actualPage.pathname === "/produtor" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Produtor"})}  
               >
-                <BrushIcon />
+                Quadrinista
               </a>
             </li>
             <li>
               <a 
-                href="/blog" 
-                title="Blog"
+                href="/comunidade" 
+                title="Comunidade"
                 className={actualPage.pathname === "/blog" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Blog"})}
               >
-                <PostAddIcon />
+                Comunidade
               </a>
             </li>
             <li>
@@ -144,42 +163,14 @@ export default function Header() {
                 className={actualPage.pathname === "/sobre" ? "active" : ""}
                 onClick={() => setActualPage({...actualPage, pageTitle: "Sobre nós"})}
               >
-                <InfoIcon />
+                Sobre nós
               </a>
             </li>
             <CancelIcon id="menu-close" onClick={closeMenu} />
           </Menu>
           <MenuIcon id="menu-open" onClick={openMenu} />
         </MenuWrapper>
-      }
-      <Input 
-        className="search-input-header"
-        width="auto"
-        isSearch
-        placeholder="Insira título ou quadrinista"
-        onChange={(e) => setSearch(e.target.value)}
-        onClick={() => runSearch()}
-        onKeyDown={(e) => {if(e.key === "Enter") runSearch();}}
-      />
-      <SessionManager>
-        {
-          isLogged &&
-          <Menu id="logged-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
-            <li>
-              <a href="#">fulanodetal</a>
-              <img src={GenericUser} alt="Foto de perfil" />
-            </li>
-            <li><a href="#" onClick={exit}>Sair</a></li>
-          </Menu>
-        }
-        {
-          isLogged === false &&
-          <Menu id="logged-out-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
-            <li><a href="#" onClick={login}>Entrar</a></li>
-            <li><a href="#">Criar conta</a></li>
-          </Menu>
-        }
-      </SessionManager>
+      </OptionsWrapper>
     </Container>
   );
 }

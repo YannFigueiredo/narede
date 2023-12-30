@@ -1,15 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  background: 
-  ${({variant, theme}) => {
-    return variant === "home" ? theme.colors.blue["900"] : "#FFF";
-  }};
+  background: ${({theme}) => theme.colors.backgroundSecondary};
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: ${({theme}) => theme.spacing.between_elements.between_items};
-  padding: ${({theme}) => theme.spacing.padding.small};
+  gap: 3.125rem;
+  padding: 0 ${({theme}) => theme.spacing.padding.large};
   max-width: 100%;
 
   @media screen and (max-width: 768px) {
@@ -37,8 +33,8 @@ export const ImageWrapper = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
 
   img {
-    max-width: 4rem;
-    min-width: 4rem;
+    max-width: 5rem;
+    min-width: 5rem;
     width: 100%;
     height: auto;
   }
@@ -64,21 +60,31 @@ export const ImageWrapper = styled.div`
   }
 `;
 
+export const OptionsWrapper = styled.div`
+  width: 100%;
+`;
+
+export const ActionWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: ${({theme}) => theme.spacing.between_elements.between_sections};
+`;
+
 export const MenuWrapper = styled.nav`
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.normal};
 
   #main-menu {
-    li a svg {
-      font-size: 2rem;
-      fill: rgba(255, 255, 255, .6);
+    li a {
+      font-size: 1.3rem;
+      color: #FFF;
     }
   }
 
-  #main-menu li a svg:hover, #main-menu li .active svg {
-    fill: rgba(255, 255, 255, 1);
+  #main-menu li a:hover, #main-menu li .active {
+    color: ${({theme}) => theme.colors.detailPrimary};
   }
 
   #menu-open {
@@ -136,44 +142,36 @@ export const MenuWrapper = styled.nav`
 
 export const Menu = styled.ul`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: ${({theme}) => theme.spacing.between_elements.very_small};
+  gap: ${({theme}) => theme.spacing.between_elements.normal};
   text-transform: uppercase;
-  min-height: 60px;
+  min-height: 3.75rem;
+  width: 100%;
 
   li {
     list-style: none;
     font-weight: 500;
     cursor: pointer;
     transition: all linear .3s;
-    padding: ${({theme}) => theme.spacing.padding.very_small} ${({theme}) => theme.spacing.padding.small};
+    padding: ${({theme}) => theme.spacing.padding.very_small} 0;
   }
 
   li a {
     transition: all linear .3s;
-    color: 
-    ${({variant, theme}) => {
-    return variant === "home" ? "rgba(255, 255, 255, .7)" : theme.colors.blue["900"];
-  }};
+    color: #FFF;
     text-decoration: none;
     font-size: ${({theme}) => theme.fontSize.regular};
-    font-weight: 
-    ${({variant}) => {
-    return variant === "home" ? 400 : 700;
-  }};
+    font-weight: 700;
   }
 
   li a:hover, li .active {
-    color: 
-    ${({variant, theme}) => {
-    return variant === "home" ? "rgba(255, 255, 255, 1)" : theme.colors.blue["400"];
-  }};
+    color: ${({theme}) => theme.colors.detailPrimary};
     font-weight: 700;
   }
 
   li img {
-    max-width: 40px;
+    max-width: 2.5rem;
     border-radius: 50%;
   }
 `;
@@ -189,7 +187,11 @@ export const SessionManager = styled.div`
 
   #logged-container, #logged-out-container {
     li {
-      padding: ${({theme}) => theme.spacing.padding.big_small};
+      padding: ${({theme}) => theme.spacing.padding.big_small} 0;
+    }
+
+    li a {
+      font-size: 1rem;
     }
   } 
 `;

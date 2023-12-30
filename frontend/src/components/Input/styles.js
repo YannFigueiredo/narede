@@ -8,10 +8,9 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 17.5rem;
+  max-width: 25rem;
   width: 100%;
-  background: 
-  ${({isSearch, theme}) => isSearch ? theme.colors.blue["400"] : "#FFF"};
+  background: #FFF;
 `;
 
 export const InputWrapper = styled.input`
@@ -19,21 +18,25 @@ export const InputWrapper = styled.input`
   background: transparent;
   width: 100%;
   height: 100%;
-  padding: ${({theme}) => theme.spacing.padding.very_small};
+  padding: 0 ${({theme}) => theme.spacing.padding.very_small};
   font-size: ${({theme}) => theme.fontSize.regular};
-  color: ${({isSearch, theme}) => isSearch ? "#FFF" : theme.colors.blue["900"]};
+  color: ${({theme}) => theme.colors.backgroundPrimaryBox};
 
   &:focus {
     outline: none;
   }
 
   &::placeholder {
-    color: ${({isSearch}) => isSearch ? "#FFF" : "rgba(255, 255, 255, .7)"};
+    color: ${({theme}) => theme.colors.backgroundPrimaryBox};
     font-size: ${({theme}) => theme.fontSize.small};
   }
 `;
 
 export const SearchButton = styled.div`
-  padding: 0.3125rem;
+  padding: 0 0.3125rem;
   cursor: pointer;
+
+  svg {
+    fill: ${({theme}) => theme.colors.backgroundPrimaryBox};
+  }
 `;
