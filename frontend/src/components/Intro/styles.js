@@ -7,19 +7,20 @@ export const Container = styled.div`
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
   background: #FFF;
-  padding: ${({theme}) => theme.spacing.padding.large} 0;
+  padding: ${({theme}) => theme.spacing.padding.very_small} 0;
 
   span {
-    font-size: ${({theme}) => theme.fontSize.base_large};
-    color: ${({theme}) => theme.colors.blue["500"]};
+    font-size: ${({theme}) => theme.fontSize.base};
+    color: ${({theme}) => theme.colors.backgroundSecondary};
     font-weight: 700;
+    text-transform: uppercase;
   }
 `;
 
 export const ImageWrapper = styled.div`
-  max-width: 17.5rem;
+  max-width: 8.5rem;
 
   img {
-    width: 100%;
+    max-width: 100%;
   }
 `;

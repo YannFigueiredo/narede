@@ -9,7 +9,7 @@ import {
   Menu,
   SessionManager 
 } from "./styles";
-import Logo from "assets/images/logo.png";
+import Logo from "assets/images/logo-white-variation.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelIcon from "@mui/icons-material/Cancel";
 import Input from "components/Input";
