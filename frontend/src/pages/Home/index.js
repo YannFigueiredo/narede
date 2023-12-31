@@ -1,24 +1,18 @@
 import React from "react";
 import { Container } from "../../components/Container/page";
-import MainSlide from "./components/MainSlide";
 import Intro from "components/Intro";
 import MostPopular from "pages/Home/components/MostPopular";
 import MostRecent from "pages/Home/components/MostRecent";
 import TitleModal from "components/TitleModal";
-import ForumIcon from "@mui/icons-material/Forum";
-import { Chat } from "./styles";
 
 export default function Home() {
   return(
     <Container>
       <Intro />
-      <MainSlide />
-      <MostRecent />
+      <MostRecent title="Recomendações" />
+      <MostRecent title="Mais recentes" />
       <MostPopular />
       <TitleModal />
-      <Chat>
-        <ForumIcon />
-      </Chat>
     </Container>
   );
 }

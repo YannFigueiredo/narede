@@ -19,11 +19,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h2, h3 {
-    color: ${({theme}) => theme.colors.blue["100"]};
+    color: ${({theme}) => theme.colors.sectionTitle};
   }
 
   h2 {
-    font-size: ${({theme}) => theme.fontSize.large};
+    font-size: ${({theme}) => theme.fontSize.most_large};
   }
 
   h3 {

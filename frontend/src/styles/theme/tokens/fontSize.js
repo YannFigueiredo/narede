@@ -4,6 +4,7 @@ const fontSize = {
   base: "1rem", //16px
   base_large: "1.125rem", //18px
   large: "1.75rem", //28px
+  most_large: "2rem", //32px
   very_large: "2.5rem" //40px
 };
 

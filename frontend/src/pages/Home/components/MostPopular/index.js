@@ -1,20 +1,37 @@
 import React from "react";
-import Carousel from "components/Carousel";
-import { Container } from "components/Container/section";
+import { Container, CardsWrapper, Card, Details } from "./styles.js";
+import TitleCard from "components/TitleCard";
 import { titlesList } from "utils/mocks/titlesList";
-import { TitleWrapper } from "./styles";
-import { Header } from "../header.js";
 
 export default function MostPopular() {
   return(
     <Container>
-      <TitleWrapper>
-        <Header>
-          <h2>Top: Quadrinhos mais populares</h2>
-          <a href="/catalogo">ver lista completa</a>
-        </Header>
-      </TitleWrapper>
-      <Carousel cards={titlesList} />
+      <h2>Em alta</h2>
+      <CardsWrapper>
+        {
+          titlesList.slice(0, 8).map((card, key) => (
+            <Card key={key} title={card.title}>
+              <TitleCard 
+                id={card.id}
+                title={card.title}
+                description={card.description}
+                volumesNumber={card.volumesNumber}
+                chaptersNumber={card.chaptersNumber}
+                category={card.category}
+                year={card.year}
+                cover={card.cover}
+                author={card.author}
+                variation="very small"
+                withTitle={false}
+              />
+              <Details>
+                <h3>{card.title.slice(0,13)}</h3>
+                <span>5,9k</span>
+              </Details>
+            </Card>
+          ))
+        }
+      </CardsWrapper>
     </Container>
   );
 }
