@@ -3,6 +3,7 @@ import { Container } from "../../components/Container/page";
 import Intro from "components/Intro";
 import MostPopular from "pages/Home/components/MostPopular";
 import MostRecent from "pages/Home/components/MostRecent";
+import Reviews from "./components/Reviews";
 import TitleModal from "components/TitleModal";
 import { Content, Main } from "./styles";
 
@@ -17,6 +18,7 @@ export default function Home() {
         </Main>
         <MostPopular />
       </Content>
+      <Reviews />
       <TitleModal />
     </Container>
   );

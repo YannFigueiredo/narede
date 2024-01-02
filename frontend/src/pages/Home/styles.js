@@ -5,7 +5,11 @@ export const Content = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
 `;
 
-export const Main = styled.div``;
+export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({theme}) => theme.spacing.between_elements.between_sections};
+`;
 
 export const Chat = styled.div`
   background: ${({theme}) => theme.colors.blue["400"]};

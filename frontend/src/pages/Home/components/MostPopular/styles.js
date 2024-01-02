@@ -8,6 +8,7 @@ export const Container = styled.div`
   padding: 
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.big_small};
+  margin-right: ${({theme}) => theme.spacing.padding.large};
   
   h2 {
     text-transform: uppercase;
