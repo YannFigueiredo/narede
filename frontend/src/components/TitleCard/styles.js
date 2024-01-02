@@ -11,7 +11,9 @@ export const Container = styled.article`
 `;
 
 export const CoverWrapper = styled.div`
-  width: 100%;
+  width: ${({ variation }) => {
+    return variation === "very small" ? "5rem" : "100%";
+  }}; 
   height: ${({ variation }) => {
     return variation === "very small" ? "5rem" : variation === "small" ? "13rem" : variation === "medium" ? "15rem" : variation === "large" ? "16.25rem" : "auto";
   }};

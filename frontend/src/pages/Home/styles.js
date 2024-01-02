@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Content = styled.div`
+  display: flex;
+  gap: ${({theme}) => theme.spacing.between_elements.between_items};
+`;
+
+export const Main = styled.div``;
+
 export const Chat = styled.div`
   background: ${({theme}) => theme.colors.blue["400"]};
   padding: ${({theme}) => theme.spacing.padding.small};

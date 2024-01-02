@@ -11,6 +11,7 @@ export default function MostPopular() {
         {
           titlesList.slice(0, 8).map((card, key) => (
             <Card key={key} title={card.title}>
+              <span className="rank">{key+1}</span>
               <TitleCard 
                 id={card.id}
                 title={card.title}

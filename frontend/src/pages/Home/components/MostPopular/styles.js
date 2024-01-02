@@ -35,6 +35,20 @@ export const Card = styled.div`
   transition: all linear .4s;
   cursor: pointer;
   width: 100%;
+  position: relative;
+
+  .rank {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000;
+    font-size: ${({theme}) => theme.fontSize.regular};
+    display: inline-block;
+    background: #FFF;
+    padding: 0.25rem ${({theme}) => theme.spacing.padding.big_small};
+    font-weight: 700;
+    z-index: 99;   
+  }
 
   &:hover {
     border: 2px solid #FFF;
