@@ -10,6 +10,7 @@ import Producer from "pages/Producer";
 import Blog from "pages/Blog";
 import About from "pages/About";
 import Search from "pages/Search";
+import Plans from "pages/Plans";
 import NotFound from "pages/NotFound";
 
 export default function AppRoutes() {
@@ -24,6 +25,7 @@ export default function AppRoutes() {
         <Route path="/produtor" element={<Producer />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/sobre" element={<About />} />
+        <Route path="/plans" element={<Plans />} />
         <Route path="/search/:search" element={<Search />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
