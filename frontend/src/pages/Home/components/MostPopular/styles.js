@@ -62,6 +62,16 @@ export const Details = styled.div`
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 
+  div {
+    display: flex;
+    align-items: center;
+    gap: ${({theme}) => theme.spacing.between_elements.small};
+
+    .view-icon {
+      font-size: ${({theme}) => theme.fontSize.base};
+    }
+  }
+
   h3 {
     color: #FFF;
     text-transform: uppercase;

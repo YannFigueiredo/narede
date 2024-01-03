@@ -25,7 +25,12 @@ export default function Header() {
   const login = () => {
     global.localStorage.setItem("logged", "true");
     setIsLogged(global.localStorage.getItem("logged") === "true" ? true : false);
-    global.window.location.reload();
+    
+    if(global.window.location.pathname === "/") {
+      global.window.location.reload();
+    } else {
+      navigate("/");
+    }
   };
 
   const exit = () => {
@@ -93,7 +98,7 @@ export default function Header() {
               isLogged &&
               <Menu id="logged-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
                 <li><a href="#" title="Minha conta">Minha conta</a></li>
-                <li><a href="#" title="Planos">Planos</a></li>
+                <li><a href="/plans" title="Planos">Planos</a></li>
                 <li><a href="#" title="Enviar">Enviar</a></li>
                 <li><a href="#" title="Sair" onClick={exit}>Sair</a></li>
               </Menu>

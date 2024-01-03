@@ -2,6 +2,7 @@ import React from "react";
 import { Container, CardsWrapper, Card, Details } from "./styles.js";
 import TitleCard from "components/TitleCard";
 import { titlesList } from "utils/mocks/titlesList";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 
 export default function MostPopular() {
   return(
@@ -27,7 +28,10 @@ export default function MostPopular() {
               />
               <Details>
                 <h3>{card.title.slice(0,13)}</h3>
-                <span>5,9k</span>
+                <div>
+                  <VisibilityIcon className="view-icon" />
+                  <span>5,9k</span>
+                </div>
               </Details>
             </Card>
           ))
