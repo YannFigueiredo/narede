@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const Main = styled.div`
+  background: ${({theme}) => theme.colors.backgroundPrimaryBox};
+  padding: ${({theme}) => theme.spacing.padding.small};
+  border-radius: 8px;
+`;
+
 export const Title = styled.h2`
   text-transform: uppercase;
 `;

@@ -25,11 +25,18 @@ export default function Header() {
   const login = () => {
     global.localStorage.setItem("logged", "true");
     setIsLogged(global.localStorage.getItem("logged") === "true" ? true : false);
+    global.window.location.reload();
   };
 
   const exit = () => {
     global.localStorage.setItem("logged", "false");
     setIsLogged(global.localStorage.getItem("logged") === "false" ? false : true);
+
+    if(global.window.location.pathname === "/") {
+      global.window.location.reload();
+    } else {
+      navigate("/");
+    }
   };
 
   const openMenu = () => {
