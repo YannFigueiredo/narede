@@ -22,10 +22,10 @@ export default function AppRoutes() {
         <Route path="/quadrinho/:id/:chap" element={<Title />} />
         <Route path="/catalogo" element={<Categories />} />
         <Route path="/leitor" element={<Reader />} />
-        <Route path="/produtor" element={<Producer />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/quadrinista" element={<Producer />} />
+        <Route path="/comunidade" element={<Blog />} />
         <Route path="/sobre" element={<About />} />
-        <Route path="/plans" element={<Plans />} />
+        <Route path="/planos" element={<Plans />} />
         <Route path="/search/:search" element={<Search />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

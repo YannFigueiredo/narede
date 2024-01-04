@@ -98,7 +98,7 @@ export default function Header() {
               isLogged &&
               <Menu id="logged-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
                 <li><a href="#" title="Minha conta">Minha conta</a></li>
-                <li><a href="/plans" title="Planos">Planos</a></li>
+                <li><a href="/planos" title="Planos">Planos</a></li>
                 <li><a href="#" title="Enviar">Enviar</a></li>
                 <li><a href="#" title="Sair" onClick={exit}>Sair</a></li>
               </Menu>

@@ -32,10 +32,18 @@ export const Container = styled.button`
     background: 
     ${({variant, theme}) => {
     return(
-      variant === "tab" ? theme.colors.blue["100"] : 
+      variant === "tab" ? "auto" : 
         variant === "blue" ? theme.colors.blue["400"] : 
           variant === "gray" ? theme.colors.blue["100"] : 
             variant === "blue_alt" ? theme.colors.blue["100"] : "transparent"
     );
   }};
+
+  color: 
+    ${({variant, theme}) => {
+    return(
+      variant === "tab" ? theme.colors.sectionTitle : "auto"
+    );
+  }};
+  }
 `;

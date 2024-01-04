@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "components/Container/page";
-import { Main, Selector, TitlesArea } from "./styles";
+import { Main, Selector, Filter, TitlesArea } from "./styles";
 import { titlesList } from "utils/mocks/titlesList";
 import TitleCard from "components/TitleCard";
 import TitleModal from "components/TitleModal";
@@ -9,7 +9,6 @@ import Button from "components/Button";
 export default function Categories() {
   const [ categories, setCategories ] = useState([]);
   const [activeCategory, setActiveCategory] = useState(0);
-  const [windowSize, setWindowSize] = useState(global.window.innerWidth);
 
   useEffect(() => {
     setCategories([
@@ -44,12 +43,6 @@ export default function Categories() {
     ]);
   }, []);
 
-  useEffect(() => {
-    global.window.addEventListener("resize", () => setWindowSize(global.window.innerWidth));
-
-    return () => global.window.removeEventListener("resize", () => setWindowSize(global.window.innerWidth));
-  }, [global.window.innerWidth]);
-
   return(
     <Container>
       <Main>
@@ -65,6 +58,12 @@ export default function Categories() {
             ))
           }
         </Selector>
+        <Filter>
+          <option>por popularidade</option>
+          <option>por data</option>
+          <option>por avaliação</option>
+          <option>por ordem alfabética</option>
+        </Filter>
         <TitlesArea>
           {
             categories && categories.length > 0 && categories[activeCategory].titles.map((title, key) => (
@@ -80,7 +79,7 @@ export default function Categories() {
                 author={title.author}
                 year={title.year}
                 cover={title.cover}
-                variation={windowSize <= 768 ? "small" : windowSize <= 992 ? "medium" : "large"}
+                variation="small"
               />
             ))
           }

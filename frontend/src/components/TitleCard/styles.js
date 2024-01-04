@@ -63,8 +63,18 @@ export const InfoWrapper = styled.div`
 export const DetailsWrapper = styled.div`
   text-align: center;
 
-  h3 {
+  h3, h4 {
     text-transform: uppercase;
-    color: ${({theme}) => theme.colors.blue["100"]};
+  }
+
+  h3 {
+    color: #FFF;
+    font-size: ${({theme}) => theme.fontSize.regular};
+  }
+
+  h4 {
+    color: ${({theme}) => theme.colors.sectionTitle};
+    font-size: ${({theme}) => theme.fontSize.small};
+    font-weight: 700;
   }
 `;

@@ -20,7 +20,20 @@ export const Selector = styled.div`
   color:  ${({theme}) => theme.colors.blue["100"]};
 
   button:nth-child(${(props) => props.active}) {
-    background: ${({theme}) => theme.colors.blue[100]};
+    color: ${({theme}) => theme.colors.sectionTitle};
+  }
+`;
+
+export const Filter = styled.select`
+  background: transparent;
+  color: ${({theme}) => theme.colors.detailPrimary};
+  display: flex;
+  width: 200px;
+  padding: ${({theme}) => theme.spacing.padding.big_small};
+  border-radius: 0.5rem;
+
+  option {
+    color: ${({theme}) => theme.colors.detailPrimary};
   }
 `;
 

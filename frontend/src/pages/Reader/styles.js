@@ -1,6 +1,89 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+`;
+
+export const Header = styled.div``;
+
 export const Main = styled.div`
+  display: flex;
+`;
+
+export const Infos = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  background: #FFF;
+  padding: 
+  ${({theme}) => theme.spacing.padding.small}
+  ${({theme}) => theme.spacing.padding.large};
+`;
+
+export const Profile = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ImageWrapper = styled.div`
+  img {
+    max-width: 15.625rem;
+  }
+`;
+
+export const TagsWrapper = styled.div`
+  display: flex;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  justify-content: space-between;
+
+  span {
+    background: ${({theme}) => theme.colors.sectionTitle};
+    color: #FFF;
+    padding: 
+    ${({theme}) => theme.spacing.padding.big_small}
+    ${({theme}) => theme.spacing.padding.very_small};
+    font-weight: 500;
+    font-size: ${({theme}) => theme.fontSize.regular};
+    border-radius: 0.5rem;
+  }
+`;
+
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+
+  button {
+    border: none;
+    background: ${({theme}) => theme.colors.backgroundSecondary};
+    color: ${({theme}) => theme.colors.backgroundPrimary};
+    padding: ${({theme}) => theme.spacing.padding.small};
+    font-weight: 700;
+    font-size: ${({theme}) => theme.fontSize.base_large};
+  }
+`;
+
+export const Social = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+
+  img {
+    width: 30px;
+  }
+`;
+
+export const Content = styled.div`
+  padding: 
+  ${({theme}) => theme.spacing.padding.small}
+  ${({theme}) => theme.spacing.padding.large};
+`;
+
+/*export const Main = styled.div`
   padding: 
   ${({theme}) => theme.spacing.padding.large} 
   ${({theme}) => theme.spacing.padding.large} 
@@ -125,4 +208,4 @@ export const Tabs = styled.nav`
 
 export const Content = styled.div`
   width: 100%;
-`;
+`;*/
