@@ -5,14 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
-  max-width: 220px;
-  min-width: 180px;
-
-  h2 {
-    color: ${({theme}) => theme.colors.blue["100"]};
-    font-weight: 900;
-    width: 100%;
-  }
+  width: 180px;
 
   .add-btn {
     box-sizing: content-box;
@@ -27,15 +20,31 @@ export const Container = styled.div`
   .add-btn:hover {
     background: ${({theme}) => theme.colors.gray["100"]};
   }
+
+  span {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 `;
 
 export const Content = styled.div`
-  background: ${({theme}) => theme.colors.gray["100"]};
+  background: #FFF;
   border-radius: 30px;
-  padding: ${({theme}) => theme.spacing.padding.normal};
   width: 100%;
-  min-height: 200px;
   text-align: right;
+  overflow: hidden;
+  max-height: 283px;
+  max-width: 180px;
+
+  div{
+    height: 223px;
+    width: 180px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 
   span {
     color: ${({theme}) => theme.colors.blue["900"]};

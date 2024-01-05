@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
   max-width: 18.75rem;
+  margin-top: -150px;
 
   .edit-btn {
     background: ${({theme}) => theme.colors.blue["100"]};
@@ -34,7 +35,7 @@ export const Main = styled.div`
   padding: 
   ${({theme}) => theme.spacing.padding.large}
   ${({theme}) => theme.spacing.padding.small};
-  background: ${({theme}) => theme.colors.gray["100"]};
+  background: #FFF;
   border-radius: 2.1875rem;
   min-height: 25rem;
   height: 100%;
@@ -43,21 +44,20 @@ export const Main = styled.div`
 
 export const Header = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: ${({theme}) => theme.spacing.between_elements.small};
-  color: ${({theme}) => theme.colors.blue["900"]};
 
   h3 {
     font-weight: 700;
     font-size: 1.5rem;
-    color: ${({theme}) => theme.colors.blue["900"]};
-    text-transform: uppercase;
+    color: ${({theme}) => theme.colors.backgroundSecondary};
   }
   
   img {
     width: 100%;
-    max-width: 5rem;
+    max-width: 9rem;
     height: 100%;
     border-radius: 50%;
   }
@@ -65,7 +65,7 @@ export const Header = styled.div`
 
 export const Info = styled.p`
   font-size: ${({theme}) => theme.fontSize.regular};
-  color: ${({theme}) => theme.colors.blue["900"]};
+  color: ${({theme}) => theme.colors.backgroundSecondary};
 `;
 
 export const Contact = styled.div`
@@ -73,22 +73,33 @@ export const Contact = styled.div`
   flex-direction: column;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  margin-top: 20px;
 
   h4 {
     font-weight: 700;
-    color: ${({theme}) => theme.colors.blue["900"]};
-    text-transform: uppercase;
+    color: ${({theme}) => theme.colors.backgroundSecondary};
   }
 
   div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: ${({theme}) => theme.spacing.between_elements.small};
   }
 
+  div img {
+    width: 30px;
+    background-color: ${({theme}) => theme.colors.backgroundSecondary};
+    border-radius: 50%;
+    padding: 0.3rem;
+    cursor: pointer;
+    transition: all linear .4s;
+  }
+
+  div img:hover {
+    background-color: ${({theme}) => theme.colors.detailPrimary};
+  }
+
   span {
-    color: ${({theme}) => theme.colors.blue["900"]};
+    color: ${({theme}) => theme.colors.backgroundSecondary};
     font-size: ${({theme}) => theme.fontSize.regular};
   }
 `;

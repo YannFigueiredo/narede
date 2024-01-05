@@ -7,7 +7,11 @@ import {
   Contact
 } from "./styles";
 import Photo from "assets/images/generic-user.png";
-import EditIcon from "@mui/icons-material/Edit";
+import Behance from "assets/icons/behance-perfil-quad.png";
+import Instagram from "assets/icons/instagram-perfil-quad.png";
+import WhatsApp from "assets/icons/whatsapp-perfil-quad.png";
+import Twitter from "assets/icons/twitter-perfil-quad.png";
+import TikTok from "assets/icons/tiktok-perfil-quad.png";
 
 export default function Infos() {
   return(
@@ -21,14 +25,16 @@ export default function Infos() {
           Eu cresci em Santarém e atualmente moro em Belém. Quando não estou trabalhando como escritor, você pode me encontrar jogando videogame. Eu adoro conhecer novas pessoas e explorar novos lugares.
         </Info>
         <Contact>
-          <h4>Contatos</h4>
+          <h4>Entre em contato</h4>
           <div>
-            <span>(11) 99988-9988</span>
-            <span>fulanodetal@gmail.com</span>
+            <img src={Behance} alt = "ícone da behance" />
+            <img src={Instagram} alt = "ícone da instagram" />
+            <img src={WhatsApp} alt = "ícone da whatsapp" />
+            <img src={Twitter} alt = "ícone da twitter" />
+            <img src={TikTok} alt = "ícone da tiktok" />
           </div>
         </Contact>
       </Main>
-      <EditIcon className="edit-btn" fontSize="large" />
     </Container>
   );
 }

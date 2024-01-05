@@ -1,17 +1,18 @@
 import React from "react";
 import { Container, Content } from "./styles";
-import AddIcon from "@mui/icons-material/Add";
 
 export default function Option({
+  cover,
   title
 }) {
   return(
     <Container>
-      <h2>{title}</h2>
       <Content>
-        <span>{"Ver mais >"}</span>
+        <div>
+          <img src={cover} alt="Capa" />
+        </div>
       </Content>
-      <AddIcon className="add-btn" />
+      <span>{title}</span>
     </Container>
   );
 }
