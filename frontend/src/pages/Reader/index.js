@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { Container, Header, Main, Infos, Profile, ImageWrapper, TagsWrapper, ButtonsWrapper, Social, Content } from "./styles";
+import { 
+  Container, 
+  Header, 
+  Main, 
+  Infos, 
+  Profile, 
+  ImageWrapper, 
+  TagsWrapper, 
+  ButtonsWrapper, 
+  Social, 
+  Content,
+  Item
+} from "./styles";
 import GenericPicture from "assets/images/generic-user.png";
 import instagram from "assets/icons/instagram.png";
 import twitter from "assets/icons/twitter.png";
 import facebook from "assets/icons/facebook.png";
 import whatsapp from "assets/icons/whatsapp.png";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 export default function Reader() {
   const [favorites, setFavorites] = useState();
@@ -53,7 +66,12 @@ export default function Reader() {
   return(
     <Container>
       <Header>
-
+        <h2>Fulano Detal</h2>
+        <span className="page-title">Perfil do leitor</span>
+        <div>
+          <SettingsIcon className="settings-icon" />
+          <span>Configurações do perfil</span>
+        </div>
       </Header>
       <Main>
         <Infos>
@@ -81,7 +99,76 @@ export default function Reader() {
           </Social>
         </Infos>
         <Content>
-
+          <Item>
+            <div>
+              <h3>Favoritos</h3>
+            </div>
+            <ul>
+              <li><div></div>Belém Imaginária: muito bom!</li>
+              <li><div></div>Vero-Pexe e sua Turma: divertido</li>
+              <li><div></div>Açaí Pesado: vou ler o restante, com certeza</li>
+            </ul>
+          </Item>
+          <Item>
+            <div>
+              <h3>Listas</h3>
+            </div>
+            <ul>
+              <li><div></div>Quadrinhos do folclore</li>
+              <li><div></div>Atuais</li>
+              <li><div></div>Gratuitos</li>
+            </ul>
+          </Item>
+          <Item>
+            <div>
+              <h3>Compartilhar</h3>
+            </div>
+            <ul>
+              <li><div></div>Belém Imaginária: muito bom!</li>
+              <li><div></div>Vero-Pexe e sua Turma: divertido</li>
+              <li><div></div>Açaí Pesado: vou ler o restante, com certeza</li>
+            </ul>
+          </Item>
+          <Item>
+            <div>
+              <h3>Recomendações</h3>
+            </div>
+            <ul>
+              <li><div></div>Belém Imaginária: muito bom!</li>
+              <li><div></div>Vero-Pexe e sua Turma: divertido</li>
+              <li><div></div>Açaí Pesado: vou ler o restante, com certeza</li>
+            </ul>
+          </Item>
+          <Item>
+            <div>
+              <h3>Apoios</h3>
+            </div>
+            <ul>
+              <li><div></div>Açaí Pesado: vou ler o restante, com certeza</li>
+              <li><div></div>Belém Imaginária</li>
+              <li><div></div>Vero-Pexe e sua Turma: divertido</li>
+            </ul>
+          </Item>
+          <Item>
+            <div>
+              <h3>Notas</h3>
+            </div>
+            <ul>
+              <li><div></div>Belém Imaginária: 5,0</li>
+              <li><div></div>Vero-Pexe e sua Turma: 3,0</li>
+              <li><div></div>Açaí Pesado: 4,8</li>
+            </ul>
+          </Item>
+          <Item className="double-col">
+            <div>
+              <h3>Comentários</h3>
+            </div>
+            <ul>
+              <li><div></div>Belém Imaginária: muito bom!</li>
+              <li><div></div>Vero-Pexe e sua Turma: divertido</li>
+              <li><div></div>Açaí Pesado: vou ler o restante, com certeza</li>
+            </ul>
+          </Item>
         </Content>
       </Main>
     </Container>

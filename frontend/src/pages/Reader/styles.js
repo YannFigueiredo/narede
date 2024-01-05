@@ -4,12 +4,44 @@ export const Container = styled.div`
   max-width: 1440px;
   margin: auto;
   display: flex;
+  flex-direction: column;
 `;
 
-export const Header = styled.div``;
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:
+  ${({theme}) => theme.spacing.padding.big_small}
+  ${({theme}) => theme.spacing.padding.large};
+
+  .page-title {
+    color: rgba(255, 255, 255, .6);
+  }
+
+  h2 {
+    color: #FFF;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: ${({theme}) => theme.spacing.between_elements.very_small};
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .settings-icon [
+    fill: #FFF;
+    font-size: 2rem;
+  ]
+`;
 
 export const Main = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 export const Infos = styled.div`
@@ -20,6 +52,7 @@ export const Infos = styled.div`
   padding: 
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.large};
+  min-width: 400px;
 `;
 
 export const Profile = styled.div`
@@ -46,7 +79,7 @@ export const TagsWrapper = styled.div`
     ${({theme}) => theme.spacing.padding.big_small}
     ${({theme}) => theme.spacing.padding.very_small};
     font-weight: 500;
-    font-size: ${({theme}) => theme.fontSize.regular};
+    font-size: ${({theme}) => theme.fontSize.small};
     border-radius: 0.5rem;
   }
 `;
@@ -58,7 +91,7 @@ export const ButtonsWrapper = styled.div`
 
   button {
     border: none;
-    background: ${({theme}) => theme.colors.backgroundSecondary};
+    background: rgb(0, 159, 217);
     color: ${({theme}) => theme.colors.backgroundPrimary};
     padding: ${({theme}) => theme.spacing.padding.small};
     font-weight: 700;
@@ -81,131 +114,51 @@ export const Content = styled.div`
   padding: 
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.large};
-`;
-
-/*export const Main = styled.div`
-  padding: 
-  ${({theme}) => theme.spacing.padding.large} 
-  ${({theme}) => theme.spacing.padding.large} 
-  ${({theme}) => theme.spacing.padding.large} 
-  ${({theme}) => theme.spacing.padding.very_large};
-  display: flex;
-  flex-direction: column;
-  gap: ${({theme}) => theme.spacing.between_elements.between_sections};
-
-  hr {
-    height: 0.9375rem;
-    border-radius: ${({theme}) => theme.spacing.radius.very_small};
-    background: #FFF;
-  }
-
-  @media screen and (max-width: 992px) {
-    padding: ${({theme}) => theme.spacing.padding.large};
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: ${({theme}) => theme.spacing.padding.small};
-  }
-`;
-
-export const ContentWrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
-
-  @media screen and (max-width: 992px) {
-    flex-direction: column;
-  }
-`;
-
-export const Tabs = styled.nav`
-  max-width: 25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 
+  ${({theme}) => theme.spacing.between_elements.between_cards}
+  ${({theme}) => theme.spacing.between_elements.between_items};
   width: 100%;
+  background: #FFF;
+
+  .double-col {
+    grid-column: span 2;
+
+    h3 {
+      text-align: center;
+    }
+  }
+`;
+
+export const Item = styled.div`
+  background: ${({theme}) => theme.colors.backgroundSecondary};
 
   ul {
-    display: flex;
-    flex-direction: column;
-    gap: ${({theme}) => theme.spacing.between_elements.small}; 
-    position: relative;
+    padding: ${({theme}) => theme.spacing.padding.big_small};
+    list-style-type: none;
   }
-  
+
   ul li {
     display: flex;
-    list-style: none;
+    gap: ${({theme}) => theme.spacing.between_elements.small};
     align-items: center;
   }
 
   ul li div {
-    border-width: 0.9375rem;
-    border-style: solid;
-    border-color: transparent transparent transparent ${({theme}) => theme.colors.blue["100"]};
-    width: 0.3125rem;
-    opacity: 0;
+    background: #000;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
   }
 
-  ul li .detail-selected {
-    opacity: 1;
-  }
-
-  ul li span {
-    list-style: none;
-    text-transform: uppercase;
-    font-size: ${({theme}) => theme.fontSize.base_large};
-    padding: ${({theme}) => theme.spacing.padding.large};
-    background: #FFF;
-    border-radius:  ${({theme}) => theme.spacing.radius.normal};
-    color: ${({theme}) => theme.colors.blue["500"]};
-    text-align: center;
-    font-weight: 900;
-    cursor: pointer;
-    transition: all linear .4s;
+  h3 {
+    color: ${({theme}) => theme.colors.sectionTitle};
+    display: inline-block;
+    border-bottom: 1px solid #FFF;
+    padding: ${({theme}) => theme.spacing.padding.big_small};
     width: 100%;
-  }
-
-  ul li span:hover {
-    background: ${({theme}) => theme.colors.blue["100"]};
-  }
-
-  .selected {
-    background: ${({theme}) => theme.colors.blue["100"]};
-  }
-
-  @media screen and (max-width: 992px) {
-    max-width: 100%;
-
-    ul {
-      flex-direction: row;
-      justify-content:  space-around;
-    }
-
-    ul li {
-      width: 100%;
-    }
-
-    ul li span {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    ul li div {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    ul {
-      flex-wrap: wrap;
-    }
-
-    ul li span {
-      font-size: ${({theme}) => theme.fontSize.base};
-      padding: ${({theme}) => theme.spacing.padding.small} 
-    }
+    text-transform: uppercase;
   }
 `;
-
-export const Content = styled.div`
-  width: 100%;
-`;*/
