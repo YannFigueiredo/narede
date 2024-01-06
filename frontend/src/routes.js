@@ -11,6 +11,7 @@ import Blog from "pages/Blog";
 import About from "pages/About";
 import Search from "pages/Search";
 import Plans from "pages/Plans";
+import Account from "pages/Account";
 import NotFound from "pages/NotFound";
 
 export default function AppRoutes() {
@@ -26,6 +27,7 @@ export default function AppRoutes() {
         <Route path="/comunidade" element={<Blog />} />
         <Route path="/sobre" element={<About />} />
         <Route path="/planos" element={<Plans />} />
+        <Route path="/conta" element={<Account />} />
         <Route path="/search/:search" element={<Search />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
