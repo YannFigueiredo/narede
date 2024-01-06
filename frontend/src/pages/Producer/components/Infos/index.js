@@ -6,7 +6,7 @@ import {
   Info,
   Contact
 } from "./styles";
-import Photo from "assets/images/generic-user.png";
+import Photo from "assets/images/photo-profile.jpg";
 import Behance from "assets/icons/behance-perfil-quad.png";
 import Instagram from "assets/icons/instagram-perfil-quad.png";
 import WhatsApp from "assets/icons/whatsapp-perfil-quad.png";
@@ -19,10 +19,10 @@ export default function Infos() {
       <Main>
         <Header>
           <img src={Photo} alt="Foto de perfil" />
-          <h3>Fulano</h3>
+          <h3>Ryuujin Arts</h3>
         </Header>
         <Info>
-          Eu cresci em Santarém e atualmente moro em Belém. Quando não estou trabalhando como escritor, você pode me encontrar jogando videogame. Eu adoro conhecer novas pessoas e explorar novos lugares.
+          Eu cresci em Quatipuru. Quando não estou trabalhando como designer, você pode me encontrar escrevendo estórias. Eu adoro conhecer novas pessoas e explorar novos lugares.
         </Info>
         <Contact>
           <h4>Entre em contato</h4>

@@ -57,8 +57,8 @@ export const Header = styled.div`
   
   img {
     width: 100%;
-    max-width: 9rem;
-    height: 100%;
+    width: 9rem;
+    height: 9rem;
     border-radius: 50%;
   }
 `;

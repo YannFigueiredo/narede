@@ -152,8 +152,8 @@ export default function Header() {
               <a 
                 href="/quadrinista" 
                 title="Quadrinista"
-                className={actualPage.pathname === "/produtor" ? "active" : ""}
-                onClick={() => setActualPage({...actualPage, pageTitle: "Produtor"})}  
+                className={actualPage.pathname === "/quadrinista" ? "active" : ""}
+                onClick={() => setActualPage({...actualPage, pageTitle: "Quadrinista"})}  
               >
                 Quadrinista
               </a>
@@ -162,8 +162,8 @@ export default function Header() {
               <a 
                 href="/comunidade" 
                 title="Comunidade"
-                className={actualPage.pathname === "/blog" ? "active" : ""}
-                onClick={() => setActualPage({...actualPage, pageTitle: "Blog"})}
+                className={actualPage.pathname === "/comunidade" ? "active" : ""}
+                onClick={() => setActualPage({...actualPage, pageTitle: "Comunidade"})}
               >
                 Comunidade
               </a>
