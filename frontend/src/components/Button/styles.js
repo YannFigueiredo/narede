@@ -9,12 +9,20 @@ export const Container = styled.button`
       variant === "tab" ? "#FFF" : 
         variant === "blue" ? theme.colors.blue["100"] : 
           variant === "gray" ? theme.colors.gray["100"] : 
-            variant === "blue_alt" ? theme.colors.blue["300"] : "transparent"
+            variant === "blue_alt" ? theme.colors.detailPrimary : "transparent"
     );
   }};
   transition: all linear .3s;
-  padding: ${({theme}) => theme.spacing.padding.very_small};
-  color: ${({theme}) => theme.colors.blue["900"]};
+  padding: 
+  ${({theme}) => theme.spacing.padding.big_small}
+  ${({theme}) => theme.spacing.padding.normal};
+  color: 
+  ${({variant, theme}) => {
+    return(
+      variant === "blue_alt" ? "rgb(217, 80, 28)" :
+        variant === "tab" ? theme.colors.backgroundPrimary : "#FFF"
+    );
+  }};
   text-transform: ${({variant, isUppercase}) => variant === "tab" || isUppercase ? "uppercase" : "normal"};
   font-weight: 700;
   width: ${(props) => props.width};

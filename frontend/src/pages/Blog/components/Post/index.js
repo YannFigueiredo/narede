@@ -5,34 +5,28 @@ import {
   Content,
   ButtonsWrapper 
 } from "./styles";
-import Button from "components/Button";
+import PictureProfile from "assets/images/generic-user.png";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import TextsmsIcon from "@mui/icons-material/Textsms";
 
 export default function Post({
   username,
-  title,
   text,
   image
 }) {
   return(
     <Container>
       <Header>
+        <img src={PictureProfile} alt="Foto de perfil" />
         <a href="#">{`@${username}`}</a>
-        <Button
-          text="Seguir"
-          isUppercase
-          variant="blue_alt"
-          freeSize={false}
-          width="content"
-        />
       </Header>
       <Content>
-        <h3>{title}</h3>
         <img src={image}/>
         <p>{text}</p>
       </Content>
       <ButtonsWrapper>
-        <a href="#">Curtir</a>
-        <a href="#">Comentar</a>
+        <FavoriteIcon className="post-btn" />
+        <TextsmsIcon className="post-btn" />
       </ButtonsWrapper>
     </Container>
   );

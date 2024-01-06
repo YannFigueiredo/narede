@@ -16,17 +16,23 @@ export const Container = styled.div`
 
 export const Header = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: ${({theme}) => theme.spacing.between_elements.small};
   align-items: center;
+
+  img {
+    width: 40px;
+    border-radius: 50%;
+  }
 
   a {
     font-weight: 700;
     text-decoration: none;
-    color: #FFF;
+    color: rgb(252, 189, 73);
   }
 
   a:visited {
-    color: #FFF;
+    color: rgb(252, 189, 73);
   }
 `;
 
@@ -43,16 +49,18 @@ export const Content = styled.div`
 
 export const ButtonsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
   align-items: center;
   margin-top: ${({theme}) => theme.spacing.between_elements.between_cards};
 
-  a {
-    text-decoration: none;
-    color: #FFF;
+  .post-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all linear .4s;
   }
 
-  a:visited {
-    color: #FFF;
+  .post-btn:hover {
+    fill: rgb(252, 189, 73);
   }
 `;

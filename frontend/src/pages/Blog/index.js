@@ -1,34 +1,37 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "components/Container/page";
 import {
+  Container,
   Main,
-  Title,
   ContentWrapper,
   Top,
+  AsideWrapper,
   TopContent,
-  Posts
+  Posts,
+  Options,
+  ButtonWrapper,
+  TagUser,
+  ItemsWrapper
 } from "./styles";
 import ProducerCard from "./components/ProducerCard";
-import TitleCard from "components/TitleCard";
 import Post from "./components/Post";
-import TitleModal from "components/TitleModal";
-import { titlesList } from "utils/mocks/titlesList";
+import SearchIcon from "@mui/icons-material/Search";
+import EmailIcon from "@mui/icons-material/Email";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import PersonIcon from "@mui/icons-material/Person";
+import PendingIcon from "@mui/icons-material/Pending";
+import ProfilePhoto from "assets/images/photo-profile.jpg";
 
 export default function Blog() {
   const [producers, setProducers] = useState([]);
-  const [comics, setComics] = useState([]);
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     setProducers([
-      {name: "Fulano", username: "fulanodetal"},
+      {name: "Cristiano", username: "cristiano7"},
       {name: "Claudia", username: "claudiacard"},
       {name: "Alex", username: "alexfig"},
       {name: "Max", username: "maxcambota"},
-      {name: "Beltrano", username: "beltranosilva"}
     ]);
-
-    setComics(titlesList.slice(3, 8));
 
     setPosts([
       {
@@ -54,25 +57,39 @@ export default function Blog() {
 
   return(
     <Container>
-      <TitleModal />
       <Main>
-        <Title>
-          Posts da Comunidade
-        </Title>
         <ContentWrapper>
           <Top>
-            <h2>Top usuários</h2>
-            <TopContent>
-              {
-                producers.map((producer, key) => (
-                  <ProducerCard
-                    key={key}
-                    name={producer.name}
-                    username={producer.username}
-                  />
-                ))
-              }
-            </TopContent>
+            <AsideWrapper>
+              <h2>Quem seguir</h2>
+              <TopContent>
+                {
+                  producers.map((producer, key) => (
+                    <ProducerCard
+                      key={key}
+                      username={producer.username}
+                    />
+                  ))
+                }
+              </TopContent>
+            </AsideWrapper>
+            <AsideWrapper>              
+              <h2>Em alta</h2>
+              <TopContent>
+                <div className="popular">
+                  <h4>Acelera!</h4>
+                  <span>1,3 mil posts</span>
+                </div>
+                <div className="popular">
+                  <h4>Felipe Garcia</h4>
+                  <span>875 posts</span>
+                </div>
+                <div className="popular">
+                  <h4>Coletivo BRT</h4>
+                  <span>572 posts</span>
+                </div>
+              </TopContent>
+            </AsideWrapper>
           </Top>
           <Posts>
             {
@@ -87,26 +104,22 @@ export default function Blog() {
               ))
             }
           </Posts>
-          <Top>
-            <h2>Top obras</h2>
-            <TopContent id="top-titles">
-              {
-                comics && comics.length > 0 && comics.map((comic, key) => (
-                  <TitleCard
-                    key={key}
-                    id={comic.id}
-                    description={comic.description}
-                    author={comic.author}
-                    title={comic.title}
-                    variation="small"
-                    cover={comic.cover}
-                    year={comic.year}
-                    category={comic.category}
-                  />
-                ))
-              }
-            </TopContent>
-          </Top>
+          <Options>
+            <ButtonWrapper>
+              <a href="#">Postar</a>
+            </ButtonWrapper>
+            <TagUser>
+              <img src={ProfilePhoto} alt="Foto de perfil" />
+              <span>Ryuujin Arts</span>
+            </TagUser>
+            <ItemsWrapper>
+              <li><SearchIcon className="item-icon" />Pesquisar</li>
+              <li><EmailIcon className="item-icon" />Mensagens</li>
+              <li><NotificationsIcon className="item-icon" />Notificações</li>
+              <li><PersonIcon className="item-icon" />Perfil</li>
+              <li><PendingIcon className="item-icon" />Mais</li>
+            </ItemsWrapper>
+          </Options>
         </ContentWrapper>
       </Main>
     </Container>
