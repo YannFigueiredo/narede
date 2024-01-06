@@ -4,7 +4,7 @@ export const Container = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${({theme}) => theme.colors.gray["100"]};
+  background: #000;
   padding: 
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.very_large};
@@ -32,7 +32,6 @@ export const Menu = styled.ul`
   justify-content: flex-start;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.very_small};
-  text-transform: uppercase;
   min-height: 3.75rem;
 
   li {
@@ -41,18 +40,28 @@ export const Menu = styled.ul`
     cursor: pointer;
     transition: all linear .3s;
     padding: ${({theme}) => theme.spacing.padding.very_small} ${({theme}) => theme.spacing.padding.small};
+    display: flex;
+    align-items: center;
+    gap: ${({theme}) => theme.spacing.between_elements.very_small};
   }
 
-  li a {
-    transition: all linear .3s;
-    color: ${({theme}) => theme.colors.blue["900"]};
-    text-decoration: none;
-    font-size: ${({theme}) => theme.fontSize.regular};
+  li:nth-child(1) img {
+    width: 20px;
+    height: 20px;
   }
 
-  li a:hover, li .active {
-    color: ${({theme}) => theme.colors.blue["400"]};
-    font-weight: 700;
+  li:nth-child(2) img {
+    width: 25px;
+    height: 25px;
+  }
+
+  li:nth-child(3) img {
+    width: 22px;
+    height: 22px;
+  }
+ 
+  li span {
+    font-weight: 500;
   }
 
   @media screen and (max-width: 768px) {
