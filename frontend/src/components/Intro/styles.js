@@ -15,6 +15,12 @@ export const Container = styled.div`
     font-weight: 700;
     text-transform: uppercase;
   }
+
+  @media screen and (max-width: 768px) {
+    span {
+      display: none;
+    }
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -22,5 +28,9 @@ export const ImageWrapper = styled.div`
 
   img {
     max-width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 4rem;
   }
 `;

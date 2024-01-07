@@ -16,6 +16,14 @@ export const Cards = styled.div`
   grid-template-rows: auto;
   margin-top: 1rem;
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Card = styled.div`

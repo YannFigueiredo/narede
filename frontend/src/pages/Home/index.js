@@ -22,11 +22,11 @@ export default function Home() {
         <MostPopular />
       </Content>
       <Reviews />
-      <TitleModal />
       <SubmitWrapper>
         <img src={SubmitImage} alt="Imagem da seção de submissão" />
         <img src={SubmitText} alt="Texto da seção de submissão" />
       </SubmitWrapper>
+      <TitleModal />
     </Container>
   );
 }

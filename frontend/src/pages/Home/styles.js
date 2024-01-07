@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Content = styled.div`
   display: flex;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Main = styled.div`
@@ -51,8 +55,18 @@ export const SubmitWrapper = styled.div`
   justify-content: center;
   max-width: 800px;
   margin: auto;
+  padding: 0 ${({theme}) => theme.spacing.padding.large};
 
   img {
     max-width: 100%;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 0 ${({theme}) => theme.spacing.padding.large};
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 ${({theme}) => theme.spacing.padding.small};
+    grid-template-columns: repeat(1, 1fr);
   }
 `;

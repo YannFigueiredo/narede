@@ -24,7 +24,14 @@ export const CardsWrapper = styled.div`
   flex-wrap: wrap;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
 
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: ${({theme}) => theme.spacing.between_elements.small};
+  }
+
   @media screen and (max-width: 600px) {
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
   }
 `;

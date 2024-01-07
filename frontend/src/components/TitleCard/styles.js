@@ -8,6 +8,10 @@ export const Container = styled.article`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.small};
+
+  @media screen and (max-width: 768px) {
+    width: 6rem;
+  }
 `;
 
 export const CoverWrapper = styled.div`
@@ -28,6 +32,12 @@ export const CoverWrapper = styled.div`
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 6rem;
+    height: 7rem;
+    border-radius: 8px;
   }
 `;
 

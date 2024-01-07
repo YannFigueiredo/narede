@@ -70,7 +70,7 @@ export default function TitleModal() {
                       return author + " | ";
                     }
                   })
-                } - @autor - x páginas - x visualizações - x likes - x comentários - x favoritações
+                } - 100 páginas - 45 visualizações - 15 likes - 3 comentários - 10 favoritações
               </h4>
             </TitleWrapper>
             <Label>Grátis</Label>

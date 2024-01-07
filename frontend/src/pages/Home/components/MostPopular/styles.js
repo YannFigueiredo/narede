@@ -16,6 +16,12 @@ export const Container = styled.div`
     font-size: ${({theme}) => theme.fontSize.base_large};
     text-align: center;
   }
+
+  @media screen and (max-width: 768px) {
+   margin: auto;
+   width: 100%;
+   padding: ${({theme}) => theme.spacing.padding.small}
+  }
 `;
 
 export const CardsWrapper = styled.div`
