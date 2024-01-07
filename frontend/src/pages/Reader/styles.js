@@ -33,15 +33,25 @@ export const Header = styled.div`
     }
   }
 
-  .settings-icon [
+  .settings-icon {
     fill: #FFF;
     font-size: 2rem;
-  ]
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Main = styled.div`
   display: flex;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+    align-items: center;
+  }
 `;
 
 export const Infos = styled.div`
@@ -53,6 +63,11 @@ export const Infos = styled.div`
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.large};
   min-width: 400px;
+
+  @media screen and (max-width: 768px) {
+    padding: ${({theme}) => theme.spacing.padding.small};
+    width: 100%;
+  }
 `;
 
 export const Profile = styled.div`
@@ -73,6 +88,29 @@ export const ImageWrapper = styled.div`
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 15.625rem;
+    height: 15.625rem;
+  }
+`;
+
+export const UserName = styled.h2`
+  color: ${({theme}) => theme.colors.backgroundSecondary};
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+    padding: 
+    ${({theme}) => theme.spacing.padding.big_small}
+    ${({theme}) => theme.spacing.padding.very_small};
+    font-weight: 700;
+    font-size: ${({theme}) => theme.fontSize.large};
+    text-align: center;
+    width: 100%;
+    background: ${({theme}) => theme.colors.gray["100"]};
   }
 `;
 
@@ -137,6 +175,19 @@ export const Content = styled.div`
 
     h3 {
       text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: ${({theme}) => theme.spacing.padding.small};
+    
+    .double-col {
+      grid-column: span 1;
+
+      h3 {
+        text-align: left;
+      }
     }
   }
 `;

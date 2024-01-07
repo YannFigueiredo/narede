@@ -6,6 +6,7 @@ import {
   Infos, 
   Profile, 
   ImageWrapper, 
+  UserName,
   TagsWrapper, 
   ButtonsWrapper, 
   Social, 
@@ -79,6 +80,7 @@ export default function Reader() {
             <ImageWrapper>
               <img src={GenericPicture} alt="Foto do usuário" />
             </ImageWrapper>
+            <UserName>Ryuujin Arts</UserName>
             <TagsWrapper>
               <span>212 salvos</span>
               <span>351 seguidores</span>
