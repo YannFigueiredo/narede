@@ -58,6 +58,18 @@ export default function Categories() {
             ))
           }
         </Selector>
+        <Filter id="mobile-selector" onChange={(e) => setActiveCategory(e.target.value)}>
+          {
+            categories && categories.length > 0 && categories.map((category, key) => (
+              <option 
+                key={key}
+                value={key}
+              >
+                {category.name}
+              </option>
+            ))
+          }
+        </Filter>
         <Filter>
           <option>por popularidade</option>
           <option>por data</option>

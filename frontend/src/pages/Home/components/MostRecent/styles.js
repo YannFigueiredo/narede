@@ -26,12 +26,13 @@ export const CardsWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: ${({theme}) => theme.spacing.between_elements.small};
+    justify-content: center;
   }
 
-  @media screen and (max-width: 600px) {
-    grid-template-columns: repeat(3, 1fr);
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;

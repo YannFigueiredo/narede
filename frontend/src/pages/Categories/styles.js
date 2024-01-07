@@ -8,8 +8,25 @@ export const Main = styled.div`
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
 
+  #mobile-selector {
+    display: none;
+    background: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: ${({theme}) => theme.colors.sectionTitle};
+
+    option {
+      color: ${({theme}) => theme.colors.sectionTitle};
+    }
+
+    @media screen and (max-width: 600px) {
+      display: flex;
+    }
+  }
+
   @media screen and (max-width: 600px) {
     padding: ${({theme}) => theme.spacing.padding.small};
+    align-items: center;
   }
 `;
 
@@ -21,6 +38,10 @@ export const Selector = styled.div`
 
   button:nth-child(${(props) => props.active}) {
     color: ${({theme}) => theme.colors.sectionTitle};
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
   }
 `;
 
@@ -42,7 +63,7 @@ export const TitlesArea = styled.div`
   flex-wrap: wrap;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     justify-content: center;
   }
 `;
