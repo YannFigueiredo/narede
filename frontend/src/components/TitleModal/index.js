@@ -13,7 +13,8 @@ import {
   ButtonsWrapper,
   Description, 
   ListWrapper, 
-  List
+  List,
+  Label
 } from "./styles";
 import CancelIcon from "@mui/icons-material/Cancel";
 import acaiIcon from "assets/icons/acai.png";
@@ -72,6 +73,7 @@ export default function TitleModal() {
                 } - @autor - x páginas - x visualizações - x likes - x comentários - x favoritações
               </h4>
             </TitleWrapper>
+            <Label>Grátis</Label>
             <AssessmentsWrapper>
               <span>Avaliação:</span>
               <div>

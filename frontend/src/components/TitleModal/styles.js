@@ -96,6 +96,20 @@ export const TitleWrapper = styled.div`
   }
 `;
 
+export const Label = styled.span`
+  background: ${({theme}) => theme.colors.backgroundSecondary};
+  text-transform: uppercase;
+  padding:
+  0.25rem
+  ${({theme}) => theme.spacing.padding.normal}; 
+  display: inline-block;
+  font-size: ${({theme}) => theme.fontSize.small};
+  border-radius: ${({theme}) => theme.spacing.radius.normal};
+  max-width: 110px;
+  text-align: center;
+  font-weight: 500;
+`;
+
 export const AssessmentsWrapper = styled.div`
   display: flex;
   align-items: center;

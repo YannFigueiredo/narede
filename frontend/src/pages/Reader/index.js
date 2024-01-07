@@ -12,7 +12,7 @@ import {
   Content,
   Item
 } from "./styles";
-import GenericPicture from "assets/images/generic-user.png";
+import GenericPicture from "assets/images/photo-profile.jpg";
 import instagram from "assets/icons/instagram.png";
 import twitter from "assets/icons/twitter.png";
 import facebook from "assets/icons/facebook.png";
@@ -66,7 +66,7 @@ export default function Reader() {
   return(
     <Container>
       <Header>
-        <h2>Fulano Detal</h2>
+        <h2>Ryuujin Arts</h2>
         <span className="page-title">Perfil do leitor</span>
         <div>
           <SettingsIcon className="settings-icon" />

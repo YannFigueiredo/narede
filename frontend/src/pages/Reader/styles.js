@@ -59,11 +59,20 @@ export const Profile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 `;
 
 export const ImageWrapper = styled.div`
+  max-width: 15.625rem;
+  max-height: 15.625rem;
+  width: 100%;
+  height: 100%;
+
   img {
-    max-width: 15.625rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 `;
 
