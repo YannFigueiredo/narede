@@ -23,8 +23,10 @@ export const Container = styled.div`
     background: ${({theme}) => theme.colors.gray["100"]};
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     max-width: 100%;
+    margin-top: -460px;
+    max-width: 22rem;
   }
 `;
 

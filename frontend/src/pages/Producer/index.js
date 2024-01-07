@@ -17,9 +17,7 @@ export default function Producer() {
 
   return(
     <Container>
-      <Header>
-
-      </Header>
+      <Header></Header>
       <Main>
         <Infos />
         <Content>

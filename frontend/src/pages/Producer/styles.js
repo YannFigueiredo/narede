@@ -16,6 +16,10 @@ export const Header = styled.div`
   background-image: url(${backgroundProfile});
   background-position: center center;
   background-size: cover;
+
+  @media screen and (max-width: 768px) {
+    height: 475px;
+  }
 `;
 
 export const Main = styled.div`
@@ -26,6 +30,10 @@ export const Main = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
   flex-wrap: wrap;
 
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+
   @media screen and (max-width: 600px) {
     padding: ${({theme}) => theme.spacing.padding.small}};
   }
@@ -35,11 +43,20 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const OptionWrapper = styled.div`
   display: flex;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Options = styled.div`
@@ -59,5 +76,18 @@ export const Options = styled.div`
 
   span:hover, .active {
     border-color: ${({theme}) => theme.colors.detailPrimary};
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+
+    span {
+      color: #FFF;
+    }
+
+    span:hover, .active {
+      color: ${({theme}) => theme.colors.detailPrimary};
+      border-color: ${({theme}) => theme.colors.detailPrimary};
+    }
   }
 `;
