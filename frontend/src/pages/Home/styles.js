@@ -44,3 +44,15 @@ export const Chat = styled.div`
   }
 `;
 
+export const SubmitWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+
+  img {
+    max-width: 100%;
+  }
+`;

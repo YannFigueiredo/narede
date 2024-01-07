@@ -99,7 +99,8 @@ export default function Header() {
               <Menu id="logged-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
                 <li>
                   <a 
-                    href="/conta" title="Minha conta"
+                    href="/conta" 
+                    title="Minha conta"
                     className={actualPage.pathname === "/conta" ? "active" : ""}
                   >
                     Minha conta
@@ -107,13 +108,22 @@ export default function Header() {
                 </li>
                 <li>
                   <a 
-                    href="/planos" title="Planos"
+                    href="/planos" 
+                    title="Planos"
                     className={actualPage.pathname === "/planos" ? "active" : ""}
                   >
                     Planos
                   </a>
                 </li>
-                <li><a href="#" title="Enviar">Enviar</a></li>
+                <li>
+                  <a 
+                    href="/enviar" 
+                    title="Enviar"
+                    className={actualPage.pathname === "/enviar" ? "active" : ""}
+                  >
+                    Enviar
+                  </a>
+                </li>
                 <li><a href="#" title="Sair" onClick={exit}>Sair</a></li>
               </Menu>
             }
