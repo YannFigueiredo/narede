@@ -230,7 +230,7 @@ export const SessionManager = styled.div`
     }
 
     li .menu-icon {
-      font-size: 408px;
+      font-size: 40px;
       display: inline-block;
       width: 2rem;
       height: 2rem;

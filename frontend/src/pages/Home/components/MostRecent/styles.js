@@ -25,14 +25,7 @@ export const CardsWrapper = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
 
   @media screen and (max-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
     gap: ${({theme}) => theme.spacing.between_elements.small};
     justify-content: center;
-  }
-
-  @media screen and (max-width: 500px) {
-    grid-template-columns: repeat(2, 1fr);
   }
 `;
