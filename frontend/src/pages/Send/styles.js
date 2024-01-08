@@ -9,6 +9,13 @@ export const Main = styled.div`
   ${({theme}) => theme.spacing.padding.normal}
   ${({theme}) => theme.spacing.padding.large}
   0;
+
+  @media screen and (max-width: 768px) {
+    padding: 
+    ${({theme}) => theme.spacing.padding.small}
+    ${({theme}) => theme.spacing.padding.small}
+    0;
+  }
 `;
 
 export const SubmitWrapper = styled.div`
@@ -21,6 +28,11 @@ export const SubmitWrapper = styled.div`
 
   img {
     max-width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
