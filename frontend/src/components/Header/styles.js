@@ -181,13 +181,15 @@ export const Menu = styled.ul`
   }
 
   li img {
-    max-width: 2.5rem;
+    max-width: 2rem;
   }
 `;
 
 export const SessionManager = styled.div`
   li img {
     display: none;
+    width: 2rem;
+    height: 2rem;
   }
 
   #logged-container {
@@ -213,6 +215,7 @@ export const SessionManager = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: ${({theme}) => theme.spacing.between_elements.small};
     }
 
@@ -222,12 +225,15 @@ export const SessionManager = styled.div`
 
     #logged-container, #logged-out-container {
       li a {
-        font-size: ${({theme}) => theme.fontSize.small};
+        font-size: 0.5rem;
       }
     }
 
     li .menu-icon {
-      font-size: 44px;
+      font-size: 408px;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
     }
   }
 `;

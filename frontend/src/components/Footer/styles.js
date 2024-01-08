@@ -114,7 +114,6 @@ export const MenuHeader = styled.div`
   }
 
   li img {
-    max-width: 2.5rem;
     display: none;
   }
 
@@ -131,10 +130,12 @@ export const MenuHeader = styled.div`
 
     li img {
       display: inline-block;
+      width: 2rem;
+      height: 2rem;
     }
 
     li a {
-      font-size: 12px;
+      font-size: 0.5rem;
     }
   }
 `;

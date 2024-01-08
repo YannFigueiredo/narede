@@ -159,6 +159,16 @@ export default function Header() {
                   <a href="#" onClick={login}>Entrar</a>
                 </li>
                 <li>
+                  <img src={Plans} alt="Ícone de planos" />
+                  <a 
+                    href="/planos" 
+                    title="Planos"
+                    className={actualPage.pathname === "/planos" ? "active" : ""}
+                  >
+                    Planos
+                  </a>
+                </li>
+                <li>
                   <AppRegistrationIcon className="menu-icon" />
                   <a href="#">Criar conta</a>
                 </li>
