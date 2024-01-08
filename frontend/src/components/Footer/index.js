@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 import {
   MenuWrapper,
@@ -17,6 +18,7 @@ import Community from "assets/icons/mobile-menu/comunidade.png";
 export default function Footer() {
   const [actualPage, setActualPage] = useState("");
   const [isMenuFixed, setIsMenuFixed] = useState(false);
+  const navigate = useNavigate();
 
   const updateActualPage = () => {
     setActualPage({
@@ -49,19 +51,19 @@ export default function Footer() {
     };
   }, []);
 
-  useEffect(() => updateActualPage(), [actualPage.pathname]);
+  useEffect(() => updateActualPage(), [actualPage.pathname, global.window.location.pathname]);
 
   return(
     <Container id="footer">
       <MenuWrapper>
         <MenuHeader className={isMenuFixed ? "fixed-menu" : ""}>
-          <li>
+          <li onClick={() => navigate("/")}>
             <img src={Home} alt ="Ícone da página inicial" />
             <a href="/" title="Página inicial" className={actualPage.pathname === "/" ? "active" : ""}>
               Início
             </a>
           </li>
-          <li>
+          <li onClick={() => navigate("/catalogo")}>
             <img src={Catalog} alt ="Ícone do catálogo" />
             <a 
               href="/catalogo" 
@@ -72,7 +74,7 @@ export default function Footer() {
               Catálogo
             </a>
           </li>
-          <li>
+          <li onClick={() => navigate("/leitor")}>
             <img src={Reader} alt ="Ícone de leitor" />
             <a 
               href="/leitor" 
@@ -83,7 +85,7 @@ export default function Footer() {
               Leitor
             </a>
           </li>
-          <li>
+          <li onClick={() => navigate("/quadrinista")}>
             <img src={Producer} alt ="Ícone de quadrinista" />
             <a 
               href="/quadrinista" 
@@ -94,7 +96,7 @@ export default function Footer() {
               Quadrinista
             </a>
           </li>
-          <li>
+          <li onClick={() => navigate("/comunidade")}>
             <img src={Community} alt ="Ícone de comunidade" />
             <a 
               href="/comunidade" 

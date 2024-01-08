@@ -91,7 +91,7 @@ export default function Header() {
 
   useEffect(() => updateActualPage(), []);
 
-  useEffect(() => updateActualPage(), [actualPage.pathname]);
+  useEffect(() => updateActualPage(), [actualPage.pathname, global.window.location.pathname]);
 
   return(
     <Container>
@@ -104,7 +104,7 @@ export default function Header() {
             {
               isLogged &&
               <Menu id="logged-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
-                <li>
+                <li onClick={() => navigate("/conta")}>
                   <img src={Profile} alt="Ícone de perfil" />
                   <a 
                     href="/conta" 
@@ -114,7 +114,7 @@ export default function Header() {
                     Perfil
                   </a>
                 </li>
-                <li>
+                <li onClick={() => navigate("/planos")}>
                   <img src={Plans} alt="Ícone de planos" />
                   <a 
                     href="/planos" 
@@ -124,7 +124,7 @@ export default function Header() {
                     Planos
                   </a>
                 </li>
-                <li>
+                <li onClick={() => navigate("/enviar")}>
                   <img src={Send} alt="Ícone de enviar" />
                   <a 
                     href="/enviar" 
@@ -134,7 +134,7 @@ export default function Header() {
                     Enviar
                   </a>
                 </li>
-                <li id="about-btn-mobile">
+                <li id="about-btn-mobile" onClick={() => navigate("/sobre")}>
                   <img src={About} alt="Ícone de sobre nós" />
                   <a 
                     href="/sobre" 
@@ -145,20 +145,20 @@ export default function Header() {
                     Sobre
                   </a>
                 </li>
-                <li>
+                <li onClick={exit}>
                   <LogoutIcon className="menu-icon" />
-                  <a href="#" title="Sair" onClick={exit}>Sair</a>
+                  <a href="#" title="Sair">Sair</a>
                 </li>
               </Menu>
             }
             {
               isLogged === false &&
               <Menu id="logged-out-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
-                <li>
+                <li onClick={login}>
                   <LoginIcon className="menu-icon" />
-                  <a href="#" onClick={login}>Entrar</a>
+                  <a href="#">Entrar</a>
                 </li>
-                <li>
+                <li onClick={() => navigate("/planos")}>
                   <img src={Plans} alt="Ícone de planos" />
                   <a 
                     href="/planos" 
@@ -172,7 +172,7 @@ export default function Header() {
                   <AppRegistrationIcon className="menu-icon" />
                   <a href="#">Criar conta</a>
                 </li>
-                <li id="about-btn-mobile">
+                <li id="about-btn-mobile" onClick={() => navigate("/sobre")}>
                   <img src={About} alt="Ícone de sobre nós" />
                   <a 
                     href="/sobre" 
