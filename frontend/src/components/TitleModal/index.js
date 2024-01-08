@@ -18,11 +18,14 @@ import {
 } from "./styles";
 import CancelIcon from "@mui/icons-material/Cancel";
 import acaiIcon from "assets/icons/acai.png";
+import OpenIcon from "assets/icons/cadeado-desbloqueado.png";
+import CloseIcon from "assets/icons/cadeado-trancado.png";
 
 export default function TitleModal() {
   const { titleValues, isModalOpen, setIsModalOpen } = useContext(TitleContext);
   const [chaptersList, setChaptersList] = useState([]);
   const modal = useRef(null);
+  const [isLogged, setIsLogged] = useState();
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -35,7 +38,8 @@ export default function TitleModal() {
 
     global.localStorage.setItem("favorites", JSON.stringify(favorites));
   };*/
-
+  useEffect(() => setIsLogged(global.localStorage.getItem("logged") === "true" ? true : false), []);
+  
   useEffect(() => {
     if(isModalOpen) {
       global.document.body.style.overflow = "hidden";
@@ -73,7 +77,7 @@ export default function TitleModal() {
                 } - 100 páginas - 45 visualizações - 15 likes - 3 comentários - 10 favoritações
               </h4>
             </TitleWrapper>
-            <Label>Grátis</Label>
+            <Label>{titleValues.isFree}</Label>
             <AssessmentsWrapper>
               <span>Avaliação:</span>
               <div>
@@ -86,10 +90,23 @@ export default function TitleModal() {
         </Header>
         <Content>
           <ButtonsWrapper>
-            <a>Ler agora</a>
+            <a
+              href={
+                titleValues.isFree === "Grátis" || isLogged ? `/quadrinho/${titleValues.id}/1` : "#"
+              }
+              className={
+                titleValues.isFree === "Grátis" || isLogged ? "" : "blocked-item"
+              }
+            >
+              Ler agora
+            </a>
             <div>
+              {
+                titleValues.isFree !== "Grátis" &&
+                <a href="/planos">{titleValues.isFree === "Compra" ? "Comprar" : "Assinar"}</a>
+              }
               <a href="#">Apoie o autor</a>
-              <a href="#">Perfil do autor</a>
+              <a href="/quadrinista">Perfil do autor</a>
               <a href="#">Salvar</a>
               <a href="#">Compatilhar</a>
             </div>
@@ -104,7 +121,27 @@ export default function TitleModal() {
                 chaptersList && chaptersList.length > 0 ? chaptersList[0].chapters.map((chapter, key) => (
                   <div className="list-item" key={key}>
                     <div className="list-item-photo"></div>
-                    <a href={`/quadrinho/${titleValues.id}/${key + 1}`}>{chapter.name}</a>
+                    {
+                      (titleValues.isFree === "Grátis" || isLogged) &&
+                      <img 
+                        src={OpenIcon} 
+                        alt="Ícone de cadeado aberto" 
+                        className="list-item-icon" 
+                      />
+                    }
+                    {
+                      (titleValues.isFree !== "Grátis" && !isLogged) &&
+                      <img 
+                        src={CloseIcon} 
+                        alt="Ícone de cadeado fechado" 
+                        className="list-item-icon" 
+                      />
+                    }
+                    <a 
+                      href={
+                        titleValues.isFree === "Grátis" || isLogged ? `/quadrinho/${titleValues.id}/${key + 1}` : "#"
+                      }
+                    >{chapter.name}</a>
                   </div>
                 )) : (<span>Nenhum capítulo encontrado</span>)
               }

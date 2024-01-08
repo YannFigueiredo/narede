@@ -158,6 +158,15 @@ export const Content = styled.div`
   span, a {
     color: #FFF;
   }
+
+  .blocked-item {
+    cursor: default;
+    background: ${({theme}) => theme.colors.gray["100"]};
+  }
+
+  .blocked-item:hover {
+    background: ${({theme}) => theme.colors.gray["100"]};
+  }
 `;
 
 export const Description = styled.div`
@@ -229,11 +238,20 @@ export const List = styled.div`
     display: flex;
     align-items: center;
     gap: ${({theme}) => theme.spacing.between_elements.small};
+    position: relative;
   }
 
   .list-item-photo {
     width: 35px;
     height: 30px;
     background: #000;
+  }
+
+  .list-item-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
   }
 `;

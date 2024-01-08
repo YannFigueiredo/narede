@@ -89,6 +89,7 @@ export default function Categories() {
                 volumesNumber={title.volumesNumber}
                 chaptersNumber={title.chaptersNumber}
                 author={title.author}
+                isFree={title.isFree}
                 year={title.year}
                 cover={title.cover}
                 variation="small"

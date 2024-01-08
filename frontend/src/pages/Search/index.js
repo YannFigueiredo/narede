@@ -90,6 +90,7 @@ export default function Search() {
                 description={comic.description}
                 author={comic.author}
                 year={comic.year}
+                isFree={comic.isFree}
                 cover={comic.cover}
                 variation={windowSize <= 768 ? "small" : windowSize <= 992 ? "medium" : "large"}
               />

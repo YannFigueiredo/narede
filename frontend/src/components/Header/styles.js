@@ -192,6 +192,10 @@ export const SessionManager = styled.div`
     height: 2rem;
   }
 
+  li .menu-icon {
+    display: none;
+  }
+
   #logged-container {
     li:nth-child(1) {
       display: flex;

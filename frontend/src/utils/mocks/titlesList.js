@@ -15,7 +15,8 @@ export const titlesList = [
     author: ["Vários"],
     category: "Aventura",
     cover: Logo01,
-    year: "2018"
+    year: "2018",
+    isFree: "Grátis"
   },
   {
     id: 2,
@@ -24,7 +25,8 @@ export const titlesList = [
     author: ["Ademar Vieira", "Jucylande Júnior", "Ticê Santos"],
     category: "Aventura",
     cover: Logo02,
-    year: "2020"
+    year: "2020",
+    isFree: "Grátis"
   },
   {
     id: 3,
@@ -33,7 +35,8 @@ export const titlesList = [
     author: ["Wolney Nazareno", "Fernando Augusto", "Carlos Paul", "Otoniel Oliveira"],
     category: "Folclore",
     cover: Logo03,
-    year: "2004"
+    year: "2004",
+    isFree: "Compra"
   },
   {
     id: 4,
@@ -42,7 +45,8 @@ export const titlesList = [
     author: ["Gidalti Júnior"],
     category: "Romance",
     cover: Logo04,
-    year: "2017"
+    year: "2017",
+    isFree: "Compra"
   },
   {
     id: 5,
@@ -51,7 +55,8 @@ export const titlesList = [
     author: ["Sérnio dos Anjos", "Angela Ousinho", "Felipe Garcia", "Diogo Ferreira", "Markynson Rocha", "Andressa Munhoz", "Laércio Júnior"],
     category: "Cultura",
     cover: Logo05,
-    year: "2017"
+    year: "2017",
+    isFree: "Assinatura"
   },
   {
     id: 6,
@@ -60,7 +65,8 @@ export const titlesList = [
     author: ["Dedê Paiva"],
     category: "Comédia",
     cover: Logo06,
-    year: "2000"
+    year: "2000",
+    isFree: "Assinatura"
   },
   {
     id: 7,
@@ -69,7 +75,8 @@ export const titlesList = [
     author: ["Luiz Paulo Jacob", "Gabriel de Jesus"],
     category: "Comédia",
     cover: Logo07,
-    year: "1989"
+    year: "1989",
+    isFree: "Grátis"
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ export const titlesList = [
     author: ["Woylle Masaki"],
     category: "Ação",
     cover: Logo08,
-    year: "2021"
+    year: "2021",
+    isFree: "Grátis"
   }
 ];

@@ -24,6 +24,7 @@ export default function MostPopular() {
                 cover={card.cover}
                 author={card.author}
                 variation="very small"
+                isFree={card.isFree}
                 withTitle={false}
               />
               <Details>

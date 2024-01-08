@@ -12,7 +12,8 @@ export default function TitleCard({
   cover,
   variation = "medium",
   withTitle = true,
-  className
+  className,
+  isFree
 }) {
   const { setTitleValues, setIsModalOpen } = useContext(TitleContext);
 
@@ -23,7 +24,8 @@ export default function TitleCard({
       description: description,
       cover: cover,
       category: category,
-      author: author
+      author: author,
+      isFree: isFree
     });
     setIsModalOpen(true);
   };

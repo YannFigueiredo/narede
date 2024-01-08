@@ -35,6 +35,7 @@ export default function MostRecent({ title }) {
               year={card.year}
               cover={card.cover}
               author={card.author}
+              isFree={card.isFree}
               variation="small"
               withTitle={false}
             />
