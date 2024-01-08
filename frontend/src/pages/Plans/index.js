@@ -25,10 +25,13 @@ export default function Plans() {
     <Container>
       <Main>
         <Content>
-          <h1>Leia suas histórias preferidas onde quiser</h1>
+          <h1>
+            Ainda não sabe qual plano assinar? Crie uma conta e compre apenas os quadrinhos que você quiser
+            ou acesse a biblioteca gratuita.
+          </h1>
           <span>
-            Faça a sua assinatura e tenha acesso a todo o catálogo e vantagens exclusivas
-            somente para os assinantes.
+            Crie sua conta gratuita e tenha acesso a diversos quadrinhos que estão na categoria grátis, ou ainda tenha a possibilidade de comprar apenas quadrinhos específicos de sua preferência. Você também poderá conhecer todo o catálogo com milhares de quadrinhos e ainda ter acesso a comunidade.<br/>
+            Na conta grátis você conseguirá ler os quadrinhos que estão gratuitos no site e app, como vero-peixe, las cabaças, zagaia e outros, além de poder interagir diretamente com quadrinistas e outros leitores através da comunidade do site, e não precisa cadastrar algum meio de pagamento, o login é totalmente free. Ou ainda você pode comprar apenas aquele quadrinhos especial direto com o autor através do pix.
           </span>
           <ButtonWrapper>
             <a 

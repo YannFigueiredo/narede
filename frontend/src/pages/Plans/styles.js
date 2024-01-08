@@ -48,6 +48,12 @@ export const Content = styled.div`
   span {
     font-weight: 500;
   }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export const ButtonWrapper = styled.div`
