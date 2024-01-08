@@ -75,7 +75,9 @@ export const Menu = styled.ul`
   }
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    li span {
+      font-size: ${({theme}) => theme.fontSize.regular};
+    }
   }
 `;
 
@@ -87,7 +89,6 @@ export const MenuHeader = styled.div`
   width: 100%;
   background: rgb(56, 52, 53);
   display: none;
-  width: 100%;
   padding: ${({theme}) => theme.spacing.padding.small}; 
   z-index: 9999;
 
@@ -114,10 +115,26 @@ export const MenuHeader = styled.div`
 
   li img {
     max-width: 2.5rem;
-    border-radius: 50%;
+    display: none;
   }
 
   @media screen and (max-width: 768px) {
     display: flex;
+    padding: 0 ${({theme}) => theme.spacing.padding.very_small}; 
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: ${({theme}) => theme.spacing.between_elements.small};
+    }
+
+    li img {
+      display: inline-block;
+    }
+
+    li a {
+      font-size: 12px;
+    }
   }
 `;

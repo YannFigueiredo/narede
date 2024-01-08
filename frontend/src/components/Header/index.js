@@ -13,6 +13,13 @@ import Logo from "assets/images/logo-white-variation.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelIcon from "@mui/icons-material/Cancel";
 import Input from "components/Input";
+import Profile from "assets/icons/mobile-menu/perfil.png";
+import Plans from "assets/icons/mobile-menu/planos.png";
+import Send from "assets/icons/mobile-menu/enviar.png";
+import About from "assets/icons/mobile-menu/sobre-nos.png";
+import LoginIcon from "@mui/icons-material/Login";
+import LogoutIcon from "@mui/icons-material/Logout";
+import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 
 export default function Header() {
   const menu = useRef(null);
@@ -98,6 +105,7 @@ export default function Header() {
               isLogged &&
               <Menu id="logged-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
                 <li>
+                  <img src={Profile} alt="Ícone de perfil" />
                   <a 
                     href="/conta" 
                     title="Minha conta"
@@ -107,6 +115,7 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
+                  <img src={Plans} alt="Ícone de planos" />
                   <a 
                     href="/planos" 
                     title="Planos"
@@ -116,6 +125,7 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
+                  <img src={Send} alt="Ícone de enviar" />
                   <a 
                     href="/enviar" 
                     title="Enviar"
@@ -125,6 +135,7 @@ export default function Header() {
                   </a>
                 </li>
                 <li id="about-btn-mobile">
+                  <img src={About} alt="Ícone de sobre nós" />
                   <a 
                     href="/sobre" 
                     title="Sobre nós"
@@ -134,15 +145,25 @@ export default function Header() {
                     Sobre
                   </a>
                 </li>
-                <li><a href="#" title="Sair" onClick={exit}>Sair</a></li>
+                <li>
+                  <LogoutIcon className="menu-icon" />
+                  <a href="#" title="Sair" onClick={exit}>Sair</a>
+                </li>
               </Menu>
             }
             {
               isLogged === false &&
               <Menu id="logged-out-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
-                <li><a href="#" onClick={login}>Entrar</a></li>
-                <li><a href="#">Criar conta</a></li>
+                <li>
+                  <LoginIcon className="menu-icon" />
+                  <a href="#" onClick={login}>Entrar</a>
+                </li>
+                <li>
+                  <AppRegistrationIcon className="menu-icon" />
+                  <a href="#">Criar conta</a>
+                </li>
                 <li id="about-btn-mobile">
+                  <img src={About} alt="Ícone de sobre nós" />
                   <a 
                     href="/sobre" 
                     title="Sobre nós"

@@ -8,6 +8,11 @@ import {
 import Twitter from "assets/icons/twitter-perfil-quad.png";
 import Instagram from "assets/icons/instagram-perfil-quad.png";
 import TikTok from "assets/icons/tiktok-perfil-quad.png";
+import Home from "assets/icons/mobile-menu/inicio.png";
+import Catalog from "assets/icons/mobile-menu/catalogo.png";
+import Reader from "assets/icons/mobile-menu/leitor.png";
+import Producer from "assets/icons/mobile-menu/quadrinista.png";
+import Community from "assets/icons/mobile-menu/comunidade.png";
 
 export default function Footer() {
   const [actualPage, setActualPage] = useState("");
@@ -51,11 +56,13 @@ export default function Footer() {
       <MenuWrapper>
         <MenuHeader className={isMenuFixed ? "fixed-menu" : ""}>
           <li>
+            <img src={Home} alt ="Ícone da página inicial" />
             <a href="/" title="Página inicial" className={actualPage.pathname === "/" ? "active" : ""}>
               Início
             </a>
           </li>
           <li>
+            <img src={Catalog} alt ="Ícone do catálogo" />
             <a 
               href="/catalogo" 
               title="Catálogo"
@@ -66,6 +73,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
+            <img src={Reader} alt ="Ícone de leitor" />
             <a 
               href="/leitor" 
               title="Leitor"
@@ -76,6 +84,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
+            <img src={Producer} alt ="Ícone de quadrinista" />
             <a 
               href="/quadrinista" 
               title="Quadrinista"
@@ -86,6 +95,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
+            <img src={Community} alt ="Ícone de comunidade" />
             <a 
               href="/comunidade" 
               title="Comunidade"
