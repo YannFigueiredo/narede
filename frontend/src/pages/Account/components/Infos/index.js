@@ -25,14 +25,14 @@ export default function Infos() {
         <InputWrapper>
           <label>Nome exibido</label>
           <Input 
-            width="100%"
+            width="auto"
             className="input-infos"
           />
         </InputWrapper>
         <InputWrapper>
           <label>E-mail</label>
           <Input 
-            width="100%"
+            width="auto"
             className="input-infos"
           />
         </InputWrapper>

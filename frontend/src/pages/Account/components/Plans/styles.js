@@ -45,6 +45,8 @@ export const Cards = styled.div`
   display: flex;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  flex-wrap: wrap;
+  justify-content: center;
 
   .active {
     border-color: ${({theme}) => theme.colors.detailPrimary};
@@ -84,5 +86,10 @@ export const Card = styled.div`
   span {
     font-weight: 500;
     font-size: ${({theme}) => theme.fontSize.regular};
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 180px;
+    height: 250px;
   }
 `;

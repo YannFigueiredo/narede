@@ -26,7 +26,7 @@ export default function Plans() {
       <ToggleWrapper
         onClick={() => setIsActive(!isActive)}
       >
-        <span>{isActive ? "Ativo" : "Desativado"}</span>
+        <span>{isActive ? "Ativo" : "Inativo"}</span>
         <Toggle>
           <div 
             className={isActive ? "" : "noActiveToggle"}

@@ -5,12 +5,17 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
+  max-width: 100%;
 
   h2 {
     text-transform: uppercase;
     color: #FFF;
     font-weight: 500;
     font-size: 25px;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
   }
 `;
 
@@ -57,6 +62,15 @@ export const InputsWrapper = styled.div`
     border-radius: ${({theme}) => theme.spacing.radius.small};
     padding: ${({theme}) => theme.spacing.padding.big_small};
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    .input-infos {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 `;
 
 export const InputWrapper = styled.div`
@@ -68,6 +82,10 @@ export const InputWrapper = styled.div`
   label {
     font-weight: 500;
     font-size: ${({theme}) => theme.fontSize.base_large};
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -90,5 +108,14 @@ export const ButtonWrapper = styled.div`
 
   &:hover {
     background: ${({theme}) => theme.colors.detailPrimary};
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 
+    ${({theme}) => theme.spacing.padding.big_small}
+    ${({theme}) => theme.spacing.padding.large};
+    border-radius: ${({theme}) => theme.spacing.radius.normal};
+    text-align: center;
+    width: 150px;
   }
 `;

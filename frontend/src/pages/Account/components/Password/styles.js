@@ -12,6 +12,10 @@ export const Container = styled.div`
     font-weight: 500;
     font-size: 25px;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const InputsWrapper = styled.div`
@@ -26,6 +30,15 @@ export const InputsWrapper = styled.div`
     border-radius: ${({theme}) => theme.spacing.radius.small};
     padding: ${({theme}) => theme.spacing.padding.big_small};
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    .input-infos {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 `;
 
 export const InputWrapper = styled.div`
@@ -37,6 +50,10 @@ export const InputWrapper = styled.div`
   label {
     font-weight: 500;
     font-size: ${({theme}) => theme.fontSize.base_large};
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -60,6 +77,15 @@ export const ButtonWrapper = styled.div`
   &:hover {
     background: ${({theme}) => theme.colors.detailPrimary};
   }
+
+  @media screen and (max-width: 768px) {
+    width: 150px;
+    padding: 
+    ${({theme}) => theme.spacing.padding.big_small}
+    ${({theme}) => theme.spacing.padding.large};
+    border-radius: ${({theme}) => theme.spacing.radius.normal};
+    text-align: center;
+  }
 `;
 
 export const LoginOptions = styled.div`
@@ -67,6 +93,12 @@ export const LoginOptions = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: ${({theme}) => theme.spacing.between_elements.small};
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
 `;
 
 export const LoginOption = styled.div`
