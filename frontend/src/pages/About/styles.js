@@ -10,7 +10,7 @@ export const Cards = styled.div`
   ${({theme}) => theme.spacing.padding.large}
   ${({theme}) => theme.spacing.padding.very_large};
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     padding: ${({theme}) => theme.spacing.padding.small};
   }
 `;

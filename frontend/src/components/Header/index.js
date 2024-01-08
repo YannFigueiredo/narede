@@ -103,7 +103,7 @@ export default function Header() {
                     title="Minha conta"
                     className={actualPage.pathname === "/conta" ? "active" : ""}
                   >
-                    Minha conta
+                    Perfil
                   </a>
                 </li>
                 <li>
@@ -124,6 +124,16 @@ export default function Header() {
                     Enviar
                   </a>
                 </li>
+                <li id="about-btn-mobile">
+                  <a 
+                    href="/sobre" 
+                    title="Sobre nós"
+                    className={actualPage.pathname === "/sobre" ? "active" : ""}
+                    onClick={() => setActualPage({...actualPage, pageTitle: "Sobre nós"})}
+                  >
+                    Sobre
+                  </a>
+                </li>
                 <li><a href="#" title="Sair" onClick={exit}>Sair</a></li>
               </Menu>
             }
@@ -132,6 +142,16 @@ export default function Header() {
               <Menu id="logged-out-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
                 <li><a href="#" onClick={login}>Entrar</a></li>
                 <li><a href="#">Criar conta</a></li>
+                <li id="about-btn-mobile">
+                  <a 
+                    href="/sobre" 
+                    title="Sobre nós"
+                    className={actualPage.pathname === "/sobre" ? "active" : ""}
+                    onClick={() => setActualPage({...actualPage, pageTitle: "Sobre nós"})}
+                  >
+                    Sobre
+                  </a>
+                </li>
               </Menu>
             }
           </SessionManager>

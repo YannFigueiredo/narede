@@ -10,7 +10,7 @@ export const Container = styled.header`
 
   @media screen and (max-width: 768px) {
     position: relative;
-    padding-bottom: ${({theme}) => theme.spacing.padding.very_large};
+    padding: 0 ${({theme}) => theme.spacing.padding.small} 48px;
 
     .search-input-header {
       position: absolute;
@@ -19,6 +19,10 @@ export const Container = styled.header`
       right: 0;
       margin: ${({theme}) => theme.spacing.padding.small} auto;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    background: rgb(56, 52, 53);
   }
 
   @media screen and (max-width: 600px) {
@@ -48,6 +52,8 @@ export const ImageWrapper = styled.div`
   }
 
   @media screen and (max-width: 768px) {
+    display: none;
+
     h1 {
       font-size: ${({theme}) => theme.fontSize.base_large};
     }
@@ -138,6 +144,10 @@ export const MenuWrapper = styled.nav`
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
  `;
 
 export const Menu = styled.ul`
@@ -194,4 +204,14 @@ export const SessionManager = styled.div`
       font-size: 1rem;
     }
   } 
+
+  #about-btn-mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    #about-btn-mobile {
+      display: inline-block;
+    }
+  }
 `;
