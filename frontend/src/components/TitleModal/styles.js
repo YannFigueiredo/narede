@@ -178,11 +178,13 @@ export const ButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: ${({theme}) => theme.spacing.between_elements.small};
 
   div {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: ${({theme}) => theme.spacing.between_elements.very_small};
   }  
   
