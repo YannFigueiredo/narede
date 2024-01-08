@@ -8,6 +8,10 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 0 ${({theme}) => theme.spacing.padding.large};
   background: rgb(217, 80, 28); 
+
+  @media screen and (max-width: 768px) {
+    padding: ${({theme}) => theme.spacing.padding.small};
+  }
 `;
 
 export const Main = styled.main`
@@ -58,6 +62,7 @@ export const Top = styled.aside`
 
   @media screen and (max-width: 768px) {
     gap: ${({theme}) => theme.spacing.between_elements.between_items}; 
+    order: 3;
 
     h2 {
       display: inline-block;
@@ -109,10 +114,7 @@ export const TopContent = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    overflow-x: auto;
     max-width: 100%;
-    flex-direction: row;
-    align-items: flex-start;
   }
 `;
 
@@ -122,6 +124,10 @@ export const Posts = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.normal}; 
+
+  @media screen and (max-width: 768px) {
+    order: 1;
+  }
 `;
 
 export const Options = styled.div`
@@ -135,6 +141,10 @@ export const Options = styled.div`
   background: ${({theme}) => theme.colors.backgroundSecondary}; 
   min-width: 260px;
   border-radius: 1.5625rem;
+
+  @media screen and (max-width: 768px) {
+    order: 2;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
