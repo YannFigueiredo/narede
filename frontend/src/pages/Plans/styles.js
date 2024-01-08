@@ -24,6 +24,14 @@ export const Main = styled.div`
   padding: 
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.large};
+
+  @media screen and (max-width: 768px) {
+    padding: ${({theme}) => theme.spacing.padding.small};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  }
 `;
 
 export const Content = styled.div`
@@ -59,6 +67,10 @@ export const ButtonWrapper = styled.div`
   a:hover {
     border-color: #FFF;
   }
+
+  @media screen and (max-width: 768px) {
+    margin: auto;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -85,6 +97,15 @@ export const Benefits = styled.div`
   span {
     font-weight: 500;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    
+    h1 {
+      padding: 0 ${({theme}) => theme.spacing.padding.small};
+      text-align: center;
+    }
+  }
 `;
 
 export const List = styled.ul`
@@ -102,6 +123,12 @@ export const List = styled.ul`
   span {
     font-size: 1rem;
   }
+
+  @media screen and (max-width: 768px) {
+    li {
+      padding: ${({theme}) => theme.spacing.padding.small};
+    }
+  }
 `;
 
 export const Options = styled.div`
@@ -116,6 +143,11 @@ export const Options = styled.div`
   h2 {
     color: #FFF;
     text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 768px) {
+    overflow: auto;
+    padding: ${({theme}) => theme.spacing.padding.small};
   }
 `;
 
@@ -170,6 +202,13 @@ export const Final = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   justify-content: start;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: ${({theme}) => theme.spacing.between_elements.between_sections};
+    padding: ${({theme}) => theme.spacing.padding.small};
+  }
 `;
 
 export const Intro = styled.div`
@@ -184,5 +223,9 @@ export const Intro = styled.div`
     display: inline-block;
     width: 75%;
     font-size: ${({theme}) => theme.fontSize.very_large};
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
   }
 `;
