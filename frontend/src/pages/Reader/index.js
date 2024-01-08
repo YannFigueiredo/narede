@@ -106,9 +106,9 @@ export default function Reader() {
               <h3>Favoritos</h3>
             </div>
             <ul>
-              <li><div></div>Belém Imaginária: muito bom!</li>
-              <li><div></div>Vero-Pexe e sua Turma: divertido</li>
-              <li><div></div>Açaí Pesado: vou ler o restante, com certeza</li>
+              <li><div></div>Belém Imaginária</li>
+              <li><div></div>Vero-Pexe e sua Turma</li>
+              <li><div></div>Açaí Pesado</li>
             </ul>
           </Item>
           <Item>
@@ -126,9 +126,9 @@ export default function Reader() {
               <h3>Compartilhar</h3>
             </div>
             <ul>
-              <li><div></div>Belém Imaginária: muito bom!</li>
-              <li><div></div>Vero-Pexe e sua Turma: divertido</li>
-              <li><div></div>Açaí Pesado: vou ler o restante, com certeza</li>
+              <li><div></div>Vero-Pexe e sua Turma</li>
+              <li><div></div>Belém Imaginária</li>
+              <li><div></div>Açaí Pesado</li>
             </ul>
           </Item>
           <Item>
@@ -136,9 +136,9 @@ export default function Reader() {
               <h3>Recomendações</h3>
             </div>
             <ul>
-              <li><div></div>Belém Imaginária: muito bom!</li>
-              <li><div></div>Vero-Pexe e sua Turma: divertido</li>
-              <li><div></div>Açaí Pesado: vou ler o restante, com certeza</li>
+              <li><div></div>Açaí Pesado</li>
+              <li><div></div>Vero-Pexe e sua Turma</li>
+              <li><div></div>Belém Imaginária!</li>
             </ul>
           </Item>
           <Item>
@@ -146,9 +146,9 @@ export default function Reader() {
               <h3>Apoios</h3>
             </div>
             <ul>
-              <li><div></div>Açaí Pesado: vou ler o restante, com certeza</li>
+              <li><div></div>Açaí Pesado</li>
               <li><div></div>Belém Imaginária</li>
-              <li><div></div>Vero-Pexe e sua Turma: divertido</li>
+              <li><div></div>Vero-Pexe e sua Turma</li>
             </ul>
           </Item>
           <Item>
