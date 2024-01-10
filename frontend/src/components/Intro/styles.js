@@ -14,6 +14,7 @@ export const Container = styled.div`
     color: ${({theme}) => theme.colors.backgroundSecondary};
     font-weight: 700;
     text-transform: uppercase;
+    animation: moveFromRight 1.2s forwards;
   }
 
   @media screen and (max-width: 768px) {
@@ -25,6 +26,7 @@ export const Container = styled.div`
 
 export const ImageWrapper = styled.div`
   max-width: 8.5rem;
+  animation: moveFromLeft 1.2s forwards;
 
   img {
     max-width: 100%;

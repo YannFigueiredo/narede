@@ -19,6 +19,7 @@ export const Container = styled.div`
 export const Main = styled.div`
   max-width: 34.375rem; 
   width: 100%;
+  animation: moveFromBottom .7s forwards;
 `;
 
 export const CloseButton = styled.div`

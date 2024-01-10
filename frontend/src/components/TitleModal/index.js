@@ -38,7 +38,11 @@ export default function TitleModal() {
 
     global.localStorage.setItem("favorites", JSON.stringify(favorites));
   };*/
-  useEffect(() => setIsLogged(global.localStorage.getItem("logged") === "true" ? true : false), []);
+  
+  useEffect(() => {
+    setIsLogged(global.localStorage.getItem("logged") === "true" ? true : false);
+    setIsModalOpen(false);
+  }, []);
   
   useEffect(() => {
     if(isModalOpen) {

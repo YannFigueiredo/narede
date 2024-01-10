@@ -4,6 +4,11 @@ export const Main = styled.div`
   background: ${({theme}) => theme.colors.backgroundPrimaryBox};
   padding: ${({theme}) => theme.spacing.padding.small};
   border-radius: 8px;
+
+  .fade-in {
+    animation: fadeIn 1.5s;
+    opacity: 1;
+  }
 `;
 
 export const Title = styled.h2`
@@ -16,6 +21,7 @@ export const Cards = styled.div`
   grid-template-rows: auto;
   margin-top: 1rem;
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
+  opacity: 0;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

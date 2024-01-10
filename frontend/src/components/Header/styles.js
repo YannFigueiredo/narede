@@ -7,6 +7,7 @@ export const Container = styled.header`
   gap: 3.125rem;
   padding: 0 ${({theme}) => theme.spacing.padding.large};
   max-width: 100%;
+  animation: fadeIn 1.2s;
 
   @media screen and (max-width: 768px) {
     position: relative;
@@ -35,6 +36,7 @@ export const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
+  animation: moveFromTop 1.2s forwards;
 
   img {
     max-width: 5rem;

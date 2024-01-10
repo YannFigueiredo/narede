@@ -1,6 +1,51 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+  @keyframes moveFromTop {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes moveFromBottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes moveFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes moveFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   * {
       padding: 0;
       margin: 0;
