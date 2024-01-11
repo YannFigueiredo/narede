@@ -4,6 +4,7 @@ export const Main = styled.main`
   padding: 
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.large};
+  animation: rotateFromLeft .2s linear;
 
   @media screen and (max-width: 600px) {
     padding: ${({theme}) => theme.spacing.padding.small}

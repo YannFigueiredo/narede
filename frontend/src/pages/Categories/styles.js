@@ -7,6 +7,7 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
+  animation: rotateFromLeft .2s linear;
 
   #mobile-selector {
     display: none;

@@ -14,6 +14,7 @@ export const Container = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  animation: rotateFromLeft .2s linear;
 `;
 
 export const Main = styled.div`
@@ -38,6 +39,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
+  animation: fadeIn .7s;
 
   h1 {
     text-transform: uppercase;
@@ -208,6 +210,7 @@ export const Final = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   justify-content: start;
+  opacity: 0;
 
   @media screen and (max-width: 768px) {
     display: flex;

@@ -46,6 +46,15 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  @keyframes rotateFromLeft {
+    0% {
+      transform: rotate(-90deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
   * {
       padding: 0;
       margin: 0;
@@ -73,5 +82,18 @@ export const GlobalStyle = createGlobalStyle`
 
   h3 {
     font-size: ${({theme}) => theme.fontSize.base};
+  }
+
+  .move-from-left {
+    animation: moveFromLeft .4s forwards;
+  }
+
+  .fade-in {
+    animation: fadeIn .7s;
+    opacity: 1;
+  }
+
+  .rotate-from-left {
+    animation: rotateFromLeft .2s linear infinite;
   }
 `;

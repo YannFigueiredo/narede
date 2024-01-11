@@ -9,6 +9,7 @@ export const Container = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
   position: relative;
   padding-bottom: ${({theme}) => theme.spacing.padding.large};
+  animation: rotateFromLeft .2s linear;
 
   @media screen and (max-width: 768px) {
     gap: ${({theme}) => theme.spacing.between_elements.between_cards};

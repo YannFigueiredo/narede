@@ -5,6 +5,7 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
+  animation: rotateFromLeft .2s linear;
 `;
 
 export const Header = styled.div`

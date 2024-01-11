@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  animation: rotateFromLeft .2s linear;
+`;
 
 export const Cards = styled.div`
   display: flex;

@@ -7,6 +7,7 @@ export const Reader = styled.div`
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
   padding: ${({theme}) => theme.spacing.padding.small};
+  animation: rotateFromLeft .2s linear;
   
   img {
     max-width: 43.75rem;

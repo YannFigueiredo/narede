@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 0 ${({theme}) => theme.spacing.padding.large};
   background: rgb(217, 80, 28); 
+  animation: rotateFromLeft .2s linear;
 
   @media screen and (max-width: 768px) {
     padding: ${({theme}) => theme.spacing.padding.small};

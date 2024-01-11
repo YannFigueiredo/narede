@@ -198,6 +198,10 @@ export const SessionManager = styled.div`
     display: none;
   }
 
+  #about-btn-mobile {
+    display: none;
+  }
+
   #logged-container {
     li:nth-child(1) {
       display: flex;
@@ -240,6 +244,10 @@ export const SessionManager = styled.div`
       display: inline-block;
       width: 2rem;
       height: 2rem;
+    }
+
+    #about-btn-mobile {
+      display: flex;
     }
   }
 `;

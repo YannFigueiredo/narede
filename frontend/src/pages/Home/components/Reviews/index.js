@@ -4,25 +4,16 @@ import { Container } from "components/Container/section";
 
 export default function Review() {
   const contentCard = useRef(null);
-  //const titleCard = useRef(null);
 
   const verifyScreenPosition = () => {
-    var show = 50;
+    var show = 20;
     var contentCardHeight = contentCard.current.offsetHeight;
-    //var titleCardHeight = global.document.getElement.offsetHeight;
     var contentCardTop = contentCard.current.getBoundingClientRect().top;
-    //var titleCardTop = titleCard.current.getBoundingClientRect().top; 
     var screenHeight = global.window.innerHeight;
 
     if (contentCardTop <= screenHeight - (contentCardHeight * (show / 100))) {
       contentCard.current.classList.add("fade-in");
     }
-
-    /*if (titleCardTop <= screenHeight - (titleCardHeight * (show / 100))) {
-      titleCard.current.classList.add("move-from-left");
-    } else {
-      titleCard.current.classList.remove("move-from-left");
-    }*/
   };
 
   useEffect(() => {

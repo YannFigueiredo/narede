@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   Container, 
   Main, 
@@ -20,6 +20,34 @@ import check from "assets/icons/check.png";
 
 export default function Plans() {
   const [cardActivated, setCardActivated] = useState(0);
+
+  const verifyScreenPosition = () => {
+    var show = 30;
+    var items = global.document.querySelectorAll(".benefits-item");
+    var screenHeight = global.window.innerHeight;
+    var finalHeight = global.document.querySelector(".plans-final").offsetHeight;
+    var finalTop = global.document.querySelector(".plans-final").getBoundingClientRect().top;
+
+    items.forEach(item => {
+      var itemHeight = item.offsetHeight;
+      var itemTop = item.getBoundingClientRect().top;
+   
+      if (itemTop <= screenHeight - (itemHeight * (show / 100))) {
+        item.classList.add("move-from-left");
+      }
+    });
+
+    if (finalTop <= screenHeight - (finalHeight * (show / 100))) {
+      global.document.querySelector(".plans-final").classList.add("fade-in");
+    }
+  };
+
+  useEffect(() => {
+    global.window.addEventListener("scroll", verifyScreenPosition);
+    
+    return () => global.window.removeEventListener("scroll", verifyScreenPosition);
+  }, []);
+
 
   return(
     <Container>
@@ -51,7 +79,7 @@ export default function Plans() {
         <h1>Vantagens de assinar <span>Na rede</span></h1>
         <Main>
           <List>
-            <li>
+            <li className="benefits-item">
               <ImageWrapper>
                 <img src={check} alt="Símbolo de check" />
               </ImageWrapper>
@@ -60,7 +88,7 @@ export default function Plans() {
                 Leia milhares de quadrinhos no seu desktop ou pelo app
               </span>
             </li>
-            <li>
+            <li className="benefits-item">
               <ImageWrapper>
                 <img src={check} alt="Símbolo de check" />
               </ImageWrapper>
@@ -69,7 +97,7 @@ export default function Plans() {
                 Baixe e leia seus quadrinhos sem precisar de internet
               </span>
             </li>
-            <li>
+            <li className="benefits-item">
               <ImageWrapper>
                 <img src={check} alt="Símbolo de check" />
               </ImageWrapper>
@@ -78,7 +106,7 @@ export default function Plans() {
                 Apoie e interaja diretamente com seus artistas preferidos
               </span>
             </li>
-            <li>
+            <li className="benefits-item">
               <ImageWrapper>
                 <img src={check} alt="Símbolo de check" />
               </ImageWrapper>
@@ -87,7 +115,7 @@ export default function Plans() {
                 Crie e organize suas próprias coleções de leitura
               </span>
             </li>
-            <li>
+            <li className="benefits-item">
               <ImageWrapper>
                 <img src={check} alt="Símbolo de check" />
               </ImageWrapper>
@@ -151,7 +179,7 @@ export default function Plans() {
           </Card>
         </Cards>
       </Options>
-      <Final>
+      <Final className="plans-final">
         <Intro>
           <h1>
             Faça seu login ou crie sua conta grátis
