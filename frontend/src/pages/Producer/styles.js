@@ -53,6 +53,7 @@ export const Content = styled.div`
 export const OptionWrapper = styled.div`
   display: flex;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  animation: fadeIn 1.5s;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
