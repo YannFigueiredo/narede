@@ -142,6 +142,7 @@ export const Options = styled.div`
   background: ${({theme}) => theme.colors.backgroundSecondary}; 
   min-width: 260px;
   border-radius: 1.5625rem;
+  max-height: 400px;
 
   @media screen and (max-width: 768px) {
     order: 2;

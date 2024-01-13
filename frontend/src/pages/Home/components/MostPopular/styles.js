@@ -10,6 +10,7 @@ export const Container = styled.div`
   ${({theme}) => theme.spacing.padding.big_small};
   margin-right: ${({theme}) => theme.spacing.padding.large};
   border-radius: 8px;
+  max-height: 900px;
   
   h2 {
     text-transform: uppercase;

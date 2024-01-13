@@ -8,7 +8,6 @@ export const Container = styled.article`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.small};
-  animation: moveFromLeft .5s forwards;
 `;
 
 export const CoverWrapper = styled.div`

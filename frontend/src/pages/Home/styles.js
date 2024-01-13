@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Content = styled.div`
   display: flex;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
-  animation: rotateFromLeft .2s linear;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -57,6 +56,7 @@ export const SubmitWrapper = styled.div`
   max-width: 800px;
   margin: auto;
   padding: 0 ${({theme}) => theme.spacing.padding.large};
+  opacity: 0;
 
   img {
     max-width: 100%;

@@ -23,6 +23,7 @@ export const CardsWrapper = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
+  opacity: 0;
 
   @media screen and (max-width: 768px) {
     gap: ${({theme}) => theme.spacing.between_elements.small};

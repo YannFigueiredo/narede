@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Container } from "components/Container/section";
 import { titlesList } from "utils/mocks/titlesList";
 import { TitleWrapper, CardsWrapper } from "./styles";
@@ -6,13 +6,24 @@ import TitleCard from "components/TitleCard";
 import { Header } from "../header.js";
 
 export default function MostRecent({ title }) {
-  /*const [windowSize, setWindowSize] = useState(global.window.innerWidth);
+  const cards = useRef(null);
+
+  const verifyScreenPosition = () => {
+    var show = 10;
+    var screenHeight = global.window.innerHeight;
+    var itemHeight = cards.current.offsetHeight;
+    var itemTop = cards.current.getBoundingClientRect().top;
+   
+    if (itemTop <= screenHeight - (itemHeight * (show / 100))) {
+      cards.current.classList.add("fade-in");
+    }
+  };
 
   useEffect(() => {
-    global.window.addEventListener("resize", () => setWindowSize(global.window.innerWidth));
-
-    return () => global.window.removeEventListener("resize", setWindowSize(global.window.innerWidth));
-  }, [global.window.innerWidth]);*/
+    global.window.addEventListener("scroll", verifyScreenPosition);
+    
+    return () => global.window.removeEventListener("scroll", verifyScreenPosition);
+  }, []);
 
   return(
     <Container>
@@ -21,7 +32,7 @@ export default function MostRecent({ title }) {
           <h2>{title}</h2>
         </Header>
       </TitleWrapper>
-      <CardsWrapper>
+      <CardsWrapper ref={cards}>
         {
           titlesList.slice(0, 15).map((card, key) => (
             <TitleCard 
