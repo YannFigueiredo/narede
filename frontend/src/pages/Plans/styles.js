@@ -210,7 +210,6 @@ export const Final = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   justify-content: start;
-  opacity: 0;
 
   @media screen and (max-width: 768px) {
     display: flex;
