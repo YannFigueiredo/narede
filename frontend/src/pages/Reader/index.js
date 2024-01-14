@@ -13,7 +13,7 @@ import {
   Content,
   Item
 } from "./styles";
-import GenericPicture from "assets/images/photo-profile.jpg";
+import GenericPicture from "assets/images/photo-profile2.jpg";
 import instagram from "assets/icons/instagram.png";
 import twitter from "assets/icons/twitter.png";
 import facebook from "assets/icons/facebook.png";
@@ -67,7 +67,7 @@ export default function Reader() {
   return(
     <Container>
       <Header>
-        <h2>Ryuujin Arts</h2>
+        <h2>Iara Nascimento</h2>
         <span className="page-title">Perfil do leitor</span>
         <div>
           <SettingsIcon className="settings-icon" />
@@ -80,7 +80,7 @@ export default function Reader() {
             <ImageWrapper>
               <img src={GenericPicture} alt="Foto do usuário" />
             </ImageWrapper>
-            <UserName>Ryuujin Arts</UserName>
+            <UserName>Iara Nascimento</UserName>
             <TagsWrapper>
               <span>212 salvos</span>
               <span>351 seguidores</span>

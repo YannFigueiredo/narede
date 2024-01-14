@@ -182,6 +182,8 @@ export const TagUser = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
   }
 `;
 

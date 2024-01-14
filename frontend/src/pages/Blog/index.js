@@ -19,7 +19,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
 import PendingIcon from "@mui/icons-material/Pending";
-import ProfilePhoto from "assets/images/photo-profile.jpg";
+import ProfilePhoto from "assets/images/photo-profile2.jpg";
 
 export default function Blog() {
   const [producers, setProducers] = useState([]);
@@ -110,7 +110,7 @@ export default function Blog() {
             </ButtonWrapper>
             <TagUser>
               <img src={ProfilePhoto} alt="Foto de perfil" />
-              <span>Ryuujin Arts</span>
+              <span>Iara Nascimento</span>
             </TagUser>
             <ItemsWrapper>
               <li><SearchIcon className="item-icon" />Pesquisar</li>
