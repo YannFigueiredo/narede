@@ -179,7 +179,7 @@ export default function Plans() {
           </Card>
         </Cards>
       </Options>
-      <Final className="plans-final">
+      <Final className="plans-final initial-fade">
         <Intro>
           <h1>
             Faça seu login ou crie sua conta grátis

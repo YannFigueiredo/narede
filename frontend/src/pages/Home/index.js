@@ -43,7 +43,7 @@ export default function Home() {
         <MostPopular />
       </Content>
       <Reviews />
-      <SubmitWrapper className="submit">
+      <SubmitWrapper className="submit initial-fade">
         <img src={SubmitImage} alt="Imagem da seção de submissão" />
         <img src={SubmitText} alt="Texto da seção de submissão" />
       </SubmitWrapper>

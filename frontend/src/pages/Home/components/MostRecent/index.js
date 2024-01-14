@@ -32,7 +32,7 @@ export default function MostRecent({ title }) {
           <h2>{title}</h2>
         </Header>
       </TitleWrapper>
-      <CardsWrapper ref={cards}>
+      <CardsWrapper ref={cards} className="initial-fade">
         {
           titlesList.slice(0, 15).map((card, key) => (
             <TitleCard 

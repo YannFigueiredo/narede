@@ -56,7 +56,6 @@ export const SubmitWrapper = styled.div`
   max-width: 800px;
   margin: auto;
   padding: 0 ${({theme}) => theme.spacing.padding.large};
-  opacity: 0;
 
   img {
     max-width: 100%;

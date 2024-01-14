@@ -84,6 +84,10 @@ export const GlobalStyle = createGlobalStyle`
     font-size: ${({theme}) => theme.fontSize.base};
   }
 
+  .initial-fade {
+    opacity: 0;
+  }
+
   .move-from-left {
     animation: moveFromLeft .4s forwards;
   }
