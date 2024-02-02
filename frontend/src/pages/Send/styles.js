@@ -24,7 +24,7 @@ export const SubmitWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   justify-content: center;
-  max-width: 800px;
+  max-width: 50rem;
   margin: auto;
 
   img {
@@ -38,7 +38,7 @@ export const SubmitWrapper = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  max-width: 350px;
+  max-width: 21.875rem;
   background: ${({theme}) => theme.colors.sectionTitle};
   transition: all linear .4s;
   padding: ${({theme}) => theme.spacing.padding.small};

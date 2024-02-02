@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 1px solid ${({theme}) => theme.colors.primary};
+  border: 0.063rem solid ${({theme}) => theme.colors.primary};
   width: ${(props) => props.width};
   border-radius: ${({theme, isSearch}) => isSearch ? "20px" : theme.spacing.radius.small};
   overflow: hidden;

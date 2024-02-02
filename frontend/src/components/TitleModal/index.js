@@ -30,14 +30,6 @@ export default function TitleModal() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
-  /*const addFavorite = () => {
-    const favorites = JSON.parse(global.localStorage.getItem("favorites")) || [];
-
-    favorites.push(titleValues);
-
-    global.localStorage.setItem("favorites", JSON.stringify(favorites));
-  };*/
   
   useEffect(() => {
     setIsLogged(global.localStorage.getItem("logged") === "true" ? true : false);

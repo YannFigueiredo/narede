@@ -56,18 +56,18 @@ export const Menu = styled.ul`
   }
 
   li:nth-child(1) img {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   li:nth-child(2) img {
-    width: 25px;
-    height: 25px;
+    width: 1.563rem;
+    height: 1.563rem;
   }
 
   li:nth-child(3) img {
-    width: 22px;
-    height: 22px;
+    width: 1.375rem;
+    height: 1.375rem;
   }
  
   li span {

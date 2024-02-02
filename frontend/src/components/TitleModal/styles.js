@@ -106,7 +106,7 @@ export const Label = styled.span`
   display: inline-block;
   font-size: ${({theme}) => theme.fontSize.small};
   border-radius: ${({theme}) => theme.spacing.radius.normal};
-  max-width: 110px;
+  max-width: 6.875rem;
   text-align: center;
   font-weight: 500;
 `;
@@ -125,7 +125,7 @@ export const AssessmentsWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 0.2rem;
-    height: 20px;
+    height: 1.25rem;
   }
 
   span {
@@ -243,8 +243,8 @@ export const List = styled.div`
   }
 
   .list-item-photo {
-    width: 35px;
-    height: 30px;
+    width: 2.188rem;
+    height: 1.875rem;
     background: #000;
   }
 
@@ -252,7 +252,7 @@ export const List = styled.div`
     position: absolute;
     left: 0;
     top: 0;
-    width: 10px;
-    height: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
   }
 `;
