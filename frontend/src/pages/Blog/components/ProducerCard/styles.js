@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: ${({theme}) => theme.spacing.padding.big_small} 0;
 
   img {
-    max-width: 35px;
+    max-width: 2.188rem;
     border-radius: 50%;
   }
 

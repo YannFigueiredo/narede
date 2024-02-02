@@ -8,7 +8,7 @@ export const Container = styled.div`
   ${({theme}) => theme.spacing.between_elements.between_items}
   ${({theme}) => theme.spacing.between_elements.between_items}
   ${({theme}) => theme.spacing.between_elements.small};
-  border: 2px solid ${({theme}) => theme.colors.gray["100"]}; 
+  border: 0.125rem solid ${({theme}) => theme.colors.gray["100"]}; 
   border-radius: 1.5625rem;
   max-width: 31.25rem;
   width: 100%;
@@ -21,7 +21,7 @@ export const Header = styled.div`
   align-items: center;
 
   img {
-    width: 40px;
+    width: 2.5rem;
     border-radius: 50%;
   }
 

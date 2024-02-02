@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 1440px;
+  max-width: 90rem;
   margin: auto;
   min-height: 75vh;
   display: flex;
@@ -140,9 +140,9 @@ export const Options = styled.div`
   ${({theme}) => theme.spacing.padding.large}
   ${({theme}) => theme.spacing.padding.very_small}; 
   background: ${({theme}) => theme.colors.backgroundSecondary}; 
-  min-width: 260px;
+  min-width: 16.25rem;
   border-radius: 1.5625rem;
-  max-height: 400px;
+  max-height: 25rem;
 
   @media screen and (max-width: 768px) {
     order: 2;
@@ -179,8 +179,8 @@ export const TagUser = styled.div`
   }
 
   img {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     object-fit: cover;
     object-position: top;
