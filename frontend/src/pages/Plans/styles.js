@@ -3,7 +3,7 @@ import background from "assets/images/background.png";
 import backgroundCard from "assets/images/background-card.png";
 
 export const Container = styled.div`
-  max-width: 1440px;
+  max-width: 90rem;
   margin: auto;
   min-height: 75vh;
   display: flex;
@@ -65,7 +65,7 @@ export const ButtonWrapper = styled.div`
     background: #000;
     border-radius: 0.5rem;
     padding: ${({theme}) => theme.spacing.padding.small};
-    border: 2px solid transparent;
+    border: 0.125rem solid transparent;
     transition: all linear .4s;
     cursor: pointer;
     text-transform: uppercase;
@@ -88,7 +88,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Benefits = styled.div`
-  width: 1100px;
+  width: 68.75rem;
   margin: auto;
 
   h1 {
@@ -179,9 +179,9 @@ export const Card = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 250px;
-  height: 350px;
-  border: 3px solid transparent;
+  width: 15.625rem;
+  height: 21.875rem;
+  border: 0.188rem solid transparent;
   transition: all linear .4s;
   cursor: pointer;
 
