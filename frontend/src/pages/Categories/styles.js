@@ -50,7 +50,7 @@ export const Filter = styled.select`
   background: transparent;
   color: ${({theme}) => theme.colors.detailPrimary};
   display: flex;
-  width: 200px;
+  width: 12.5rem;
   padding: ${({theme}) => theme.spacing.padding.big_small};
   border-radius: 0.5rem;
 
