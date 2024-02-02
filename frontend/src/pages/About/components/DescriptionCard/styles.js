@@ -1,24 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @keyframes moveCardFromLeft {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes moveCardFromRight {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
@@ -29,11 +11,11 @@ export const Container = styled.div`
   background: ${({theme}) => theme.colors.gray["100"]};
   border-radius: 1.25rem;
   max-width: 50rem;
-  animation: moveCardFromLeft .5s forwards;
+  animation: moveFromLeft .5s forwards;
 
   &:nth-child(even) {
     align-self: flex-end;
-    animation: moveCardFromRight .5s forwards;
+    animation: moveFromRight .5s forwards;
   }
 
   @media screen and (max-width: 600px) {
@@ -67,12 +49,12 @@ export const Identifier = styled.h2`
 
 export const Title = styled.h2`
   color: ${({theme}) => theme.colors.blue["400"]};
-  font-size: 2.5rem;
+  font-size: ${({theme}) => theme.fontSize.very_large};
   font-weight: 900;
   margin-top: 0.3125rem;
 
   @media screen and (max-width: 600px) {
-    font-size: 2rem;
+    font-size: ${({theme}) => theme.fontSize.most_large};
   }
 `;
 
