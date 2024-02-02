@@ -11,7 +11,7 @@ export const Container = styled.div`
     text-transform: uppercase;
     color: #FFF;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 1.563rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -26,8 +26,8 @@ export const PhotoWrapper = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
   
   img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 6.25rem;
+    max-height: 6.25rem;
     border-radius: 50%;
   }
 `;
@@ -57,8 +57,8 @@ export const InputsWrapper = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.normal};
 
   .input-infos {
-    max-width: 500px;
-    width: 500px;
+    max-width: 31.25rem;
+    width: 31.25rem;
     border-radius: ${({theme}) => theme.spacing.radius.small};
     padding: ${({theme}) => theme.spacing.padding.big_small};
   }
@@ -90,7 +90,7 @@ export const InputWrapper = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  width: 200px;
+  width: 12.5rem;
   padding: 
   ${({theme}) => theme.spacing.padding.big_small}
   ${({theme}) => theme.spacing.padding.very_large};
@@ -116,6 +116,6 @@ export const ButtonWrapper = styled.div`
     ${({theme}) => theme.spacing.padding.large};
     border-radius: ${({theme}) => theme.spacing.radius.normal};
     text-align: center;
-    width: 150px;
+    width: 9.375rem;
   }
 `;

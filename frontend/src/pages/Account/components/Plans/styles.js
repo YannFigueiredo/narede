@@ -22,16 +22,16 @@ export const ToggleWrapper = styled.div`
 
 export const Toggle = styled.div`
   background: ${({theme}) => theme.colors.sectionTitle};
-  width: 80px;
-  border-radius: 16px;
+  width: 5rem;
+  border-radius: ${({theme}) => theme.spacing.radius.normal};
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
 
   div {
     background: ${({theme}) => theme.colors.detailPrimary};
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     border-radius: 50%;
     transition: all linear .2s;
   }
@@ -63,9 +63,9 @@ export const Card = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 250px;
-  height: 350px;
-  border: 3px solid transparent;
+  width: 15.625rem;
+  height: 21.875rem;
+  border: 0.188rem solid transparent;
   transition: all linear .4s;
   cursor: pointer;
 
@@ -89,7 +89,7 @@ export const Card = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    width: 180px;
-    height: 250px;
+    width: 11.25rem;
+    height: 15.625rem;
   }
 `;

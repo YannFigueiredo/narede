@@ -22,16 +22,16 @@ export const ToggleWrapper = styled.div`
 
 export const Toggle = styled.div`
   background: ${({theme}) => theme.colors.sectionTitle};
-  width: 80px;
-  border-radius: 16px;
+  width: 5rem;
+  border-radius: ${({theme}) => theme.spacing.radius.normal};
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
 
   div {
     background: ${({theme}) => theme.colors.detailPrimary};
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     border-radius: 50%;
   }
 `;
