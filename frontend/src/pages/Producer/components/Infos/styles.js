@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
   max-width: 18.75rem;
-  margin-top: -150px;
+  margin-top: -9.375rem;
 
   .edit-btn {
     background: ${({theme}) => theme.colors.blue["100"]};
@@ -25,7 +25,7 @@ export const Container = styled.div`
 
   @media screen and (max-width: 768px) {
     max-width: 100%;
-    margin-top: -460px;
+    margin-top: -28.75rem;
     max-width: 22rem;
   }
 `;
@@ -75,7 +75,7 @@ export const Contact = styled.div`
   flex-direction: column;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
-  margin-top: 20px;
+  margin-top: 1.25rem;
 
   h4 {
     font-weight: 700;
@@ -88,7 +88,7 @@ export const Contact = styled.div`
   }
 
   div img {
-    width: 30px;
+    width: 1.875rem;
     background-color: ${({theme}) => theme.colors.backgroundSecondary};
     border-radius: 50%;
     padding: 0.3rem;

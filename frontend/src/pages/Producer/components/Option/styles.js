@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
-  width: 180px;
+  width: 11.25rem;
 
   .add-btn {
     box-sizing: content-box;
@@ -29,16 +29,16 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   background: #FFF;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   width: 100%;
   text-align: right;
   overflow: hidden;
-  max-height: 283px;
-  max-width: 180px;
+  max-height: 17.688rem;
+  max-width: 11.25rem;
 
   div{
-    height: 223px;
-    width: 180px;
+    height: 13.938rem;
+    width: 11.25rem;
   }
 
   img {

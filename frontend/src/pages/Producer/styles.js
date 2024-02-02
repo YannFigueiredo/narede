@@ -2,7 +2,7 @@ import styled from "styled-components";
 import backgroundProfile from "assets/images/background-perfil-quad.png";
 
 export const Container = styled.div`
-  max-width: 1440px;
+  max-width: 90rem;
   margin: auto;
   min-height: 75vh;
   display: flex;
@@ -12,14 +12,14 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-  height: 200px;
+  height: 12.5rem;
   width: 100%;
   background-image: url(${backgroundProfile});
   background-position: center center;
   background-size: cover;
 
   @media screen and (max-width: 768px) {
-    height: 475px;
+    height: 29.688rem;
   }
 `;
 
@@ -73,7 +73,7 @@ export const Options = styled.div`
     display: inline-block;
     cursor: pointer;
     transition: all linear .4s;
-    border-bottom: 2px solid transparent;
+    border-bottom: 0.125rem solid transparent;
   }
 
   span:hover, .active {
