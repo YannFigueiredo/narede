@@ -23,7 +23,7 @@ export const PictureConfig = styled.div`
 
 export const Configuration = styled.div`
   padding-top: ${({theme}) => theme.spacing.between_elements.between_sections};
-  border-top: 1px solid ${({theme}) => theme.colors.blue["100"]};  
+  border-top: 0.063rem solid ${({theme}) => theme.colors.blue["100"]};  
   display: grid;
   justify-content: start;
   align-items: center;
@@ -38,7 +38,7 @@ export const Configuration = styled.div`
 
   button {
     grid-column: 2;
-    max-width: 150px;
+    max-width: 9.375rem;
   }
 
   .option-label {

@@ -10,7 +10,7 @@ export const Container = styled.table`
   }
 
   tr {
-    border: 1px solid ${({theme}) => theme.colors.gray["100"]};
+    border: 0.063rem solid ${({theme}) => theme.colors.gray["100"]};
   }
 
   tr th {

@@ -59,9 +59,6 @@ export default function Reader() {
         date: "27/08/2023"
       }
     ]);
-
-    console.log(historic);
-    console.log(favorites);
   }, []);
 
   return(

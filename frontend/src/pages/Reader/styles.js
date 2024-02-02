@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 1440px;
+  max-width: 90rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ export const Infos = styled.div`
   padding: 
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.large};
-  min-width: 400px;
+  min-width: 25rem;
 
   @media screen and (max-width: 768px) {
     padding: ${({theme}) => theme.spacing.padding.small};
@@ -154,7 +154,7 @@ export const Social = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 
   img {
-    width: 30px;
+    width: 1.875rem;
   }
 `;
 
@@ -209,15 +209,15 @@ export const Item = styled.div`
 
   ul li div {
     background: #000;
-    width: 10px;
-    height: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
     border-radius: 50%;
   }
 
   h3 {
     color: ${({theme}) => theme.colors.sectionTitle};
     display: inline-block;
-    border-bottom: 1px solid #FFF;
+    border-bottom: 0.063rem solid #FFF;
     padding: ${({theme}) => theme.spacing.padding.big_small};
     width: 100%;
     text-transform: uppercase;
