@@ -9,8 +9,8 @@ export const Container = styled.div`
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.big_small};
   margin-right: ${({theme}) => theme.spacing.padding.large};
-  border-radius: 8px;
-  max-height: 900px;
+  border-radius: ${({theme}) => theme.spacing.radius.small};
+  max-height: 56.25rem;
   
   h2 {
     text-transform: uppercase;
@@ -40,7 +40,7 @@ export const CardsWrapper = styled.div`
 export const Card = styled.div`
   display: flex;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent;
   transition: all linear .4s;
   cursor: pointer;
   width: 100%;
@@ -60,7 +60,7 @@ export const Card = styled.div`
   }
 
   &:hover {
-    border: 2px solid #FFF;
+    border: 0.125rem solid #FFF;
   }
 `;
 

@@ -53,7 +53,7 @@ export const SubmitWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   justify-content: center;
-  max-width: 800px;
+  max-width: 50rem;
   margin: auto;
   padding: 0 ${({theme}) => theme.spacing.padding.large};
 

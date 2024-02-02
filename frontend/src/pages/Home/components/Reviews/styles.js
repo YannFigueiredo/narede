@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Main = styled.div`
   background: ${({theme}) => theme.colors.backgroundPrimaryBox};
   padding: ${({theme}) => theme.spacing.padding.small};
-  border-radius: 8px;
+  border-radius: ${({theme}) => theme.spacing.radius.small};
 
   .fade-in {
     animation: fadeIn 1.5s;
@@ -40,7 +40,7 @@ export const Card = styled.div`
   padding: 
   ${({theme}) => theme.spacing.padding.big_small}
   ${({theme}) => theme.spacing.padding.very_small};
-  border-radius: 30px;
+  border-radius: 1.875rem;
 
   h3 {
     text-align: center;
