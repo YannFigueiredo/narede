@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { 
   Container, 
   Header, 
@@ -21,46 +21,6 @@ import whatsapp from "assets/icons/whatsapp.png";
 import SettingsIcon from "@mui/icons-material/Settings";
 
 export default function Reader() {
-  const [favorites, setFavorites] = useState();
-  const [historic, setHistoric] = useState();
-
-  useEffect(() => {
-    setFavorites([
-      {
-        id: 6,
-        title: "Las Cabaças: A Primeira Aventura",
-        date: "25/08/2023"
-      },
-      {
-        id: 7,
-        title: "Vero Pexe e sua Turma",
-        date: "26/08/2023"
-      },
-      {
-        id: 8,
-        title: "Tailus em Busca da Semente da Vida",
-        date: "27/08/2023"
-      }
-    ]);
-    setHistoric([
-      {
-        id: 6,
-        title: "Las Cabaças: A Primeira Aventura",
-        date: "25/08/2023"
-      },
-      {
-        id: 7,
-        title: "Vero Pexe e sua Turma",
-        date: "26/08/2023"
-      },
-      {
-        id: 8,
-        title: "Tailus em Busca da Semente da Vida",
-        date: "27/08/2023"
-      }
-    ]);
-  }, []);
-
   return(
     <Container>
       <Header>
