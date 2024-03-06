@@ -11,9 +11,9 @@ export const Container = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
   position: relative;
   background-image: url(${background});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-size: content;
+  background-repeat: repeat;
+  background-position: left top;
   animation: rotateFromLeft .2s linear;
 `;
 
