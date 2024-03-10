@@ -4,8 +4,11 @@ export const TitleWrapper = styled.div`
   margin-bottom: ${({theme}) => theme.spacing.between_elements.between_cards};
   display: inline-block;
   width: 100%;
-  padding: ${({theme}) => theme.spacing.padding.small} 0;
+  padding: 
+  ${({theme}) => theme.spacing.padding.small} 
+  ${({theme}) => theme.spacing.padding.very_small};
   border-radius: ${({theme}) => theme.spacing.radius.small};
+  background-color: #001620;
 
   h2 {
     color: #FFF;
