@@ -9,13 +9,13 @@ export default function MostRecent({ title }) {
   const cards = useRef(null);
 
   const verifyScreenPosition = () => {
-    var show = 10;
+    var show = 0.1;
     var screenHeight = global.window.innerHeight;
     var itemHeight = cards.current.offsetHeight;
     var itemTop = cards.current.getBoundingClientRect().top;
    
     if (itemTop <= screenHeight - (itemHeight * (show / 100))) {
-      cards.current.classList.add("fade-in");
+      cards.current.classList.add("move-from-bottom");
     }
   };
 
@@ -32,7 +32,7 @@ export default function MostRecent({ title }) {
           <h2>{title}</h2>
         </Header>
       </TitleWrapper>
-      <CardsWrapper ref={cards} className="initial-fade">
+      <CardsWrapper ref={cards} className="initial-bottom">
         {
           titlesList.slice(0, 15).map((card, key) => (
             <TitleCard 

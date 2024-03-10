@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "components/Container/page";
-import { Main, Selector, Filter, TitlesArea } from "./styles";
+import { Container, Main, Selector, Filter, TitlesArea } from "./styles";
 import { titlesList } from "utils/mocks/titlesList";
 import TitleCard from "components/TitleCard";
 import TitleModal from "components/TitleModal";

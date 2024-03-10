@@ -12,7 +12,7 @@ export const Main = styled.div`
 `;
 
 export const Title = styled.h2`
-  text-transform: uppercase;
+  color: #FFF;
 `;
 
 export const Cards = styled.div`
@@ -44,6 +44,7 @@ export const Card = styled.div`
 
   h3 {
     text-align: center;
+    color: ${({theme}) => theme.colors.sectionTitle};
   }
 
   span {

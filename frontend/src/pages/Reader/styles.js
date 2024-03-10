@@ -215,7 +215,6 @@ export const Item = styled.div`
   }
 
   h3 {
-    color: ${({theme}) => theme.colors.sectionTitle};
     display: inline-block;
     border-bottom: 0.063rem solid #FFF;
     padding: ${({theme}) => theme.spacing.padding.big_small};

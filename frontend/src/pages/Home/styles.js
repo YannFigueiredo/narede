@@ -1,4 +1,26 @@
 import styled from "styled-components";
+import background from "assets/images/background-home.png";
+
+export const Container = styled.div`
+  max-width: 90rem;
+  margin: auto;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  gap: ${({theme}) => theme.spacing.between_elements.between_sections};
+  position: relative;
+  padding-bottom: ${({theme}) => theme.spacing.padding.large};
+  animation: rotateFromLeft .2s linear;
+  background-image: url(${background});
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+
+  @media screen and (max-width: 768px) {
+    gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  }
+`;
 
 export const Content = styled.div`
   display: flex;

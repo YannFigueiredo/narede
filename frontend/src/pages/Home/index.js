@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import { Container } from "../../components/Container/page";
 import Intro from "components/Intro";
 import MostPopular from "pages/Home/components/MostPopular";
 import MostRecent from "pages/Home/components/MostRecent";
 import Reviews from "./components/Reviews";
 import TitleModal from "components/TitleModal";
-import { Content, Main, SubmitWrapper } from "./styles";
+import { Container, Content, Main, SubmitWrapper } from "./styles";
 import SubmitImage from "assets/images/submissao-img.png";
 import SubmitText from "assets/images/submissao-texto.png";
 

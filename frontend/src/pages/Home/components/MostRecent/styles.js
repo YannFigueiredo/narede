@@ -8,7 +8,7 @@ export const TitleWrapper = styled.div`
   border-radius: ${({theme}) => theme.spacing.radius.small};
 
   h2 {
-    text-transform: uppercase;
+    color: #FFF;
   }
 
   @media screen and (max-width: 600px) {

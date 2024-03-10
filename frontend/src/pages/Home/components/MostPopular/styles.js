@@ -16,6 +16,10 @@ export const Container = styled.div`
     text-transform: uppercase;
     font-size: ${({theme}) => theme.fontSize.base_large};
     text-align: center;
+    color: #FFF;
+    display: inline-block;
+    border-bottom: 2px solid #FFF;
+    padding-bottom: 0.5rem;
   }
 
   @media screen and (max-width: 768px) {

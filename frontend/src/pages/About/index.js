@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "components/Container/page";
-import { Main, Cards } from "./styles";
+import { Container, Main, Cards } from "./styles";
 import DescriptionCard from "./components/DescriptionCard";
 
 export default function About() {
