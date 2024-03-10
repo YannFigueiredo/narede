@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
       transform: translateY(-100%);
     }
     to {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
       transform: translateY(100%);
     }
     to {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
@@ -59,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Madimi One", sans-serif;
       font-weight: 400;
       color: #FFF;
   }
@@ -68,12 +68,20 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({theme}) => theme.colors.blue["900"]};
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  h1, h2 {
+    font-weight: 900;
+  }
+
+  h3 {
     font-weight: 700;
   }
 
   h2, h3 {
-    color: ${({theme}) => theme.colors.sectionTitle};
+    color: #FFF;
   }
 
   h2 {
@@ -88,8 +96,19 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0;
   }
 
+  .initial-bottom {
+    transform: translateY(100%);
+    opacity: 0;
+    overflow: hidden;
+  }
+
   .move-from-left {
     animation: moveFromLeft .4s forwards;
+  }
+
+  .move-from-bottom {
+    animation: moveFromBottom .2s forwards;
+    opacity: 1;
   }
 
   .fade-in {
