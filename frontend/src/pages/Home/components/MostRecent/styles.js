@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  padding: 0 ${({theme}) => theme.spacing.padding.large};
+  overflow: hidden;
+
+  @media screen and (max-width: 992px) {
+    padding: 0 ${({theme}) => theme.spacing.padding.large};
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 ${({theme}) => theme.spacing.padding.small};
+  }
+`;
+
 export const TitleWrapper = styled.div`
   margin-bottom: ${({theme}) => theme.spacing.between_elements.between_cards};
   display: inline-block;

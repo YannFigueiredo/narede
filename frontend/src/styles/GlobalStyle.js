@@ -107,7 +107,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .move-from-bottom {
-    animation: moveFromBottom .2s forwards;
+    animation: moveFromBottom .7s forwards;
     opacity: 1;
   }
 

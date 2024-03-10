@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Container } from "components/Container/section";
 import { titlesList } from "utils/mocks/titlesList";
-import { TitleWrapper, CardsWrapper } from "./styles";
+import { Container, TitleWrapper, CardsWrapper } from "./styles";
 import TitleCard from "components/TitleCard";
 import { Header } from "../header.js";
 
