@@ -21,7 +21,7 @@ export const CoverWrapper = styled.div`
   position: relative;
   cursor: pointer;
   border-radius: ${({ variation }) => {
-    return variation === "very small" ? "5px" : "30px";
+    return variation === "very small" ? "3px" : "8px";
   }};
   overflow: hidden;
 
