@@ -6,7 +6,7 @@ export const Container = styled.button`
   background: 
   ${({variant, theme}) => {
     return(
-      variant === "tab" ? "#FFF" : 
+      variant === "tab" ? "transparent" : 
         variant === "blue" ? theme.colors.blue["100"] : 
           variant === "gray" ? theme.colors.gray["100"] : 
             variant === "blue_alt" ? theme.colors.detailPrimary : "transparent"
@@ -17,10 +17,10 @@ export const Container = styled.button`
   ${({theme}) => theme.spacing.padding.big_small}
   ${({theme}) => theme.spacing.padding.normal};
   color: 
-  ${({variant, theme}) => {
+  ${({variant}) => {
     return(
       variant === "blue_alt" ? "rgb(217, 80, 28)" :
-        variant === "tab" ? theme.colors.backgroundPrimary : "#FFF"
+        variant === "tab" ? "#FFF" : "#FFF"
     );
   }};
   text-transform: ${({variant, isUppercase}) => variant === "tab" || isUppercase ? "uppercase" : "normal"};
@@ -31,7 +31,7 @@ export const Container = styled.button`
   font-size: 
     ${({variant, theme, isUppercase}) => {
     return(
-      variant === "tab" ? theme.fontSize.regular : 
+      variant === "tab" ? theme.fontSize.base_large : 
         isUppercase ? theme.fontSize.small : theme.fontSize.base
     );
   }};
