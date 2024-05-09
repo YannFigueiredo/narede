@@ -3,14 +3,28 @@ import styled from "styled-components";
 export const Container = styled.div`
   border: 0.063rem solid ${({theme}) => theme.colors.primary};
   width: ${(props) => props.width};
-  border-radius: ${({theme, isSearch}) => isSearch ? "20px" : theme.spacing.radius.small};
+  border-radius: ${({theme}) => theme.spacing.radius.small};
   overflow: hidden;
+  width: 100%;
+  background: #FFF;
+
+  .search-input-categories {
+    background-color: ${({theme}) => theme.colors.backgroundLightBlue};
+    
+    .input-wrapper{
+      
+    }
+
+    .search-button {
+      border-lefT: 1px solid #000;
+    }
+  }
+`;
+
+export const Main = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 25rem;
-  width: 100%;
-  background: #FFF;
 `;
 
 export const InputWrapper = styled.input`
