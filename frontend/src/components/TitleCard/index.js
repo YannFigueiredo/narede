@@ -32,6 +32,11 @@ export default function TitleCard({
 
   return(
     <Container variation={variation} className={className} title={title}>
+      {withTitle &&
+        <DetailsWrapper>
+          <h3>{title.slice(0, 17)}</h3>
+        </DetailsWrapper>
+      }
       <CoverWrapper variation={variation} onClick={openModal} className="cover">
         <img src={cover} alt="Capa da HQ" />
         {variation !== "very small" &&
@@ -42,9 +47,8 @@ export default function TitleCard({
         }
       </CoverWrapper>
       {withTitle &&
-        <DetailsWrapper>
-          <h3>{title.slice(0, 17)}</h3>
-          <h4>{author[0]}</h4>
+        <DetailsWrapper className="author-details">
+          <h3>{author.length > 1 ? "vários" : author[0]}</h3>
         </DetailsWrapper>
       }
     </Container>

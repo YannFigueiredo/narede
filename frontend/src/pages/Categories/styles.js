@@ -10,6 +10,8 @@ export const Container = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
   position: relative;
   animation: rotateFromLeft .2s linear;
+  background-color: ${({theme}) => theme.colors.backgroundLightBlue};
+  padding: 0 ${({theme}) => theme.spacing.padding.normal} ${({theme}) => theme.spacing.padding.normal};
 
   @media screen and (max-width: 768px) {
     gap: ${({theme}) => theme.spacing.between_elements.between_cards};
@@ -18,8 +20,8 @@ export const Container = styled.div`
 
 export const Main = styled.div`
   padding: 
-  ${({theme}) => theme.spacing.padding.large}
-  ${({theme}) => theme.spacing.padding.very_large};
+  ${({theme}) => theme.spacing.padding.normal}
+  ${({theme}) => theme.spacing.padding.large};
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
@@ -29,6 +31,7 @@ export const Main = styled.div`
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+  border: 2px solid ${({theme}) => theme.colors.backgroundPrimary};
 
   #mobile-selector {
     display: none;
@@ -52,11 +55,16 @@ export const Main = styled.div`
   }
 `;
 
+export const HeaderTitles = styled.div`
+  display: flex;
+  gap: ${({theme}) => theme.spacing.between_elements.between_items};
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const Selector = styled.div`
-  background: #FFF;
   border-radius: ${({theme}) => theme.spacing.radius.small};
   overflow: hidden;
-  color:  ${({theme}) => theme.colors.blue["100"]};
 
   button:nth-child(${(props) => props.active}) {
     color: ${({theme}) => theme.colors.sectionTitle};
@@ -80,10 +88,22 @@ export const Filter = styled.select`
   }
 `;
 
+export const Content = styled.div`
+  background-color: ${({theme}) => theme.colors.backgroundPrimary};
+  padding: 
+  ${({theme}) => theme.spacing.padding.normal}
+  ${({theme}) => theme.spacing.padding.large};
+  display: flex;
+  flex-direction: column;
+  gap: ${({theme}) => theme.spacing.between_elements.between_items};
+  border-radius: ${({theme}) => theme.spacing.radius.small};
+  border: 2px solid #fff; 
+`;
+
 export const TitlesArea = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  gap: ${({theme}) => theme.spacing.between_elements.between_sections};
 
   @media screen and (max-width: 768px) {
     justify-content: center;

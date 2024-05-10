@@ -8,6 +8,17 @@ export const Container = styled.article`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.small};
+  background-color: ${({theme}) => theme.colors.backgroundLightBlue};
+  padding: ${({theme}) => theme.spacing.padding.big_small};
+  border-radius: ${({theme}) => theme.spacing.radius.small};
+
+  .author-details {
+    background-color: #FFF;
+    color: #000;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+    padding: 0.25rem;
+    border: 1px solid #000;
+  }
 `;
 
 export const CoverWrapper = styled.div`
@@ -24,6 +35,7 @@ export const CoverWrapper = styled.div`
     return variation === "very small" ? "3px" : "8px";
   }};
   overflow: hidden;
+  border: 1px solid #000;
 
   img {
     width: 100%;
@@ -68,7 +80,7 @@ export const DetailsWrapper = styled.div`
   }
 
   h3 {
-    color: #FFF;
+    color: ${({theme}) => theme.colors.blue["900"]};
     font-size: ${({theme}) => theme.fontSize.regular};
   }
 

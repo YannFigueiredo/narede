@@ -59,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      font-family: "Madimi One", sans-serif;
+      font-family: "Comic Sans MS", "Comic Sans", sans-serif;
       font-weight: 400;
       color: #FFF;
   }

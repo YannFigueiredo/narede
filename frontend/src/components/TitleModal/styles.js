@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .5);
   position: fixed;
   top: 0;
   right: 0;
@@ -20,6 +20,7 @@ export const Main = styled.div`
   max-width: 34.375rem; 
   width: 100%;
   animation: moveFromBottom .7s forwards;
+  background-color: #000;
 `;
 
 export const CloseButton = styled.div`
