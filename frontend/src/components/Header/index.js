@@ -187,7 +187,6 @@ export default function Header() {
             }
           </SessionManager>
           <Input 
-            className="search-input-header"
             width="auto"
             isSearch
             placeholder="Insira título ou quadrinista"
