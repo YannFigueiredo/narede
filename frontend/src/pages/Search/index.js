@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Container } from "components/Container/page";
-import { Main, ComicsWrapper } from "./styles";
+import { Container, Main, Content, ComicsWrapper } from "./styles";
 import { titlesList } from "utils/mocks/titlesList";
 import TitleCard from "components/TitleCard";
 import TitleModal from "components/TitleModal";
 
 export default function Search() {
   const [result, setResult] = useState([]);
-  const [windowSize, setWindowSize] = useState(global.window.innerWidth);
   const { search } = useParams();
 
   const normalizeText = (text) => {
@@ -66,37 +64,33 @@ export default function Search() {
 
   useEffect(() => searchResults(), [global.window.location.pathname]);
 
-  useEffect(() => {
-    global.window.addEventListener("resize", () => setWindowSize(global.window.innerWidth));
-
-    return () => global.window.removeEventListener("resize", () => setWindowSize(global.window.innerWidth));
-  }, [global.window.innerWidth]);
-
   return(
     <Container>
       <TitleModal />
       <Main>
-        {result.length === 0 &&
-          <span>Nenhum resultado foi encontrado!</span>
-        }
-        {result.length > 0 &&
-          <ComicsWrapper>
-            {result.map((comic, key) => (
-              <TitleCard
-                key={key}
-                id={comic.id}
-                title={comic.title}
-                category={comic.category}
-                description={comic.description}
-                author={comic.author}
-                year={comic.year}
-                isFree={comic.isFree}
-                cover={comic.cover}
-                variation={windowSize <= 768 ? "small" : windowSize <= 992 ? "medium" : "large"}
-              />
-            ))}
-          </ComicsWrapper>
-        }
+        <Content>
+          {result.length === 0 &&
+            <span>Nenhum resultado foi encontrado!</span>
+          }
+          {result.length > 0 &&
+            <ComicsWrapper>
+              {result.map((comic, key) => (
+                <TitleCard
+                  key={key}
+                  id={comic.id}
+                  title={comic.title}
+                  category={comic.category}
+                  description={comic.description}
+                  author={comic.author}
+                  year={comic.year}
+                  isFree={comic.isFree}
+                  cover={comic.cover}
+                  variation="small"
+                />
+              ))}
+            </ComicsWrapper>
+          }
+        </Content>
       </Main>
     </Container>
   );
