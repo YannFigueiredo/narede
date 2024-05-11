@@ -86,6 +86,10 @@ export const Filter = styled.select`
   option {
     color: ${({theme}) => theme.colors.detailPrimary};
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Content = styled.div`
@@ -98,6 +102,11 @@ export const Content = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
   border-radius: ${({theme}) => theme.spacing.radius.small};
   border: 2px solid #fff; 
+  max-width: 100%;
+
+  @media screen and (max-width: 600px) {
+    padding: ${({theme}) => theme.spacing.padding.small};
+  }
 `;
 
 export const TitlesArea = styled.div`
@@ -107,5 +116,6 @@ export const TitlesArea = styled.div`
 
   @media screen and (max-width: 768px) {
     justify-content: center;
+    gap: ${({theme}) => theme.spacing.between_elements.small};
   }
 `;
