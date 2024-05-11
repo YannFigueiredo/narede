@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.article`
-  width: ${({ variation }) => {
+  width: 100%;
+  max-width: ${({ variation }) => {
     return variation === "very small" ? "5rem" : variation === "small" ? "10rem" : variation === "medium" ? "11rem" : variation === "large" ? "12.5rem" : "auto";
   }}; 
   height: 100%;
@@ -19,15 +20,20 @@ export const Container = styled.article`
     padding: 0.25rem;
     border: 1px solid #000;
   }
+
+  @media screen and (max-width: 768px) {
+    max-width: 7rem;
+  }
 `;
 
 export const CoverWrapper = styled.div`
-  width: ${({ variation }) => {
+  max-width: ${({ variation }) => {
     return variation === "very small" ? "5rem" : "100%";
   }}; 
   height: ${({ variation }) => {
     return variation === "very small" ? "5rem" : variation === "small" ? "13rem" : variation === "medium" ? "15rem" : variation === "large" ? "16.25rem" : "auto";
   }};
+  width: 100%;
   max-height: 20rem;
   position: relative;
   cursor: pointer;
@@ -40,6 +46,11 @@ export const CoverWrapper = styled.div`
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 7rem;
+    max-height: 7rem;
   }
 `;
 
@@ -70,10 +81,19 @@ export const InfoWrapper = styled.div`
     color: #FFF;
     font-weight: 500;
   }
+
+  @media screen and (max-width: 768px) {
+    span {
+      font-size: ${({theme}) => theme.fontSize.small};
+    }
+  }
 `;
 
 export const DetailsWrapper = styled.div`
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   h3, h4 {
     text-transform: uppercase;
