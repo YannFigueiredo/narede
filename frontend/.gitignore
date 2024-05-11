@@ -10,7 +10,6 @@
 
 # production
 /build
-/public/_redirects
 
 # misc
 .DS_Store
