@@ -68,10 +68,6 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({theme}) => theme.colors.blue["900"]};
   }
 
-  h1, h2, h3, h4 {
-    font-family: "Roboto", sans-serif;
-  }
-
   h1, h2 {
     font-weight: 900;
   }
