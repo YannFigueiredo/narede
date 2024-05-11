@@ -6,7 +6,6 @@ import Reviews from "./components/Reviews";
 import TitleModal from "components/TitleModal";
 import { Container, Content, Main, SubmitWrapper } from "./styles";
 import SubmitImage from "assets/images/submissao-img.png";
-import SubmitText from "assets/images/submissao-texto.png";
 
 export default function Home() {
   const verifyScreenPosition = () => {
@@ -44,7 +43,6 @@ export default function Home() {
       <Reviews />
       <SubmitWrapper className="submit initial-fade">
         <img src={SubmitImage} alt="Imagem da seção de submissão" />
-        <img src={SubmitText} alt="Texto da seção de submissão" />
       </SubmitWrapper>
       <TitleModal />
     </Container>
