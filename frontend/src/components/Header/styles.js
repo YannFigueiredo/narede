@@ -10,16 +10,7 @@ export const Container = styled.header`
   animation: fadeIn 1.2s;
 
   @media screen and (max-width: 768px) {
-    position: relative;
-    padding: 0 ${({theme}) => theme.spacing.padding.small} 48px;
-
-    .search-input-header {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: ${({theme}) => theme.spacing.padding.small} auto;
-    }
+    padding: ${({theme}) => theme.spacing.padding.small};
   }
 
   @media screen and (max-width: 768px) {
@@ -77,6 +68,11 @@ export const ActionWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  }
 `;
 
 export const MenuWrapper = styled.nav`
