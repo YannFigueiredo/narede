@@ -43,10 +43,6 @@ export const Main = styled.div`
     option {
       color: ${({theme}) => theme.colors.sectionTitle};
     }
-
-    @media screen and (max-width: 600px) {
-      display: flex;
-    }
   }
 
   @media screen and (max-width: 600px) {
