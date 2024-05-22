@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
+export const Container = styled.div``;
+
 export const Main = styled.div`
-  background: ${({theme}) => theme.colors.backgroundPrimaryBox};
-  padding: ${({theme}) => theme.spacing.padding.small};
-  border-radius: ${({theme}) => theme.spacing.radius.small};
+  padding: ${({theme}) => theme.spacing.padding.small} 0;
 
   .fade-in {
     animation: fadeIn 1.5s;
@@ -16,12 +16,28 @@ export const Title = styled.h2`
 `;
 
 export const Cards = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
   opacity: 0;
+  overflow-x: auto;
+  padding: ${({theme}) => theme.spacing.padding.very_small};
+  overflow-y: hidden;
+  cursor: grab;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & {
+    -ms-overflow-style: none;
+  }
+
+  & {
+    overflow: -moz-scrollbars-none;
+    overflow-x: auto;
+  }
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

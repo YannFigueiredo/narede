@@ -66,6 +66,13 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${({theme}) => theme.colors.blue["900"]};
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
   }
 
   h1, h2 {

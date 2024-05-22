@@ -9,8 +9,12 @@ export const Container = styled.article`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.small};
-  background-color: ${({theme}) => theme.colors.backgroundLightBlue};
-  padding: ${({theme}) => theme.spacing.padding.big_small};
+  background-color: ${({ theme, variation }) => {
+    return variation === "very small" ? "transparent" : theme.colors.backgroundLightBlue;
+  }}; 
+  padding: ${({ theme, variation }) => {
+    return variation === "very small" ? 0 : theme.spacing.padding.big_small;
+  }};  
   border-radius: ${({theme}) => theme.spacing.radius.small};
 
   .author-details {
@@ -31,7 +35,7 @@ export const CoverWrapper = styled.div`
     return variation === "very small" ? "5rem" : "100%";
   }}; 
   height: ${({ variation }) => {
-    return variation === "very small" ? "5rem" : variation === "small" ? "13rem" : variation === "medium" ? "15rem" : variation === "large" ? "16.25rem" : "auto";
+    return variation === "very small" ? "6rem" : variation === "small" ? "13rem" : variation === "medium" ? "15rem" : variation === "large" ? "16.25rem" : "auto";
   }};
   width: 100%;
   max-height: 20rem;

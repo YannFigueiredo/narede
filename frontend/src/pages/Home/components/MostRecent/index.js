@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { titlesList } from "utils/mocks/titlesList";
 import { Container, TitleWrapper, CardsWrapper } from "./styles";
-import TitleCard from "components/TitleCard";
-import { Header } from "../header.js";
+import HomeTitleCard from "pages/Home/components/HomeTitleCard";
 
 export default function MostRecent({ title }) {
   const cards = useRef(null);
@@ -24,30 +23,49 @@ export default function MostRecent({ title }) {
     return () => global.window.removeEventListener("scroll", verifyScreenPosition);
   }, []);
 
+  useEffect(() => {
+    let scrollContainer = cards.current;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    scrollContainer.addEventListener("mousedown", (e) => {
+      startX = e.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+      scrollContainer.classList.add("active");
+    });
+
+    scrollContainer.addEventListener("mouseleave", () => {
+      scrollContainer.classList.remove("active");
+    });
+
+    scrollContainer.addEventListener("mouseup", () => {
+      scrollContainer.classList.remove("active");
+    });
+
+    scrollContainer.addEventListener("mousemove", (e) => {
+      if(!scrollContainer.classList.contains("active")) return;
+      e.preventDefault();
+      const x = e.pageX - scrollContainer.offsetLeft;
+      const walk = (x - startX) * 2;
+      scrollContainer.scrollLeft = scrollLeft - walk;
+    });
+  }, []);
+
   return(
     <Container>
       <TitleWrapper>
-        <Header>
-          <h2>{title}</h2>
-        </Header>
+        <h2>{title}</h2>
       </TitleWrapper>
-      <CardsWrapper ref={cards} className="initial-bottom">
+      <CardsWrapper ref={cards}>
         {
           titlesList.slice(0, 15).map((card, key) => (
-            <TitleCard 
+            <HomeTitleCard 
               key={key}
-              id={card.id}
-              title={card.title}
-              description={card.description}
-              volumesNumber={card.volumesNumber}
-              chaptersNumber={card.chaptersNumber}
-              category={card.category}
-              year={card.year}
-              cover={card.cover}
-              author={card.author}
-              isFree={card.isFree}
-              variation="small"
+              title={card}
               withTitle={false}
+              variation="home-card"
+              width={16} 
+              height={10}
             />
           ))
         }

@@ -8,18 +8,21 @@ export const Container = styled.div`
   padding: 
   ${({theme}) => theme.spacing.padding.small}
   ${({theme}) => theme.spacing.padding.big_small};
-  margin-right: ${({theme}) => theme.spacing.padding.large};
-  border-radius: ${({theme}) => theme.spacing.radius.small};
-  max-height: 56.25rem;
+  //margin-right: ${({theme}) => theme.spacing.padding.large};
+  border-radius: ${({theme}) => theme.spacing.radius.normal};
+  border: 2px solid #fff;
+  min-width: 20%;
   
   h2 {
     text-transform: uppercase;
     font-size: ${({theme}) => theme.fontSize.base_large};
     text-align: center;
-    color: #FFF;
+    color: #000;
     display: inline-block;
-    border-bottom: 2px solid #FFF;
-    padding-bottom: 0.5rem;
+    border: 2px solid #000;
+    border-radius: ${({theme}) => theme.spacing.radius.small};
+    background-color: rgb(147, 194, 208);
+    padding: 0.5rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -62,10 +65,6 @@ export const Card = styled.div`
     font-weight: 700;
     z-index: 99;   
   }
-
-  &:hover {
-    border: 0.125rem solid #FFF;
-  }
 `;
 
 export const Details = styled.div`
@@ -84,8 +83,11 @@ export const Details = styled.div`
   }
 
   h3 {
-    color: #FFF;
+    color: #000;
+    display: inline-block;
+    background-color: #FFF;
     text-transform: uppercase;
+    padding: ${({theme}) => theme.spacing.padding.big_small};
   }
 
   span {

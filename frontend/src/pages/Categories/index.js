@@ -92,7 +92,6 @@ export default function Categories() {
             {
               categories && categories.length > 0 && categories[activeCategory].titles.map((title, key) => (
                 <TitleCard 
-                  className="card"
                   key={key}
                   id={title.id}
                   title={title.title}

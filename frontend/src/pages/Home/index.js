@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import Intro from "components/Intro";
+import MainSlide from "./components/MainSlide";
 import MostPopular from "pages/Home/components/MostPopular";
 import MostRecent from "pages/Home/components/MostRecent";
 import Reviews from "./components/Reviews";
 import TitleModal from "components/TitleModal";
-import { Container, Content, Main, SubmitWrapper } from "./styles";
+import { Container, Content, Main, SubmitWrapper, Submit } from "./styles";
 import SubmitImage from "assets/images/submissao-img.png";
+import star from "assets/icons/ranking.png";
 
 export default function Home() {
   const verifyScreenPosition = () => {
@@ -31,7 +32,7 @@ export default function Home() {
 
   return(
     <Container>
-      <Intro />
+      <MainSlide />
       <Content>
         <Main>
           <MostRecent title="Recomendações" />
@@ -42,7 +43,21 @@ export default function Home() {
       </Content>
       <Reviews />
       <SubmitWrapper className="submit initial-fade">
+        <Submit>
+          <div>
+            <img src={star} alt="Imagem de uma estrela" />
+            <img src={star} alt="Imagem de uma estrela" />
+            <img src={star} alt="Imagem de uma estrela" />
+          </div>
+          <h2>Submissão</h2>
+          <div>
+            <img src={star} alt="Imagem de uma estrela" />
+            <img src={star} alt="Imagem de uma estrela" />
+            <img src={star} alt="Imagem de uma estrela" />
+          </div>
+        </Submit>
         <img src={SubmitImage} alt="Imagem da seção de submissão" />
+        <div className="bg"></div>
       </SubmitWrapper>
       <TitleModal />
     </Container>
