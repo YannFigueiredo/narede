@@ -6,6 +6,7 @@ export const Container = styled.article`
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
+  transition: all linear .2s;
 
   &:hover .cover {
     border-color: ${({variation}) => variation === "home-card" ? "#FFF" : "#000"};

@@ -1,16 +1,70 @@
 import styled from "styled-components";
 
+export const Tabs = styled.div`
+  max-width: 40rem;
+  width: 100%;
+  height: 0.3rem;
+  border: radius;
+  position: relative;
+  background-color: #FFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: .5rem;
+
+  div {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    border: 1px solid #000;
+  }
+
+  div:nth-child(1) {
+    left: 0;
+  }
+
+  div:nth-child(2) {
+    left: 50%;
+  } 
+
+  div:nth-child(3) {
+    right: 0;
+  }
+
+  .active {
+    width: 0.3rem;
+    height: 2rem;
+    transition: all linear .2s;
+  }
+`;
+
+export const Header = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Main = styled.div`
   padding: ${({theme}) => theme.spacing.padding.large} 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
   overflow: hidden;
 
   h2 {
+    color: #000;
     display: inline-block;
-    text-align: left;
+    padding: 
+    ${({theme}) => theme.spacing.padding.very_small}
+    ${({theme}) => theme.spacing.padding.normal};
+    background-color: #FFF;
+    border-radius: ${({theme}) => theme.spacing.radius.small};
+    text-transform: uppercase;
+    font-size: 1.5rem;
   }
 
   @media screen and (max-width: 600px) {
@@ -25,7 +79,6 @@ export const Main = styled.div`
 export const SlideContainer = styled.div`
   overflow-x: hidden;
   position: relative;
-  max-width: 50rem;
   width: 100%;
 
   .slide-side {
@@ -48,9 +101,7 @@ export const SlideContainer = styled.div`
 `;
 
 export const ComicsWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: auto;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
@@ -111,5 +162,45 @@ export const TabsWrapper = styled.div`
     border-radius: 10px;
     transition: all linear .1s;
     background: ${({theme}) => theme.colors.blue["100"]};
+  }
+`;
+
+export const CardWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({theme}) => theme.spacing.between_elements.normal};
+`;
+
+export const Divider = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  div:nth-child(odd) {
+    background-color: orange;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 1px solid #000;
+  }
+
+  div:nth-child(even) {
+    max-height: 14rem;
+    height: 100vh;
+    width: 0.2rem;
+    border-radius: 50%;
+    background-color: #FFF;
+  }
+
+  span {
+    display: inline-block;
+    background-color: orange;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 50%;
+    border: 1px solid #000;
   }
 `;
