@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   border: 0.063rem solid ${({theme}) => theme.colors.primary};
-  width: ${(props) => props.width};
+  max-width: ${(props) => props.maxwidth}rem;
   border-radius: ${({theme}) => theme.spacing.radius.small};
   overflow: hidden;
-  width: 100%;
   background: #FFF;
+  width: 100%;
 
   .search-input-categories {
     background-color: ${({theme}) => theme.colors.backgroundLightBlue};

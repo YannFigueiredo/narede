@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background from "assets/images/background-home.png";
 import submitBg from "assets/images/herois_bg.jpg";
 
 export const Container = styled.div`
@@ -13,11 +12,6 @@ export const Container = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.between_sections};
   position: relative;
   animation: rotateFromLeft .2s linear;
-  background-image: url(${background});
-  background-size: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: repeat;
 
   @media screen and (max-width: 768px) {
     gap: ${({theme}) => theme.spacing.between_elements.between_cards};

@@ -3,7 +3,7 @@ import { Container, Main, InputWrapper, SearchButton } from "./styles";
 import SearchIcon from "@mui/icons-material/Search";
 
 export default function Input({
-  width,
+  maxwidth,
   placeholder = "",
   isSearch = false,
   className,
@@ -12,7 +12,7 @@ export default function Input({
   onKeyDown
 }) {
   return(
-    <Container width={width} isSearch={isSearch}>
+    <Container maxwidth={maxwidth} isSearch={isSearch}>
       <Main className={className}>
         <InputWrapper 
           isSearch={isSearch}

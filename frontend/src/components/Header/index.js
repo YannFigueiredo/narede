@@ -4,12 +4,12 @@ import {
   Container, 
   ImageWrapper, 
   OptionsWrapper,
-  ActionWrapper,
   MenuWrapper, 
   Menu,
-  SessionManager 
+  InputWrapper,
+  InputBorder
 } from "./styles";
-import Logo from "assets/images/logo-white-variation.png";
+import Logo from "assets/images/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelIcon from "@mui/icons-material/Cancel";
 import Input from "components/Input";
@@ -94,16 +94,33 @@ export default function Header() {
   useEffect(() => updateActualPage(), [actualPage.pathname, global.window.location.pathname]);
 
   return(
-    <Container>
+    <Container background={window.location.pathname === "/" ? true : false}>
       <ImageWrapper>
         <a href="/"><img src={Logo} alt="Logo do site Nave HQ"/></a>
       </ImageWrapper>
+      <InputWrapper>
+        <InputBorder>
+          <Input 
+            id="search"
+            maxwidth={20}
+            isSearch
+            placeholder="Insira título ou quadrinista"
+            onChange={(e) => setSearch(e.target.value)}
+            onClick={() => runSearch()}
+            onKeyDown={(e) => {if(e.key === "Enter") runSearch();}}
+          />
+        </InputBorder>
+      </InputWrapper>
       <OptionsWrapper>
-        <ActionWrapper>
-          <SessionManager>
+        <MenuWrapper>
+          <Menu id="main-menu" ref={menu}>
+            <li>
+              <a href="/" title="Página inicial" className={actualPage.pathname === "/" ? "active" : ""}>
+                Início
+              </a>
+            </li>
             {
               isLogged &&
-              <Menu id="logged-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
                 <li onClick={() => navigate("/conta")}>
                   <img src={Profile} alt="Ícone de perfil" />
                   <a 
@@ -114,6 +131,9 @@ export default function Header() {
                     Perfil
                   </a>
                 </li>
+            }
+            {
+              isLogged &&
                 <li onClick={() => navigate("/planos")}>
                   <img src={Plans} alt="Ícone de planos" />
                   <a 
@@ -124,6 +144,9 @@ export default function Header() {
                     Planos
                   </a>
                 </li>
+            }
+            {
+              isLogged &&
                 <li onClick={() => navigate("/enviar")}>
                   <img src={Send} alt="Ícone de enviar" />
                   <a 
@@ -134,6 +157,9 @@ export default function Header() {
                     Enviar
                   </a>
                 </li>
+            }
+            {
+              isLogged &&
                 <li id="about-btn-mobile" onClick={() => navigate("/sobre")}>
                   <img src={About} alt="Ícone de sobre nós" />
                   <a 
@@ -145,19 +171,9 @@ export default function Header() {
                     Sobre
                   </a>
                 </li>
-                <li onClick={exit}>
-                  <LogoutIcon className="menu-icon" />
-                  <a href="#" title="Sair">Sair</a>
-                </li>
-              </Menu>
             }
             {
               isLogged === false &&
-              <Menu id="logged-out-container" variant={actualPage.pathname === "/" ? "home" : "others"}>
-                <li onClick={login}>
-                  <LoginIcon className="menu-icon" />
-                  <a href="#">Entrar</a>
-                </li>
                 <li onClick={() => navigate("/planos")}>
                   <img src={Plans} alt="Ícone de planos" />
                   <a 
@@ -168,10 +184,9 @@ export default function Header() {
                     Planos
                   </a>
                 </li>
-                <li>
-                  <AppRegistrationIcon className="menu-icon" />
-                  <a href="#">Criar conta</a>
-                </li>
+            }
+            {
+              isLogged === false &&
                 <li id="about-btn-mobile" onClick={() => navigate("/sobre")}>
                   <img src={About} alt="Ícone de sobre nós" />
                   <a 
@@ -183,25 +198,7 @@ export default function Header() {
                     Sobre
                   </a>
                 </li>
-              </Menu>
             }
-          </SessionManager>
-          <Input 
-            width="auto"
-            isSearch
-            placeholder="Insira título ou quadrinista"
-            onChange={(e) => setSearch(e.target.value)}
-            onClick={() => runSearch()}
-            onKeyDown={(e) => {if(e.key === "Enter") runSearch();}}
-          />
-        </ActionWrapper>
-        <MenuWrapper>
-          <Menu id="main-menu" ref={menu}>
-            <li>
-              <a href="/" title="Página inicial" className={actualPage.pathname === "/" ? "active" : ""}>
-                Página inicial
-              </a>
-            </li>
             <li>
               <a 
                 href="/catalogo" 
@@ -252,6 +249,27 @@ export default function Header() {
                 Sobre nós
               </a>
             </li>
+            {
+              isLogged === false &&
+                <li onClick={login}>
+                  <LoginIcon className="menu-icon" />
+                  <a href="#">Entrar</a>
+                </li>
+            }
+            {
+              isLogged === false &&
+                <li>
+                  <AppRegistrationIcon className="menu-icon" />
+                  <a href="#">Criar conta</a>
+                </li>
+            }
+            {
+              isLogged &&
+                <li onClick={exit}>
+                  <LogoutIcon className="menu-icon" />
+                  <a href="#" title="Sair">Sair</a>
+                </li>
+            }
             <CancelIcon id="menu-close" onClick={closeMenu} />
           </Menu>
           <MenuIcon id="menu-open" onClick={openMenu} />

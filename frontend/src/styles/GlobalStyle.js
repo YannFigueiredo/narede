@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import homeBg from "assets/images/bg_home.jpg";
 
 export const GlobalStyle = createGlobalStyle`
   @keyframes moveFromTop {
@@ -65,7 +66,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${({theme}) => theme.colors.blue["900"]};
+    background-image: url(${homeBg});
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
     max-width: 100%;
     overflow-x: hidden !important;
   }

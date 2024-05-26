@@ -1,13 +1,21 @@
 import styled from "styled-components";
+import bgSearch from "assets/images/bgSearch.png";
 
 export const Container = styled.header`
-  background: ${({theme}) => theme.colors.backgroundSecondary};
+  background: ${({background, theme}) => background ? "rgba(0, 94, 136, .4)" : theme.colors.backgroundSecondary};
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 3.125rem;
-  padding: 0 ${({theme}) => theme.spacing.padding.large};
+  justify-content: center;
+  gap: ${({theme}) => theme.spacing.between_elements.between_cards};
+  padding: ${({theme}) => theme.spacing.padding.small} 0 0 0;
   max-width: 100%;
   animation: fadeIn 1.2s;
+
+  #search {
+    max-width: 15rem;
+    width: 100%;
+  }
 
   @media screen and (max-width: 768px) {
     padding: ${({theme}) => theme.spacing.padding.small};
@@ -30,8 +38,8 @@ export const ImageWrapper = styled.div`
   animation: moveFromTop 1.2s forwards;
 
   img {
-    max-width: 5rem;
-    min-width: 5rem;
+    max-width: 7rem;
+    min-width: 7rem;
     width: 100%;
     height: auto;
   }
@@ -78,18 +86,6 @@ export const ActionWrapper = styled.div`
 export const MenuWrapper = styled.nav`
   display: flex;
   align-items: center;
-  gap: ${({theme}) => theme.spacing.between_elements.normal};
-
-  #main-menu {
-    li a {
-      font-size: 1.3rem;
-      color: #FFF;
-    }
-  }
-
-  #main-menu li a:hover, #main-menu li .active {
-    color: ${({theme}) => theme.colors.detailPrimary};
-  }
 
   #menu-open {
     display: none;
@@ -117,6 +113,17 @@ export const MenuWrapper = styled.nav`
     #menu-close {
       display: inline-block;
     }
+
+    #main-menu {
+    li a {
+      font-size: ${({theme}) => theme.fontSize.regular};
+    }
+  }
+
+  #main-menu li a:hover, #main-menu li .active {
+    color: ${({theme}) => theme.colors.detailPrimary};
+  }
+
 
     #main-menu {
       display: none;
@@ -150,36 +157,90 @@ export const MenuWrapper = styled.nav`
 
 export const Menu = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: ${({theme}) => theme.spacing.between_elements.normal};
   text-transform: uppercase;
-  min-height: 3.75rem;
   width: 100%;
+  background: radial-gradient(circle at center, #FFF, ${({theme}) => theme.colors.backgroundPrimary});
+
+  li img {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  li .menu-icon {
+    display: none;
+  }
+
+  #about-btn-mobile {
+    display: none;
+  }
+
+  #logged-container {
+    li:nth-child(1) {
+      display: flex;
+      align-items: center;
+    }
+  }
 
   li {
     list-style: none;
     font-weight: 500;
     cursor: pointer;
     transition: all linear .3s;
-    padding: ${({theme}) => theme.spacing.padding.very_small} 0;
   }
 
   li a {
     transition: all linear .3s;
-    color: #FFF;
+    color: #000;
+    background-color: ${({theme}) => theme.colors.backgroundLightBlue};
     text-decoration: none;
     font-size: ${({theme}) => theme.fontSize.regular};
     font-weight: 700;
+    display: inline-block;
+    padding: ${({theme}) => theme.spacing.padding.small} ${({theme}) => theme.spacing.padding.normal};
   }
 
   li a:hover, li .active {
-    color: ${({theme}) => theme.colors.detailPrimary};
+    color: #FFF;
+    background-color: ${({theme}) => theme.colors.backgroundPrimary};
     font-weight: 700;
   }
 
   li img {
     max-width: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: ${({theme}) => theme.spacing.between_elements.small};
+    }
+
+    li img {
+      display: inline-block;
+    }
+
+    #logged-container, #logged-out-container {
+      li a {
+        font-size: 0.5rem;
+      }
+    }
+
+    li .menu-icon {
+      font-size: 40px;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    #about-btn-mobile {
+      display: flex;
+    }
   }
 `;
 
@@ -246,4 +307,20 @@ export const SessionManager = styled.div`
       display: flex;
     }
   }
+`;
+
+export const InputWrapper = styled.div`
+  background-image: url(${bgSearch});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+`;
+
+export const InputBorder = styled.div`
+  background-image: url(${bgSearch});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
 `;
