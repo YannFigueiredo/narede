@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import homeBg from "assets/images/bg_home.jpg";
+import homeMobileBg from "assets/images/bg_mobile_home.jpg";
 
 export const GlobalStyle = createGlobalStyle`
   @keyframes moveFromTop {
@@ -73,6 +74,10 @@ export const GlobalStyle = createGlobalStyle`
     background-repeat: repeat;
     max-width: 100%;
     overflow-x: hidden !important;
+
+    @media screen and (max-width: 768px) {
+      background-image: url(${homeMobileBg});
+    }
   }
 
   img {
