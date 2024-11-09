@@ -3,6 +3,16 @@ import homeBg from "assets/images/bg_home.jpg";
 import homeMobileBg from "assets/images/bg_mobile_home.jpg";
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'NexaBold';
+    src:url('src/assets/fonts/NexaBold/NexaBold.ttf.woff') format('woff'),
+        url('src/assets/fonts/NexaBold/NexaBold.ttf.svg#NexaBold') format('svg'),
+        url('src/assets/fonts/NexaBold/NexaBold.ttf.eot'),
+        url('src/assets/fonts/NexaBold/NexaBold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
   @keyframes moveFromTop {
     from {
       transform: translateY(-100%);
@@ -61,7 +71,7 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+      font-family: "Arial Rounded MT", "Arial", sans-serif;
       font-weight: 400;
       color: #FFF;
   }
@@ -83,6 +93,10 @@ export const GlobalStyle = createGlobalStyle`
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'NexaBold', sans-serif;
   }
 
   h1, h2 {
