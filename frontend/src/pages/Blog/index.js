@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   Main,
@@ -19,40 +20,30 @@ import EmailIcon from "@mui/icons-material/Email";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
 import PendingIcon from "@mui/icons-material/Pending";
+import EditNoteIcon from "@mui/icons-material/EditNote";
 import ProfilePhoto from "assets/images/photo-profile2.jpg";
+import { useBlogMemorizations } from "./hooks/useBlogMemorizations";
+import { useBlogStates } from "./hooks/useBlogStates";
 
 export default function Blog() {
-  const [producers, setProducers] = useState([]);
-  const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
+
+  const {
+    producers,
+    setProducers,
+    posts,
+    setPosts
+  } = useBlogStates();
+
+  const {
+    postContent,
+    producerContent
+  } = useBlogMemorizations();
 
   useEffect(() => {
-    setProducers([
-      {name: "Cristiano", username: "cristiano7"},
-      {name: "Claudia", username: "claudiacard"},
-      {name: "Alex", username: "alexfig"},
-      {name: "Max", username: "maxcambota"},
-    ]);
+    setProducers(producerContent);
 
-    setPosts([
-      {
-        title: "Brega story é fantástica",
-        text: "Vocês precisa dar uma chance a essa obra espetacular. Conta de forma incrível sobre o estilo musical brega.",
-        image: "https://parawebnews.com/wp-content/uploads/2022/07/brega_00732178_0_.jpg",
-        username: "claudiacard"
-      },
-      {
-        title: "O Pará é cheio de ótimos autores de quadrinhos",
-        text: "Não sabia que na minha terra existem tantos artistas talentosos. Estou muito orgulhoso de ser paraense.",
-        image: "https://i0.wp.com/jornal.usp.br/wp-content/uploads/2019/09/20190911_estudio-casa-velha.jpg?fit=800%2C420&ssl=1",
-        username: "alexfig"
-      },
-      {
-        title: "Quero sugestões para um novo quadrinho",
-        text: "Oi, pessoal. Poderiam me dar algumas sugestões para me ajudar a sair do bloqueio criativo? Estou entusiasmado para escrever e desenhar minha próxima obra.",
-        image: "https://w7.pngwing.com/pngs/484/249/png-transparent-happy-people-happy-hand-painted-figures-cartoon.png",
-        username: "beltranosilva"
-      }
-    ]);
+    setPosts(postContent);
   }, []);
 
   return(
@@ -100,6 +91,7 @@ export default function Blog() {
                   image={post.image}
                   text={post.text}
                   username={post.username}
+                  urlPhoto={post.urlPhoto ? post.urlPhoto : undefined}
                 />
               ))
             }
@@ -117,6 +109,7 @@ export default function Blog() {
               <li><EmailIcon className="item-icon" />Mensagens</li>
               <li><NotificationsIcon className="item-icon" />Notificações</li>
               <li><PersonIcon className="item-icon" />Perfil</li>
+              <li onClick={() => navigate("/")}><EditNoteIcon className="item-icon" />Minhas Resenhas</li>
               <li><PendingIcon className="item-icon" />Mais</li>
             </ItemsWrapper>
           </Options>

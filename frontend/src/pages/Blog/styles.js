@@ -191,10 +191,7 @@ export const ItemsWrapper = styled.ul`
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_items};
-
-  .item-icon {
-    font-size: 1.8rem;
-  }
+  cursor: pointer;
 
   li {
     list-style-type: none;
@@ -202,6 +199,21 @@ export const ItemsWrapper = styled.ul`
     font-size: ${({theme}) => theme.fontSize.base_large}; 
     display: flex;
     align-items: center;
-    gap: ${({theme}) => theme.spacing.between_elements.small}; 
+    gap: ${({theme}) => theme.spacing.between_elements.small};
+    transition: all linear .4s;
+    cursor: pointer;
+
+    .item-icon {
+      font-size: 1.8rem;
+      transition: all linear .4s;
+    }
+  }
+
+  li:hover {
+    color: rgb(252, 189, 73);
+
+    .item-icon {
+      fill: rgb(252, 189, 73);
+    }
   }
 `;

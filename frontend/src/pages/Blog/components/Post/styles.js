@@ -20,8 +20,16 @@ export const Header = styled.div`
   gap: ${({theme}) => theme.spacing.between_elements.small};
   align-items: center;
 
-  img {
+  div {
     width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
     border-radius: 50%;
   }
 
@@ -44,6 +52,20 @@ export const Content = styled.div`
 
   img {
     max-width: 100%;
+  }
+
+  .see-more-btn {
+    width: 100%;
+    font-weight: 700;
+    color: rgb(252, 189, 73);
+    transition: all linear .4s;
+    text-transform: uppercase;
+    text-align: start;
+    cursor: pointer;
+  }
+
+  .see-more-btn:hover {
+    color: rgb(255, 150, 80);
   }
 `;
 
