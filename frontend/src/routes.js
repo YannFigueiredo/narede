@@ -14,6 +14,7 @@ import Plans from "pages/Plans";
 import Account from "pages/Account";
 import Send from "pages/Send";
 import NotFound from "pages/NotFound";
+import UserPosts from "pages/Blog/components/UserPosts";
 
 export default function AppRoutes() {
   return(
@@ -26,6 +27,7 @@ export default function AppRoutes() {
         <Route path="/leitor" element={<Reader />} />
         <Route path="/quadrinista" element={<Producer />} />
         <Route path="/comunidade" element={<Blog />} />
+        <Route path="/comunidade/minhas-resenhas" element={<UserPosts />} />
         <Route path="/sobre" element={<About />} />
         <Route path="/planos" element={<Plans />} />
         <Route path="/conta" element={<Account />} />
