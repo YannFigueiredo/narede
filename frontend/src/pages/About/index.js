@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container, Main, Cards } from "./styles";
+import { Container, Intro, Infos, Text, Image, Main, Cards } from "./styles";
 import DescriptionCard from "./components/DescriptionCard";
+import infoImg from "assets/images/quem-somos-img.png";
 
 export default function About() {
   const [cards, setCards] = useState([]);
@@ -8,34 +9,24 @@ export default function About() {
   useEffect(() => {
     setCards([
       {
-        title: "Novidade",
+        title: "Valorização Cultural",
         number: 1,
-        text: "Pai d’égua, finalmente está aqui o Na Rede! A resposta que todos os adoradores de quadrinhos da região Norte do Brasil estavam aguardando ansiosamente. E acredite, esse site é sensacional! Desenvolvido por uma equipe altamente talentosa, incluindo o incrível designer Rafael Nascimento, o talentoso Daniel Remédios e o programador Yann Figueiredo. Essa plataforma é perfeita para quem quer explorar o mundo dos quadrinhos produzidos no Norte do país."
+        text: "Preservamos e divulgamos a cultura amazônica, dando voz às narrativas locais."
       },
       {
-        title: "Propósito",
+        title: "Inclusão e Diversidade",
         number: 2,
-        text: "O objetivo principal do Na Rede é aproximar os leitores dos quadrinhos da região Norte do Brasil. E eles têm um acervo incrível, repleto de histórias cativantes e ilustrações de tirar o fôlego. Não é preciso sair de casa para descobrir novas narrativas de ação, aventura, fantasia ou até mesmo dramas emocionantes. Aqui você encontra tudo que gosta!"
+        text: "Celebramos a diversidade de histórias, estilos e personagens que enriquecem a cultura dos quadrinhos."
       },
       {
-        title: "Visibilidade",
+        title: "Qualidade e Inovação",
         number: 3,
-        text: "Além disso, o Na Rede é um paraíso para os quadrinistas e produtores da região. Eles podem mostrar seu talento para um público amplo e dedicado, receber feedback valioso e quem sabe até oportunidades de colaboração. A plataforma é super profissional e fácil de usar, criando uma conexão incrível entre os artistas e o público."
+        text: "Buscamos constantemente a excelência, criando um espaço virtual moderno e acessível para os quadrinhos."
       },
       {
-        title: "Visual",
+        title: "Comunidade e Colaboração",
         number: 4,
-        text: "Agora vamos falar do visual do site. O layout foi cuidadosamente pensado, para garantir uma navegação tranquila e prazerosa. Com uma interface intuitiva, fica fácil encontrar os quadrinhos que você está procurando, filtrar por gêneros ou simplesmente descobrir novos talentos do Norte. As imagens e ilustrações são de uma qualidade impecável, proporcionando uma experiência visual de outro mundo."
-      },
-      {
-        title: "Comunidade",
-        number: 5,
-        text: "E tem mais, o Na Rede é muito mais do que um simples site. É uma comunidade! Leitores e produtores de quadrinhos da região Norte podem se conectar e compartilhar suas experiências. Nos fóruns de discussão e nas sessões de comentários, todo mundo pode expressar suas opiniões e se envolver ativamente. É incrível fazer parte dessa comunidade apaixonada!"
-      },
-      {
-        title: "Conclusão",
-        number: 6,
-        text: "Resumindo, o Na Rede é simplesmente indispensável para quem ama quadrinhos na região Norte do Brasil. Com um acervo vasto, uma vitrine digital para artistas brilhantes e uma comunidade ativa e envolvente, esse site é o lugar perfeito para se aventurar nas histórias em quadrinhos do Norte do país. Junte-se a nós e descubra o poder criativo que a região Norte tem a oferecer através do Navega Comics. Então, bora embarcar nessa jornada juntos?"
+        text: "Acreditamos na força da comunidade e incentivamos parcerias e a participação de todos os apaixonados por HQs. Entre no \"Na Rede\" e faça parte deste movimento que conecta quadrinhos, cultura e a essência única do Norte do Brasil!"
       }
     ]);
   }, []);
@@ -43,6 +34,30 @@ export default function About() {
   return(
     <Container>
       <Main>
+        <h1>Quem Somos</h1>
+        <Intro>
+          Bem-vindo ao &quot;Na Rede&quot;, um portal criado para celebrar, valorizar e divulgar as produções de quadrinhos da região Norte do Brasil. Desenvolvido por Daniel Remédios, Rafael Nascimento e Yann Figueiredo, o site nasceu da paixão por HQs e do desejo de conectar leitores e criadores de histórias em quadrinhos que expressam a rica diversidade cultural, social e ambiental da Amazônia.
+        </Intro>
+        <Infos>
+          <Text>
+            <div>
+              <h4>Nossa Missão</h4>
+              <p>
+                Nossa missão é promover a leitura e a produção de quadrinhos regionais, oferecendo um espaço dedicado a artistas locais e suas histórias, contribuindo para que as vozes e tradições da Amazônia sejam conhecidas, respeitadas e divulgadas. Através do &quot;Na Rede&quot;, buscamos apoiar a difusão de quadrinhos que abordam temas locais e fortalecem a identidade cultural da região.
+              </p>
+            </div>
+            <div>
+              <h4>Nossa Visão</h4>
+              <p>
+                Queremos nos tornar a principal plataforma de referência para HQs na Amazônia, onde artistas, leitores e entusiastas possam se conectar, criar e explorar o universo de histórias em quadrinhos regionais. Sonhamos com um futuro em que os quadrinhos da região Norte tenham reconhecimento nacional e internacional, conquistando espaços e inspirando gerações.
+              </p>
+            </div>
+          </Text>
+          <Image>
+            <img src={infoImg} alt="Imagem" />
+          </Image>
+        </Infos>
+        <h3>Nossos Valores</h3>
         <Cards>
           {
             cards.map((card, key) => (
