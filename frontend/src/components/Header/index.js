@@ -17,7 +17,6 @@ import About from "assets/icons/mobile-menu/sobre-nos.png";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
-import SearchIcon from "@mui/icons-material/Search";
 
 export default function Header() {
   const menu = useRef(null);
@@ -57,7 +56,7 @@ export default function Header() {
           actualPage.pathname === "/leitor" ? "Leitor" :
             actualPage.pathname === "/produtor" ? "Produtor" :
               actualPage.pathname === "/blog" ? "Blog" :
-                actualPage.pathname === "/sobre" ? " Sobre nós" :
+                actualPage.pathname === "/sobre" ? "Quem somos" :
                   actualPage.pathname.includes("/quadrinho") ? "Quadrinho" : "Busca"
     });
   };
@@ -65,10 +64,6 @@ export default function Header() {
   const runSearch = () => {
     navigate(`/search/${search}`);
     updateActualPage();
-  };
-
-  const openSearch = () => {
-    searchWrapper.current.classList.toggle("show-search");
   };
 
   useEffect(() => updateActualPage(), []);
@@ -139,21 +134,17 @@ export default function Header() {
               </a>
             </li>
           }
-          <li onClick={openSearch} className="mobile-option">
-            <SearchIcon className="menu-icon" />
-            <a href="#">Explorar</a>
-          </li>
           {
             isLogged &&
             <li id="about-btn-mobile" onClick={() => navigate("/sobre")} className="mobile-option">
               <img src={About} alt="Ícone de sobre nós" />
               <a
                 href="/sobre"
-                title="Sobre nós"
+                title="Quem somos"
                 className={actualPage.pathname === "/sobre" ? "active" : ""}
-                onClick={() => setActualPage({ ...actualPage, pageTitle: "Sobre nós" })}
+                onClick={() => setActualPage({ ...actualPage, pageTitle: "Quem somos" })}
               >
-                Sobre
+                Quem somos
               </a>
             </li>
           }
@@ -176,11 +167,11 @@ export default function Header() {
               <img src={About} alt="Ícone de sobre nós" />
               <a
                 href="/sobre"
-                title="Sobre nós"
+                title="Quem somos"
                 className={actualPage.pathname === "/sobre" ? "active" : ""}
-                onClick={() => setActualPage({ ...actualPage, pageTitle: "Sobre nós" })}
+                onClick={() => setActualPage({ ...actualPage, pageTitle: "Quem somos" })}
               >
-                Sobre
+                Quem somos
               </a>
             </li>
           }
@@ -227,11 +218,11 @@ export default function Header() {
           <li>
             <a
               href="/sobre"
-              title="Sobre nós"
+              title="Quem somos"
               className={actualPage.pathname === "/sobre" ? "active" : ""}
-              onClick={() => setActualPage({ ...actualPage, pageTitle: "Sobre nós" })}
+              onClick={() => setActualPage({ ...actualPage, pageTitle: "Quem somos" })}
             >
-              Sobre nós
+              Quem somos
             </a>
           </li>
           {
