@@ -2,7 +2,7 @@ import styled from "styled-components";
 import bgSearch from "assets/images/bgSearch.png";
 
 export const Container = styled.header`
-  background: ${({background, theme}) => background ? "rgba(0, 94, 136, .4)" : theme.colors.backgroundSecondary};
+  background: rgba(0, 94, 136, .4);
   display: flex;
   flex-direction: column;
   align-items: center;
