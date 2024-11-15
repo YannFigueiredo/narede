@@ -109,7 +109,11 @@ export default function Blog() {
               <li><EmailIcon className="item-icon" />Mensagens</li>
               <li><NotificationsIcon className="item-icon" />Notificações</li>
               <li><PersonIcon className="item-icon" />Perfil</li>
-              <li onClick={() => navigate("/")}><EditNoteIcon className="item-icon" />Minhas Resenhas</li>
+              <li 
+                onClick={() => navigate("/comunidade/minhas-resenhas")}
+              >
+                <EditNoteIcon className="item-icon" />Minhas Resenhas
+              </li>
               <li><PendingIcon className="item-icon" />Mais</li>
             </ItemsWrapper>
           </Options>
