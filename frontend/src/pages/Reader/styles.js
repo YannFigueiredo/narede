@@ -28,15 +28,25 @@ export const Header = styled.div`
     display: flex;
     align-items: center;
     gap: ${({theme}) => theme.spacing.between_elements.very_small};
+    cursor: pointer;
 
     span {
       font-weight: 700;
+      transition: all linear .4s;
     }
   }
 
   .settings-icon {
     fill: #FFF;
     font-size: 2rem;
+  }
+
+  div:hover span {
+    color: ${({theme}) => theme.colors.sectionTitle};
+  }
+
+  div:hover .settings-icon {
+    fill: ${({theme}) => theme.colors.sectionTitle};
   }
 
   @media screen and (max-width: 768px) {
@@ -129,6 +139,12 @@ export const TagsWrapper = styled.div`
     font-weight: 500;
     font-size: ${({theme}) => theme.fontSize.small};
     border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all linear .4s;
+  }
+
+  span:hover {
+    background: rgb(0, 159, 217);
   }
 `;
 
@@ -144,6 +160,12 @@ export const ButtonsWrapper = styled.div`
     padding: ${({theme}) => theme.spacing.padding.small};
     font-weight: 700;
     font-size: ${({theme}) => theme.fontSize.base_large};
+    transition: all linear .4s;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: ${({theme}) => theme.colors.sectionTitle};
   }
 `;
 
@@ -155,6 +177,7 @@ export const Social = styled.div`
 
   img {
     width: 1.875rem;
+    cursor: pointer;
   }
 `;
 
