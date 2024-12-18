@@ -51,8 +51,8 @@ export default function TitleModal() {
   }, [isModalOpen]);
 
   return(
-    <Container ref={modal}>
-      <Main>        
+    <Container ref={modal} onClick={closeModal}>
+      <Main onClick={(event) => event.stopPropagation()}>        
         <Header cover={titleValues.cover}>
           <CloseButton>
             <CancelIcon id="close-button" onClick={closeModal} />
