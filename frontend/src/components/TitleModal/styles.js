@@ -116,6 +116,10 @@ export const AssessmentsWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: ${({theme}) => theme.spacing.between_elements.small};
+  border-radius: 6px;
+  background: #FFF;
+  width: fit-content;
+  padding: 4px;
 
   img {
     max-width: 100%;
@@ -133,6 +137,7 @@ export const AssessmentsWrapper = styled.div`
     font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: 700;
+    color: #000;
   }
 `;
 
