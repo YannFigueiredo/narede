@@ -75,24 +75,21 @@ export default function Header() {
       <ImageWrapper>
         <a href="/"><img src={Logo} alt="Logo do site Nave HQ" /></a>
       </ImageWrapper>
-      <InputWrapper ref={searchWrapper}>
-        <InputBorder>
-          <Input
-            id="search"
-            maxwidth={20}
-            isSearch
-            placeholder="Insira título ou quadrinista"
-            onChange={(e) => setSearch(e.target.value)}
-            onClick={() => runSearch()}
-            onKeyDown={(e) => { if (e.key === "Enter") runSearch(); }}
-          />
-        </InputBorder>
-      </InputWrapper>
       <MenuWrapper>
         <Menu ref={menu}>
           <li>
             <a href="/" title="Página inicial" className={actualPage.pathname === "/" ? "active" : ""}>
               Início
+            </a>
+          </li>
+          <li>
+            <a
+              href="/catalogo"
+              title="Catálogo"
+              className={actualPage.pathname === "/catalogo" ? "active" : ""}
+              onClick={() => setActualPage({ ...actualPage, pageTitle: "Catálogo" })}
+            >
+              Catálogo
             </a>
           </li>
           {
@@ -177,36 +174,6 @@ export default function Header() {
           }
           <li>
             <a
-              href="/catalogo"
-              title="Catálogo"
-              className={actualPage.pathname === "/catalogo" ? "active" : ""}
-              onClick={() => setActualPage({ ...actualPage, pageTitle: "Catálogo" })}
-            >
-              Catálogo
-            </a>
-          </li>
-          <li>
-            <a
-              href="/leitor"
-              title="Leitor"
-              className={actualPage.pathname === "/leitor" ? "active" : ""}
-              onClick={() => setActualPage({ ...actualPage, pageTitle: "Leitor" })}
-            >
-              Leitor
-            </a>
-          </li>
-          <li>
-            <a
-              href="/quadrinista"
-              title="Quadrinista"
-              className={actualPage.pathname === "/quadrinista" ? "active" : ""}
-              onClick={() => setActualPage({ ...actualPage, pageTitle: "Quadrinista" })}
-            >
-              Quadrinista
-            </a>
-          </li>
-          <li>
-            <a
               href="/comunidade"
               title="Comunidade"
               className={actualPage.pathname === "/comunidade" ? "active" : ""}
@@ -246,6 +213,17 @@ export default function Header() {
               <a href="#" title="Sair">Sair</a>
             </li>
           }
+          <li>
+            <Input
+              id="search"
+              maxwidth={5}
+              isSearch
+              placeholder=""
+              onChange={(e) => setSearch(e.target.value)}
+              onClick={() => runSearch()}
+              onKeyDown={(e) => { if (e.key === "Enter") runSearch(); }}
+            />
+          </li>
         </Menu>
       </MenuWrapper>
     </Container>

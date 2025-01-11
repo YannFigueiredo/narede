@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bgSearch from "assets/images/bgSearch.png";
 
 export const Container = styled.header`
   background: rgba(0, 94, 136, .4);
@@ -39,8 +38,8 @@ export const ImageWrapper = styled.div`
   animation: moveFromTop 1.2s forwards;
 
   img {
-    max-width: 7rem;
-    min-width: 7rem;
+    max-width: 10rem;
+    min-width: 10rem;
     width: 100%;
     height: auto;
   }
@@ -140,9 +139,8 @@ export const Menu = styled.ul`
     max-width: 2rem;
   }
 
-  @media screen and (max-width: 1278px) {
-    background: none;
-    flex-wrap: wrap;
+  li:last-child {
+    margin-left: 10px;
   }
 
   @media screen and (max-width: 768px) {
@@ -196,32 +194,5 @@ export const Menu = styled.ul`
     #about-btn-mobile {
       display: flex;
     }
-  }
-`;
-
-export const InputWrapper = styled.div`
-  background-image: url(${bgSearch});
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 10px 20px;
-
-  @media screen and (max-width: 768px) {
-    background: none;
-    display: none;
-    padding: 0;
-  }
-`;
-
-export const InputBorder = styled.div`
-  background-image: url(${bgSearch});
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 10px 20px;
-  transition: all linear .4s;
-
-  @media screen and (max-width: 768px) {
-    background: none;
   }
 `;
