@@ -203,7 +203,7 @@ export default function Header() {
             isLogged === false &&
             <li className="mobile-option">
               <AppRegistrationIcon className="menu-icon" />
-              <a href="#">Criar conta</a>
+              <a href="/criar-conta">Criar conta</a>
             </li>
           }
           {

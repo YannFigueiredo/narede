@@ -24,6 +24,7 @@ import EditNoteIcon from "@mui/icons-material/EditNote";
 import ProfilePhoto from "assets/images/photo-profile2.jpg";
 import { useBlogMemorizations } from "./hooks/useBlogMemorizations";
 import { useBlogStates } from "./hooks/useBlogStates";
+import MostPopular from "./components/MostPopular";
 
 export default function Blog() {
   const navigate = useNavigate();
@@ -64,20 +65,40 @@ export default function Blog() {
                 }
               </TopContent>
             </AsideWrapper>
+            <AsideWrapper>
+              <MostPopular />
+            </AsideWrapper>
             <AsideWrapper>              
-              <h2>Em alta</h2>
+              <h2>Ranking dos artistas</h2>
               <TopContent>
                 <div className="popular">
-                  <h4>Acelera!</h4>
-                  <span>1,3 mil posts</span>
+                  <h4>Thiago Tavares</h4>
+                  <span>1,6 mil posts</span>
                 </div>
                 <div className="popular">
-                  <h4>Felipe Garcia</h4>
-                  <span>875 posts</span>
+                  <h4>Ana Dantas</h4>
+                  <span>958 posts</span>
                 </div>
                 <div className="popular">
-                  <h4>Coletivo BRT</h4>
+                  <h4>Ádson Silva</h4>
                   <span>572 posts</span>
+                </div>
+              </TopContent>
+            </AsideWrapper>
+            <AsideWrapper>              
+              <h2>Top leitores</h2>
+              <TopContent>
+                <div className="popular">
+                  <h4>Marcus Santiago</h4>
+                  <span>1,3 mil leituras</span>
+                </div>
+                <div className="popular">
+                  <h4>Matthew Murdock</h4>
+                  <span>875 leituras</span>
+                </div>
+                <div className="popular">
+                  <h4>Walter White</h4>
+                  <span>425 leituras</span>
                 </div>
               </TopContent>
             </AsideWrapper>

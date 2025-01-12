@@ -27,13 +27,12 @@ export const TitleWrapper = styled.div`
   align-items: center;
 
   h2 {
-    color: #000;
+    color: #FFF;
+    text-transform: uppercase;
     display: inline-block;
     padding: ${({theme}) => theme.spacing.padding.very_small};
-    background-color: #FFF;
     border-radius: ${({theme}) => theme.spacing.radius.small};
-    text-transform: lowercase;
-    font-size: ${({theme}) => theme.fontSize.large};
+    font-size: 1.5rem;
   }
 
   @media screen and (max-width: 600px) {

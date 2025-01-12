@@ -1,29 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: ${({theme}) => theme.colors.backgroundPrimaryBox};
+  background: transparent;
   display: flex;
   flex-direction: column;
   gap: ${({theme}) => theme.spacing.between_elements.between_cards};
-  padding: 
-  ${({theme}) => theme.spacing.padding.small}
-  ${({theme}) => theme.spacing.padding.big_small};
   //margin-right: ${({theme}) => theme.spacing.padding.large};
-  border-radius: ${({theme}) => theme.spacing.radius.normal};
-  border: 2px solid #fff;
   min-width: 20%;
-  margin-top: 20px;
   
   h2 {
-    text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 1.375rem;
     text-align: center;
-    color: #000;
+    color: rgb(252, 189, 73);
     display: inline-block;
-    border: 2px solid #000;
-    border-radius: ${({theme}) => theme.spacing.radius.small};
-    background-color: rgb(147, 194, 208);
-    padding: 0.5rem;
   }
 
   @media screen and (max-width: 768px) {

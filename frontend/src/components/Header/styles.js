@@ -88,7 +88,7 @@ export const Menu = styled.ul`
   align-items: center;
   text-transform: uppercase;
   width: 100vw;
-  background: radial-gradient(circle at center, #FFF, ${({theme}) => theme.colors.backgroundPrimary});
+  background: radial-gradient(circle at center, rgb(0, 72, 97), ${({theme}) => theme.colors.backgroundPrimary});
 
   li img {
     display: none;
@@ -116,6 +116,7 @@ export const Menu = styled.ul`
     font-weight: 500;
     cursor: pointer;
     transition: all linear .3s;
+    border: 1px solid ${({theme}) => theme.colors.backgroundPrimary};
   }
 
   li a {

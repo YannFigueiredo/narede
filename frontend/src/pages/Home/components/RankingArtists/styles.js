@@ -12,7 +12,6 @@ export const Container = styled.div`
   border-radius: ${({theme}) => theme.spacing.radius.normal};
   border: 2px solid #fff;
   min-width: 20%;
-  margin-top: 20px;
   
   h2 {
     text-transform: uppercase;
@@ -54,6 +53,13 @@ export const Card = styled.div`
   width: 100%;
   position: relative;
 
+  img {
+    max-width: 70px;
+    max-height: 70px;
+    width: 100%;
+    height: 100%;
+  }
+
   .rank {
     position: absolute;
     top: 0;
@@ -92,7 +98,7 @@ export const Details = styled.div`
   }
 
   span {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     font-weight: 700;
   }
 `;

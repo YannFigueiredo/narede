@@ -48,8 +48,20 @@ export const Content = styled.div`
     font-size: 3.125rem;
   }
 
-  span {
+  h2 {
+    text-transform: uppercase;
+    color: ${({theme}) => theme.colors.detailPrimary};
+    font-size: 1.5rem;
+  }
+
+  p {
     font-weight: 500;
+  }
+
+  div:has(p) {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
   }
 
   @media screen and (max-width: 768px) {
@@ -125,7 +137,8 @@ export const List = styled.ul`
     gap: ${({theme}) => theme.spacing.between_elements.between_cards};
 
     img {
-      width: 3rem;
+      max-width: 3rem;
+      min-width: 3rem;
     }
   }
 
@@ -203,38 +216,5 @@ export const Card = styled.div`
   span {
     font-weight: 500;
     font-size: ${({theme}) => theme.fontSize.regular};
-  }
-`;
-
-export const Final = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  justify-content: start;
-
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    gap: ${({theme}) => theme.spacing.between_elements.between_sections};
-    padding: ${({theme}) => theme.spacing.padding.small};
-  }
-`;
-
-export const Intro = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({theme}) => theme.spacing.between_elements.between_sections};
-  padding: 0 ${({theme}) => theme.spacing.padding.large};
-
-  h1 {
-    text-transform: uppercase;
-    color: ${({theme}) => theme.colors.detailPrimary};
-    display: inline-block;
-    width: 75%;
-    font-size: ${({theme}) => theme.fontSize.very_large};
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 0;
   }
 `;

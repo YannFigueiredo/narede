@@ -15,7 +15,6 @@ import {
 } from "./styles";
 import dispositivos from "assets/images/dispositivos-img.png";
 import dispositivosAlt from "assets/images/dispositivos-alt-img.png";
-import MainImage from "assets/images/first-screen-img.png";
 import check from "assets/icons/check.png";
 
 export default function Plans() {
@@ -54,13 +53,41 @@ export default function Plans() {
       <Main>
         <Content>
           <h1>
-            Ainda não sabe qual plano assinar? Crie uma conta e compre apenas os quadrinhos que você quiser
-            ou acesse a biblioteca gratuita.
+            Descubra o mundo dos quadrinhos na "Na Rede"!
           </h1>
-          <span>
-            Crie sua conta gratuita e tenha acesso a diversos quadrinhos que estão na categoria grátis, ou ainda tenha a possibilidade de comprar apenas quadrinhos específicos de sua preferência. Você também poderá conhecer todo o catálogo com milhares de quadrinhos e ainda ter acesso a comunidade.<br/>
-            Na conta grátis você conseguirá ler os quadrinhos que estão gratuitos no site e app, como vero-peixe, las cabaças, zagaia e outros, além de poder interagir diretamente com quadrinistas e outros leitores através da comunidade do site, e não precisa cadastrar algum meio de pagamento, o login é totalmente free. Ou ainda você pode comprar apenas aquele quadrinhos especial direto com o autor através do pix.
-          </span>
+          <p>
+            Crie uma conta e comece explorando! Você pode acessar quadrinhos gratuitos ou adquirir apenas aqueles títulos específicos que mais chamam sua atenção.
+          </p>
+          <h2>Conta gratuita</h2>
+          <div>
+            <p>
+              Com a conta gratuita, você terá acesso a uma biblioteca recheada de quadrinhos na categoria grátis, como Vero-Peixe, Las Cabaças, Zagaia e muitos outros. Além disso, você pode navegar por todo o catálogo, conhecer milhares de títulos incríveis e interagir diretamente com quadrinistas e outros leitores na comunidade do site.
+            </p>
+            <p>
+              E o melhor: a conta é totalmente gratuita e não exige cadastro de nenhum meio de pagamento. Quer algo especial? Adquira quadrinhos individuais diretamente dos autores, de forma simples, com pagamento via Pix.
+            </p>
+          </div>
+          <h2>Assine um plano</h2>
+          <p>
+            Quer aproveitar ainda mais benefícios? Explore os planos de assinatura da "Na Rede" e descubra uma experiência completa para leitores apaixonados por quadrinhos. Tenha acesso a conteúdos exclusivos, novas histórias, e mergulhe de vez nesse universo criativo.
+          </p>
+          <h2>Começe agora!</h2>
+          <p>
+            Crie sua conta hoje mesmo, seja gratuita ou assinando um plano, e faça parte dessa comunidade de leitores e criadores de quadrinhos!
+          </p>
+          <h2>Assine um Plano e descubra o Melhor dos Quadrinhos!</h2>
+          <p>
+            Na "Na Rede", nossos planos de assinatura foram pensados especialmente para leitores apaixonados por quadrinhos. Assinando um dos planos, você terá acesso completo ao nosso catálogo, com conteúdos exclusivos, histórias emocionantes e diversos benefícios que tornam sua experiência ainda mais especial.
+          </p>
+          <h2>Por que assinar?</h2>
+          <div>
+            <p>
+              Com um plano de assinatura, você garante acesso ilimitado a centenas de quadrinhos, participa de uma comunidade vibrante e apoia diretamente os quadrinistas da região norte.
+            </p>
+            <p>
+              Escolha seu plano, assine agora e viva a melhor experiência como leitor de quadrinhos!
+            </p>
+          </div>
           <ButtonWrapper>
             <a 
               onClick={
@@ -179,30 +206,6 @@ export default function Plans() {
           </Card>
         </Cards>
       </Options>
-      <Final className="plans-final initial-fade">
-        <Intro>
-          <h1>
-            Faça seu login ou crie sua conta grátis
-          </h1>
-          <div>
-            <p>
-              Crie sua conta gratuita e tenha acesso aos quadrinhos que estão na categoria grátis! Você também
-              poderá conhecer todo o catálogo com milhares de quadrinhos.
-            </p>
-            <br/>
-            <p>
-              Na conta grátis você só conseguirá ler os quadrinhos que estão gratuitos no app, como Ajuricaba,
-              Belém Imaginária e outros. E fica tranquilo, não precisa cadastrar seu cartão de crédito.
-            </p>
-          </div>
-          <ButtonWrapper>
-            <a href="/">Criar minha conta grátis</a>
-          </ButtonWrapper>
-        </Intro>
-        <ImageWrapper>
-          <img src={MainImage} alt="Imagem da tela principal da home antes do login" />
-        </ImageWrapper>
-      </Final>
     </Container>
   );
 }

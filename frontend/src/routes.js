@@ -15,6 +15,7 @@ import Account from "pages/Account";
 import Send from "pages/Send";
 import NotFound from "pages/NotFound";
 import UserPosts from "pages/Blog/components/UserPosts";
+import CreateAccount from "pages/CreateAccount";
 
 export default function AppRoutes() {
   return(
@@ -32,6 +33,7 @@ export default function AppRoutes() {
         <Route path="/planos" element={<Plans />} />
         <Route path="/conta" element={<Account />} />
         <Route path="/enviar" element={<Send />} />
+        <Route path="/criar-conta" element={<CreateAccount />} />
         <Route path="/search/:search" element={<Search />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

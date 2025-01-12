@@ -56,12 +56,11 @@ export const Main = styled.div`
   overflow: hidden;
 
   h2 {
-    color: #000;
+    color: #FFF;
     display: inline-block;
     padding: 
     ${({theme}) => theme.spacing.padding.very_small}
     ${({theme}) => theme.spacing.padding.normal};
-    background-color: #FFF;
     border-radius: ${({theme}) => theme.spacing.radius.small};
     text-transform: uppercase;
     font-size: 1.5rem;

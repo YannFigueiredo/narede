@@ -4,9 +4,11 @@ import MostPopular from "pages/Home/components/MostPopular";
 import MostRecent from "pages/Home/components/MostRecent";
 import Reviews from "./components/Reviews";
 import TitleModal from "components/TitleModal";
-import { Container, Content, Main, SubmitWrapper, Submit } from "./styles";
+import { Container, Content, Main, SubmitWrapper, Submit, SideLists } from "./styles";
 import SubmitImage from "assets/images/submissao-img.png";
 import star from "assets/icons/ranking.png";
+import RankingArtists from "./components/RankingArtists";
+import RankingReaders from "./components/RankingReaders";
 
 export default function Home() {
   const verifyScreenPosition = () => {
@@ -32,14 +34,18 @@ export default function Home() {
 
   return(
     <Container>
-      <MainSlide />
       <Content>
         <Main>
+          <MainSlide />
           <MostRecent title="Recomendações" />
           <MostRecent title="Mais recentes" />
           <MostRecent title="Continue lendo" />
         </Main>
-        <MostPopular />
+        <SideLists>
+          <MostPopular />
+          <RankingArtists />
+          <RankingReaders />
+        </SideLists>
       </Content>
       <Reviews />
       <SubmitWrapper className="submit initial-fade">
