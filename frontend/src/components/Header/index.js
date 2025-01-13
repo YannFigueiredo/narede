@@ -17,12 +17,14 @@ import About from "assets/icons/mobile-menu/sobre-nos.png";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
+import ModalIntro from "components/ModalIntro";
 
 export default function Header() {
   const menu = useRef(null);
   const [actualPage, setActualPage] = useState({ pathname: "", pageTitle: "" });
   const [isLogged, setIsLogged] = useState(global.localStorage.getItem("logged") === "true" ? true : false);
   const [search, setSearch] = useState("");
+  const [enableModalIntro, setEnableModalIntro] = useState(false);
   const navigate = useNavigate();
   const searchWrapper = useRef(null);
 
@@ -70,6 +72,10 @@ export default function Header() {
 
   useEffect(() => updateActualPage(), [actualPage.pathname, global.window.location.pathname]);
 
+  useEffect(() => {
+    setIsLogged(global.localStorage.getItem("logged") === "true" ? true : false);
+  }, [global.localStorage.getItem("logged")]);
+
   return (
     <Container background={window.location.pathname === "/" ? true : false}>
       <ImageWrapper>
@@ -94,12 +100,12 @@ export default function Header() {
           </li>
           {
             isLogged &&
-            <li onClick={() => navigate("/conta")} className="mobile-option">
+            <li onClick={() => navigate("/perfil")} className="mobile-option">
               <img src={Profile} alt="Ícone de perfil" />
               <a
-                href="/conta"
-                title="Minha conta"
-                className={actualPage.pathname === "/conta" ? "active" : ""}
+                href="/perfil"
+                title="Perfil"
+                className={actualPage.pathname === "/perfil" ? "active" : ""}
               >
                 Perfil
               </a>
@@ -194,7 +200,12 @@ export default function Header() {
           </li>
           {
             isLogged === false &&
-            <li onClick={login} className="mobile-option">
+            <li 
+              onClick={() => {
+                setEnableModalIntro(true);
+              }} 
+              className="mobile-option"
+            >
               <LoginIcon className="menu-icon" />
               <a href="#">Entrar</a>
             </li>
@@ -226,6 +237,7 @@ export default function Header() {
           </li>
         </Menu>
       </MenuWrapper>
+      <ModalIntro isEnabled={enableModalIntro} />
     </Container>
   );
 }
