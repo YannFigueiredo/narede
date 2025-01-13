@@ -18,6 +18,8 @@ import UserPosts from "pages/Blog/components/UserPosts";
 import CreateAccount from "pages/CreateAccount";
 
 export default function AppRoutes() {
+  const profile = global.localStorage.getItem("profile");
+
   return(
     <BrowserRouter>
       <Header />
@@ -31,7 +33,14 @@ export default function AppRoutes() {
         <Route path="/comunidade/minhas-resenhas" element={<UserPosts />} />
         <Route path="/sobre" element={<About />} />
         <Route path="/planos" element={<Plans />} />
-        <Route path="/conta" element={<Account />} />
+        <Route 
+          path="/perfil" 
+          element={
+            profile === "leitor" ? 
+            <Reader /> :
+            <Producer />
+          } 
+        />
         <Route path="/enviar" element={<Send />} />
         <Route path="/criar-conta" element={<CreateAccount />} />
         <Route path="/search/:search" element={<Search />} />
