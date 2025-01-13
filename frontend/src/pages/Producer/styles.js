@@ -8,7 +8,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: ${({theme}) => theme.spacing.padding.large};
-  animation: rotateFromLeft .2s linear;
 `;
 
 export const Header = styled.div`

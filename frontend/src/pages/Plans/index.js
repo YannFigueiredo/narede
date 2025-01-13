@@ -24,8 +24,8 @@ export default function Plans() {
     var show = 30;
     var items = global.document.querySelectorAll(".benefits-item");
     var screenHeight = global.window.innerHeight;
-    var finalHeight = global.document.querySelector(".plans-final").offsetHeight;
-    var finalTop = global.document.querySelector(".plans-final").getBoundingClientRect().top;
+    var finalHeight = global.document.querySelector(".plans-final")?.offsetHeight;
+    var finalTop = global.document.querySelector(".plans-final")?.getBoundingClientRect().top;
 
     items.forEach(item => {
       var itemHeight = item.offsetHeight;

@@ -33,7 +33,7 @@ export default function Footer() {
 
   const verifySCroll = () => {
     const scrollBottom = global.window.pageYOffset + global.window.innerHeight;
-    const footerTop = global.document.getElementById("footer").offsetTop;
+    const footerTop = global.document.getElementById("footer")?.offsetTop;
     if (scrollBottom < footerTop - 100) {
       setIsMenuFixed(true);
     } else {

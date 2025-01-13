@@ -63,6 +63,13 @@ export const Header = styled.div`
     height: 9rem;
     border-radius: 50%;
   }
+
+  span {
+    background: ${({theme}) => theme.colors.backgroundSecondary};
+    font-size: .75rem;
+    border-radius: 6px;
+    padding: 5px;
+  }
 `;
 
 export const Info = styled.p`

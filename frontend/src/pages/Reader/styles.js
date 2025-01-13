@@ -5,7 +5,6 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
-  animation: rotateFromLeft .2s linear;
 `;
 
 export const Header = styled.div`
@@ -20,17 +19,31 @@ export const Header = styled.div`
     color: rgba(255, 255, 255, .6);
   }
 
-  h2 {
-    color: #FFF;
+  .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    h2 {
+      color: #FFF;
+    }
+    
+    span {
+      background: ${({theme}) => theme.colors.sectionTitle};
+      font-size: .75rem;
+      border-radius: 6px;
+      padding: 5px;
+    }
   }
 
-  div {
+  .configs-wrapper {
     display: flex;
     align-items: center;
     gap: ${({theme}) => theme.spacing.between_elements.very_small};
     cursor: pointer;
 
-    span {
+    .configs {
       font-weight: 700;
       transition: all linear .4s;
     }
@@ -41,11 +54,11 @@ export const Header = styled.div`
     font-size: 2rem;
   }
 
-  div:hover span {
+  .configs-wrapper:hover .configs {
     color: ${({theme}) => theme.colors.sectionTitle};
   }
 
-  div:hover .settings-icon {
+  .configs-wrapper:hover .settings-icon {
     fill: ${({theme}) => theme.colors.sectionTitle};
   }
 

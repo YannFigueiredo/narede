@@ -1,14 +1,16 @@
 import React, { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { hqsList } from "utils/mocks/hqsList";
 import { titlesList } from "utils/mocks/titlesList";
 import { Container } from "components/Container/page";
-import { Reader, Content } from "./styles";
+import { Reader, Content, ChaptersButtons } from "./styles";
 import { TitleContext } from "contexts/TitleContext";
 import Button from "components/Button";
 import TitleModal from "components/TitleModal";
 
 export default function Title() {
+  const navigate = useNavigate();
   const { id, chap } = useParams();
   const [hq, setHq] = useState({});
   const [title, setTitle] = useState({});
@@ -33,6 +35,11 @@ export default function Title() {
   }, []);
 
   useEffect(() => {
+    setHq(hqsList.filter(hq => hq.id === parseInt(id)));
+    setTitle(titlesList.filter(title => title.id === parseInt(id)));
+  }, [id, chap]);
+
+  useEffect(() => {
     if(hq.length > 0 && hq[0].chapters)
       setActualChap(hq[0].chapters[chap - 1].url);
   }, [hq]);
@@ -52,11 +59,30 @@ export default function Title() {
             <img key={key} src={page} alt={`Página ${key + 1}`} />
           ))}
         </Content>
-        <Button 
-          onClick={openModal}
-          text="Acessar capítulos"
-          variant="blue"
-        />
+        <ChaptersButtons>
+          <Button 
+            onClick={
+              () => {
+                if(parseInt(chap, 10) !== 1) {
+                  navigate(`/quadrinho/${hq[0].id}/${parseInt(chap, 10)-1}`);
+                }
+              }
+            }
+            text="Anterior"
+            variant="blue"
+          />
+          <Button 
+            onClick={
+              () => {
+                if(parseInt(chap, 10) < hq[0].chapters.length) {
+                  navigate(`/quadrinho/${hq[0].id}/${parseInt(chap, 10)+1}`);
+                }
+              }
+            }
+            text="Próximo"
+            variant="blue"
+          />
+        </ChaptersButtons>
       </Reader>
     </Container>
   );

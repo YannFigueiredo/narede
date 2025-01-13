@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 0.063rem solid ${({theme}) => theme.colors.primary};
+  border: none;
   max-width: ${(props) => props.maxwidth}rem;
   border-radius: ${({theme}) => theme.spacing.radius.small};
   overflow: hidden;
@@ -25,6 +25,7 @@ export const Main = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 `;
 
 export const InputWrapper = styled.input`
@@ -35,6 +36,7 @@ export const InputWrapper = styled.input`
   padding: 0 ${({theme}) => theme.spacing.padding.very_small};
   font-size: ${({theme}) => theme.fontSize.regular};
   color: ${({theme}) => theme.colors.backgroundPrimaryBox};
+  outline: none;
 
   &:focus {
     outline: none;

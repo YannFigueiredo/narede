@@ -20,6 +20,7 @@ export default function Infos() {
         <Header>
           <img src={Photo} alt="Foto de perfil" />
           <h3>Ryuujin Arts</h3>
+          <span>Rank #6</span>
         </Header>
         <Info>
           Eu cresci em Quatipuru. Quando não estou trabalhando como designer, você pode me encontrar escrevendo estórias. Eu adoro conhecer novas pessoas e explorar novos lugares.

@@ -24,11 +24,14 @@ export default function Reader() {
   return(
     <Container>
       <Header>
-        <h2>Iara Nascimento</h2>
+        <div className="name">
+          <h2>Iara Nascimento</h2>
+          <span>Rank #33</span>
+        </div>
         <span className="page-title">Perfil do leitor</span>
-        <div>
+        <div className="configs-wrapper">
           <SettingsIcon className="settings-icon" />
-          <span>Configurações do perfil</span>
+          <span className="configs">Configurações do perfil</span>
         </div>
       </Header>
       <Main>
@@ -80,7 +83,7 @@ export default function Reader() {
           </Item>
           <Item>
             <div>
-              <h3>Compartilhar</h3>
+              <h3>Compartilhamentos</h3>
             </div>
             <ul>
               <li><div></div>Vero-Pexe e sua Turma</li>

@@ -28,3 +28,9 @@ export const Content = styled.div`
     }
   }
 `;
+
+export const ChaptersButtons = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+`;
