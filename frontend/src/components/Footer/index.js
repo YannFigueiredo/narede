@@ -115,7 +115,7 @@ export default function Footer() {
           </li>
           <li>
             <img src={Instagram} alt="Ícone do Instagram" />
-            <span>@narede</span>
+            <a href="https://www.instagram.com/naredehq/" target="_blank">@narede</a>
           </li>
           <li>
             <img src={TikTok} alt="Ícone do TikTok" />

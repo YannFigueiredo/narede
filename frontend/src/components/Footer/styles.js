@@ -74,6 +74,10 @@ export const Menu = styled.ul`
     font-weight: 500;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   @media screen and (max-width: 768px) {
     li span {
       font-size: ${({theme}) => theme.fontSize.regular};
