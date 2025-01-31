@@ -10,6 +10,8 @@ import star from "assets/icons/ranking.png";
 import RankingArtists from "./components/RankingArtists";
 import RankingReaders from "./components/RankingReaders";
 import BannerPlans from "./components/BannerPlans";
+import MostRecentVersion2 from "./components/MostRecentVersion2";
+import MostRecentVersion3 from "./components/MostRecentVersion3";
 
 export default function Home() {
   const verifyScreenPosition = () => {
@@ -39,8 +41,8 @@ export default function Home() {
         <Main>
           <MainSlide />
           <MostRecent title="Recomendações" />
-          <MostRecent title="Mais recentes" />
-          <MostRecent title="Continue lendo" />
+          <MostRecentVersion2 title="Mais recentes" />
+          <MostRecentVersion3 title="Continue lendo" />
           <BannerPlans />
         </Main>
         <SideLists>
