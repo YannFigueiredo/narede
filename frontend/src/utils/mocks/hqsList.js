@@ -6,6 +6,12 @@ import diversidadeCultural from "./hqs/diversidade-cultural.js";
 import lasCabacas from "./hqs/las-cabacas.js";
 import veroPexe from "./hqs/vero-pexe.js";
 import tailus from "./hqs/tailus.js";
+import aTurmaDoAcai from "./hqs/a-turma-do-acai.js";
+import catitandoHistorias from "./hqs/catitando-historias.js";
+import coletivoBrt from "./hqs/coletivo-brt.js";
+import almanacaoDeFerias from "./hqs/almanacao-de-ferias.js";
+import robsonverso from "./hqs/robsonverso.js";
+import visagensEAssombracoes from "./hqs/visagens-e-assombracoes.js";
 
 export const hqsList = [
   {
@@ -113,6 +119,60 @@ export const hqsList = [
       {
         name: "Capítulo 1",
         url: tailus.t0101
+      }
+    ]
+  },
+  {
+    id: 9,
+    chapters: [
+      {
+        name: "Capítulo 1",
+        url: aTurmaDoAcai.ta0101
+      }
+    ]
+  },
+  {
+    id: 10,
+    chapters: [
+      {
+        name: "Catitando Histórias",
+        url: catitandoHistorias.ch0101
+      }
+    ]
+  },
+  {
+    id: 11,
+    chapters: [
+      {
+        name: "Capítulo 1",
+        url: coletivoBrt.cbrt0101
+      }
+    ]
+  },
+  {
+    id: 12,
+    chapters: [
+      {
+        name: "Capítulo 1",
+        url: almanacaoDeFerias.af0101
+      }
+    ]
+  },
+  {
+    id: 13,
+    chapters: [
+      {
+        name: "Capítulo 1",
+        url: robsonverso.rv0101
+      }
+    ]
+  },
+  {
+    id: 14,
+    chapters: [
+      {
+        name: "Capítulo 1",
+        url: visagensEAssombracoes.va0101
       }
     ]
   }

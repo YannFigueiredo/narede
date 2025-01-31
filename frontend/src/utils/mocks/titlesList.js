@@ -6,6 +6,12 @@ import Logo05 from "assets/covers/05-diversidade-cultural-paraense-em-quadrinhos
 import Logo06 from "assets/covers/06-las-cabacas.png";
 import Logo07 from "assets/covers/07-vero-pexe.jpg";
 import Logo08 from "assets/covers/08-tailus.jpg";
+import Logo09 from "assets/covers/09-a-turma-do-acai.png";
+import Logo10 from "assets/covers/10-catitando-historias.png";
+import Logo11 from "assets/covers/11-coletivo-brt.png";
+import Logo12 from "assets/covers/12-almanacao-de-ferias.png";
+import Logo13 from "assets/covers/13-robsonverso.png";
+import Logo14 from "assets/covers/14-visagens-e-assombracoes.png";
 
 export const titlesList = [
   {
@@ -87,5 +93,65 @@ export const titlesList = [
     cover: Logo08,
     year: "2021",
     isFree: "Grátis"
-  }
+  },
+  {
+    id: 9,
+    title: "A Turma do Açaí",
+    description: "Uma revista cheia de tirinhas divertidas que acompanham as aventuras da turma do açaí, destacando o cotidiano e a cultura paraense com muito humor e leveza.",
+    author: ["Roçando Pinheiro"],
+    category: "Comédia",
+    cover: Logo09,
+    year: "2010",
+    isFree: "Grátis"
+  },
+  {
+    id: 10,
+    title: "Catitando Histórias",
+    description: "Uma história vibrante que combina fantasia e cultura amazônica, com personagens enfrentando desafios e mistérios na região, sempre com um toque de regionalismo.",
+    author: ["Coletivo Açaí Pesado"],
+    category: "Aventura",
+    cover: Logo10,
+    year: "2024",
+    isFree: "Grátis"
+  },
+  {
+    id: 11,
+    title: "Acelera",
+    description: "Uma narrativa intensa que explora as histórias das ruas e do transporte urbano, abordando temas sociais e desafios vividos pela população em um cenário vibrante e urbano.",
+    author: ["Coletivo BRT"],
+    category: "Ação",
+    cover: Logo11,
+    year: "2015",
+    isFree: "Grátis"
+  },
+  {
+    id: 12,
+    title: "Almanação de Férias",
+    description: "Um almanaque repleto de histórias leves e divertidas, retratando o cotidiano e as aventuras de personagens que vivem momentos únicos durante as férias.",
+    author: ["Coletivo BRT"],
+    category: "Comédia",
+    cover: Logo12,
+    year: "2017",
+    isFree: "Grátis"
+  },
+  {
+    id: 13,
+    title: "Capivara Astronauta",
+    description: "Acompanhe a jornada de uma capivara que se torna astronauta, explorando o espaço em aventuras emocionantes e inusitadas que misturam ciência e humor.",
+    author: ["Robson Verso"],
+    category: "Aventura",
+    cover: Logo13,
+    year: "2024",
+    isFree: "Grátis"
+  },
+  {
+    id: 14,
+    title: "Visagens, Assombrações e Encantamentos da Amazônia",
+    description: "Uma coletânea de histórias baseadas no rico folclore amazônico, explorando mitos, lendas e assombrações que fazem parte da cultura e tradição da região.",
+    author: ["Walcyr Monteiro"],
+    category: "Folclore",
+    cover: Logo14,
+    year: "2019",
+    isFree: "Grátis"
+  },
 ];
